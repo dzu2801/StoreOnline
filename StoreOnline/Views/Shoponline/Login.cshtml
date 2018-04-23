@@ -6,8 +6,8 @@
 <body>
     <div class="banner-top">
         <div class="container">
-            <h3>Login</h3>
-            <h4><a href="index.html">Home</a><label>/</label>Login</h4>
+            <h3>Đăng Nhập</h3>
+            <h4><a href="@Url.Action("Index", "Shoponline")">Trang Chủ</a><label>/</label>Đăng Nhập</h4>
             <div class="clearfix"> </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
 
         <div class="main-agileits">
             <div class="form-w3agile">
-                <h3>Login</h3>
+                <h3>Đăng Nhập</h3>
                 <form action="#" method="post">
                     <div class="key">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -29,12 +29,12 @@
                         <input type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
                         <div class="clearfix"></div>
                     </div>
-                    <input type="submit" value="Login">
+                    <input type="submit" value="Đăng Nhập">
                 </form>
             </div>
             <div class="forg">
-                <a href="#" class="forg-left">Forgot Password</a>
-                <a href="register.html" class="forg-right">Register</a>
+                <a href="#" class="forg-left">Quên Mật Khẩu</a>
+                <a href="@Url.Action("Register", "Shoponline")" class="forg-right">Đăng Ký</a>
                 <div class="clearfix"></div>
             </div>
         </div>

@@ -74,13 +74,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
 
             <div class="logo">
-                <h1><a href="index.html">Đặc Sản Đất Sen Hồng<span>Nơi Tập Trung Mọi Đặc Sản Của Miền Tây</span></a></h1>
+                <h1><a href="@Url.Action("Index", "Shoponline")">Đặc Sản Đất Sen Hồng<span>Nơi Tập Trung Mọi Đặc Sản Của Miền Tây</span></a></h1>
             </div>
             <div class="head-t">
                 <ul class="card">
-                    <li><a href="~/Views/Shoponline/Login.cshtml"><i class="fa fa-heart" aria-hidden="true"></i>Danh Sách Yêu Thích</a></li>
-                    <li><i style="color:orange" class="fa fa-user" aria-hidden="true"></i>@Html.ActionLink("Đăng Nhập","Login","Shoponline")</li>
-                    <li><i style="color:orange" class="fa fa-arrow-right" aria-hidden="true"></i>@Html.ActionLink("Đăng Ký", "Register", "Shoponline")</li>
+                    <li><a href="Login.cshtml"><i class="fa fa-heart" aria-hidden="true"></i>Danh Sách Yêu Thích</a></li>
+                    <li><a href="@Url.Action("Login", "Shoponline")"><i class="fa fa-user" aria-hidden="true"></i>Đăng Nhập</a></li>
+                    <li><a href="@Url.Action("Register", "Shoponline")"><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng Ký</a></li>
                     <li><a href="about.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Lịch Sử Đặt Hàng</a></li>
                     <li><a href="shipping.html"><i class="fa fa-ship" aria-hidden="true"></i>Giao Hàng</a></li>
                 </ul>
@@ -108,7 +108,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav ">
-                            <li class=" active"><a class="hyper, text-center">@Html.ActionLink("Trang Chu", "Index", "Shoponline")</a></li>
+                            <li class=" active"><a href="@Url.Action("Index", "Shoponline")" class="hyper"><span>Trang Chủ</span></a></li>
                             <li class="dropdown ">
                                 <a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown"><span>Kitchen<b class="caret"></b></span></a>
                                 <ul class="dropdown-menu multi">
@@ -239,8 +239,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </ul>
                             </li>
 
-                            <li><a href="codes.html" class="hyper"> <span>Codes</span></a></li>
-                            <li><a href="contact.html" class="hyper"><span>Liên Hệ</span></a></li>
+                            <li><a href="codes.html" class="hyper"> <span>Mô Tả</span></a></li>
+                            <li><a href="@Url.Action("Contact", "Shoponline")" class="hyper"><span>Liên Hệ</span></a></li>
                         </ul>
                     </div>
                 </nav>
@@ -262,7 +262,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer">
         <div class="container">
             <div class="col-md-3 footer-grid">
-                <h3>About Us</h3>
+                <h3>Về Chúng Tôi</h3>
                 <p>
                     Nam libero tempore, cum soluta nobis est eligendi
                     optio cumque nihil impedit quo minus id quod maxime
@@ -272,31 +272,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-md-3 footer-grid ">
                 <h3>Menu</h3>
                 <ul>
-                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="@Url.Action("Index", "Shoponline")">Trang Chủ</a></li>
                     <li><a href="kitchen.html">Kitchen</a></li>
                     <li><a href="care.html">Personal Care</a></li>
                     <li><a href="hold.html">Household</a></li>
-                    <li><a href="codes.html">Short Codes</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="codes.html">Mô Tả</a></li>
+                    <li><a href="@Url.Action("Contact", "Shoponline")">Liên Hệ</a></li>
                 </ul>
             </div>
             <div class="col-md-3 footer-grid ">
                 <h3>Dịch Vụ Khách Hàng</h3>
                 <ul>
-                    <li><a href="shipping.html">Shipping</a></li>
+                    <li><a href="shipping.html">Giao Hàng</a></li>
                     <li><a href="terms.html">Terms & Conditions</a></li>
                     <li><a href="faqs.html">Faqs</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="@Url.Action("Contact", "Shoponline")">Liên Hệ</a></li>
                     <li><a href="offer.html">Online Shopping</a></li>
 
                 </ul>
             </div>
             <div class="col-md-3 footer-grid">
-                <h3>My Account</h3>
+                <h3>Tài Khoản</h3>
                 <ul>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="register.html">Register</a></li>
-                    <li><a href="wishlist.html">Wishlist</a></li>
+                    <li><a href="@Url.Action("Login", "Shoponline")">Đăng Nhập</a></li>
+                    <li><a href="@Url.Action("Register", "Shoponline")">Đăng Ký</a></li>
+                    <li><a href="wishlist.html">Danh Sách Yêu Thích</a></li>
 
                 </ul>
             </div>
@@ -312,10 +312,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <p><i class="fa fa-home" aria-hidden="true"></i>153, Hùng Vương, phường 2, TP. Cao Lãnh, Đồng Tháp</p>
                     </div>
                     <div class="col-md-4 fo-grid1">
-                        <p><i class="fa fa-phone" aria-hidden="true"></i>+84 949 678 338</p>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i>+84 949 678 338 (Ms. Lài)</p>
                     </div>
                     <div class="col-md-4 fo-grid1">
-                        <p><a href="mailto:info@example.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>tralaidongthap@gmail.com</a></p>
+                        <p><a href="mailto:tralaidongthap@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>tralaidongthap@gmail.com</a></p>
                     </div>
                     <div class="clearfix"></div>
 

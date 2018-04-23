@@ -23,5 +23,15 @@ namespace StoreOnline.Controllers
         {
             return View();
         }
+
+        public ActionResult Wishlist()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
     }
 }
