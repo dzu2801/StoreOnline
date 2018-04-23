@@ -304,6 +304,7 @@
     <Content Include="Views\Shared\_LayoutUser.cshtml" />
     <Content Include="Views\Shoponline\Index.cshtml" />
     <Content Include="Views\Shoponline\Login.cshtml" />
+    <Content Include="Views\Shoponline\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
