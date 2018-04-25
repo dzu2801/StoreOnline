@@ -105,6 +105,10 @@ namespace StoreOnline.Controllers
 
         public ActionResult Wishlist()
         {
+            if (Session["tentk"] == null || Session["Taikhoan"] == null)
+            {
+                return RedirectToAction("Login", "User");
+            }
             return View();
         }
 
