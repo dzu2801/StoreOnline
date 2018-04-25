@@ -122,6 +122,8 @@ namespace StoreOnline.Controllers
         {
             var taikhoan = collection["Username"];
             var mail = collection["Email"];
+            var matkhau = collection["Password"];
+            var matkhaunl = collection["Confirm Password"];
             if (String.IsNullOrEmpty(taikhoan))
             {
                 ViewData["loi1"] = "Tên tài khoản không được bỏ trống";
@@ -130,13 +132,27 @@ namespace StoreOnline.Controllers
             {
                 ViewData["loi2"] = "Email không được bỏ trống";
             }
+            if (Convert.ToString(matkhau) == "Password")
+            {
+                ViewData["loi3"] = "Không được bỏ trống";
+            }
+            else if (Convert.ToString(matkhaunl) == "Confirm Password")
+            {
+                ViewData["loi4"] = "Không được bỏ trống";
+            }
+            else if (Convert.ToString(matkhau) != Convert.ToString(matkhaunl))
+            {
+                ViewData["loi5"] = "Mật khẩu nhập lại phải trùng trước đó";
+            }
             else
             {
                 KHACHHANG kh = db.KHACHHANGs.SingleOrDefault(n => n.TK == taikhoan && n.EMAILKH == mail);
                 if (kh != null)
                 {
-                    Session["Taikhoan"] = taikhoan;
-                    return RedirectToAction("Resetpassword", "User");
+                    kh.MK = matkhau;
+                    db.KHACHHANGs.InsertOnSubmit(kh);
+                    db.SubmitChanges();
+                    return RedirectToAction("Login");
                 }
                 else
                 {
@@ -146,10 +162,37 @@ namespace StoreOnline.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult Resetpassword()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public ActionResult Resetpassword()
+        //{
+        //    return View();
+        //}
+        //[HttpPost]
+        //public ActionResult Resetpassword(FormCollection collection, KHACHHANG kh)
+        //{
+        //    var matkhau = collection["Password"];
+        //    var matkhaunl = collection["Confirm Password"];
+        //    if (Convert.ToString(matkhau) == "Password")
+        //    {
+        //        ViewData["loi1"] = "Không được bỏ trống";
+        //    }
+        //    else if (Convert.ToString(matkhaunl) == "Confirm Password")
+        //    {
+        //        ViewData["loi2"] = "Không được bỏ trống";
+        //    }
+        //    else if (Convert.ToString(matkhau) != Convert.ToString(matkhaunl))
+        //    {
+        //        ViewData["loi3"] = "Mật khẩu nhập lại phải trùng trước đó";
+        //    }
+        //    else
+        //    {
+        //        kh = (KHACHHANG)Session["tkrs"];    
+        //        kh.MK = matkhau;
+        //        db.KHACHHANGs.InsertOnSubmit(kh);
+        //        db.SubmitChanges();
+        //        return RedirectToAction("Login");
+        //    }
+        //    return View();
+        //}
     }
 }
