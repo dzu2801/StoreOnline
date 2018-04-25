@@ -112,11 +112,41 @@ namespace StoreOnline.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult ForgotPassword()
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult ForgotPassword(FormCollection collection)
+        {
+            var taikhoan = collection["Username"];
+            var mail = collection["Email"];
+            if (String.IsNullOrEmpty(taikhoan))
+            {
+                ViewData["loi1"] = "Tên tài khoản không được bỏ trống";
+            }
+            else if (String.IsNullOrEmpty(mail))
+            {
+                ViewData["loi2"] = "Email không được bỏ trống";
+            }
+            else
+            {
+                KHACHHANG kh = db.KHACHHANGs.SingleOrDefault(n => n.TK == taikhoan && n.EMAILKH == mail);
+                if (kh != null)
+                {
+                    Session["Taikhoan"] = taikhoan;
+                    return RedirectToAction("Resetpassword", "User");
+                }
+                else
+                {
+                    ViewBag.Thongbao = "Tài khoản hoặc Email không đúng";
+                }
+            }
+            return View();
+        }
 
+        [HttpGet]
         public ActionResult Resetpassword()
         {
             return View();
