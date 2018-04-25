@@ -6,17 +6,29 @@ using System.Web.Mvc;
 
 namespace StoreOnline.Controllers
 {
-    public class ShoponlineController : Controller
+    public class UserController : Controller
     {
-        // GET: Shoponline
+        // GET: User
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Login()
         {
             return View();
         }
+
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        public ActionResult Wishlist()
+        {
+            return View();
+        }
+
+
     }
 }

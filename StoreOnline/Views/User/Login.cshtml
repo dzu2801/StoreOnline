@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<body>
+    <div class="banner-top">
+        <div class="container">
+            <h3>Đăng Nhập</h3>
+            <h4><a href="@Url.Action("Index", "Shoponline")">Trang Chủ</a><label>/</label>Đăng Nhập</h4>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!--login-->
+
+    <div class="login">
+
+        <div class="main-agileits">
+            <div class="form-w3agile">
+                <h3>Đăng Nhập</h3>
+                <form action="#" method="post">
+                    <div class="key">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <input type="text" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="key">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+                        <div class="clearfix"></div>
+                    </div>
+                    <input type="submit" value="Đăng Nhập">
+                </form>
+            </div>
+            <div class="forg">
+                <a href="#" class="forg-left">Quên Mật Khẩu</a>
+                <a href="@Url.Action("Register", "User")" class="forg-right">Đăng Ký</a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -78,9 +78,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="head-t">
                 <ul class="card">
-                    <li><a href="Login.cshtml"><i class="fa fa-heart" aria-hidden="true"></i>Danh Sách Yêu Thích</a></li>
-                    <li><a href="@Url.Action("Login", "Shoponline")"><i class="fa fa-user" aria-hidden="true"></i>Đăng Nhập</a></li>
-                    <li><a href="@Url.Action("Register", "Shoponline")"><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng Ký</a></li>
+                    <li><a href="@Url.Action("Wishlist", "User")"><i class="fa fa-heart" aria-hidden="true"></i>Danh Sách Yêu Thích</a></li>
+                    <li><a href="@Url.Action("Login", "User")"><i class="fa fa-user" aria-hidden="true"></i>Đăng Nhập</a></li>
+                    <li><a href="@Url.Action("Register", "User")"><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng Ký</a></li>
                     <li><a href="about.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Lịch Sử Đặt Hàng</a></li>
                     <li><a href="shipping.html"><i class="fa fa-ship" aria-hidden="true"></i>Giao Hàng</a></li>
                 </ul>
@@ -93,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
 
 
-            <div class="nav-top">
+            @*<div class="nav-top">
                 <nav class="navbar navbar-default">
 
                     <div class="navbar-header nav_2">
@@ -108,7 +108,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav ">
-                            <li class=" active"><a href="@Url.Action("Index", "Shoponline")" class="hyper"><span>Trang Chủ</span></a></li>
+                            <li><a href="@Url.Action("Index", "Shoponline")" class="hyper"><span>Trang Chủ</span></a></li>
+
                             <li class="dropdown ">
                                 <a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown"><span>Kitchen<b class="caret"></b></span></a>
                                 <ul class="dropdown-menu multi">
@@ -248,7 +249,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
                 </div>
                 <div class="clearfix"></div>
-            </div>
+            </div>*@
 
         </div>
     </div>
@@ -294,9 +295,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-md-3 footer-grid">
                 <h3>Tài Khoản</h3>
                 <ul>
-                    <li><a href="@Url.Action("Login", "Shoponline")">Đăng Nhập</a></li>
-                    <li><a href="@Url.Action("Register", "Shoponline")">Đăng Ký</a></li>
-                    <li><a href="wishlist.html">Danh Sách Yêu Thích</a></li>
+                    <li><a href="@Url.Action("Login", "User")">Đăng Nhập</a></li>
+                    <li><a href="@Url.Action("Register", "User")">Đăng Ký</a></li>
+                    <li><a href="@Url.Action("Wishlist", "User")">Danh Sách Yêu Thích</a></li>
 
                 </ul>
             </div>
