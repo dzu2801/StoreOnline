@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using StoreOnline.Models;
 
 namespace StoreOnline.Controllers
 {
@@ -13,7 +14,7 @@ namespace StoreOnline.Controllers
         {
             return View();
         }
-
+        [HttpGet]
         public ActionResult Login()
         {
             return View();
@@ -30,6 +31,11 @@ namespace StoreOnline.Controllers
         }
 
         public ActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        public ActionResult Resetpassword()
         {
             return View();
         }
