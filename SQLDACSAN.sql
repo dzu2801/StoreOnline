@@ -103,7 +103,7 @@ CREATE TABLE ADMIN
 )
 
 
---Auto Ma Khach Hang-----------
+--Auto ID-----------
 CREATE FUNCTION func_NextID(@lastID varchar(7),@prefix varchar(5),@size int)
 	returns varchar(7)
 as
@@ -129,8 +129,6 @@ as
 		UPDATE [KHACHHANG] set MAKH = dbo.func_NextID (@lastID, 'KH', 7) where MAKH = ''
 	end
 GO
-
---Auto Ma Hoa Don------------
 
 
 CREATE TRIGGER tr_NextMAHD on [DONDATHANG]
