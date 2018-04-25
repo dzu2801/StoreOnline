@@ -162,6 +162,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\jstarbox.css" />
+    <Content Include="Content\style.ad.css" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -171,9 +172,12 @@
     <Content Include="images\ab.jpg" />
     <Content Include="images\ab1.jpg" />
     <Content Include="images\arr.png" />
+    <Content Include="images\arrow.png" />
     <Content Include="images\ba.jpg" />
     <Content Include="images\ba1.jpg" />
     <Content Include="images\ba2.jpg" />
+    <Content Include="images\bg2.jpg" />
+    <Content Include="images\bgsen.jpg" />
     <Content Include="images\cac.jpg" />
     <Content Include="images\can.png" />
     <Content Include="images\co.jpg" />
@@ -325,10 +329,11 @@
     <Content Include="Views\User\Wishlist.cshtml" />
     <Content Include="Views\User\ForgotPassword.cshtml" />
     <Content Include="Views\User\Resetpassword.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

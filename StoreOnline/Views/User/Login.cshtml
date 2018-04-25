@@ -182,12 +182,15 @@
         <div class="main-agileits">
             <div class="form-w3agile">
                 <h3>Đăng Nhập</h3>
+                @ViewBag.Thongbao
                 <form action="#" method="post">
+                    @ViewData["loi1"]
                     <div class="key">
                         <i class="fa fa-user" aria-hidden="true"></i>
-                        <input type="text" value="user" name="user" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'user';}" required="">
+                        <input type="text" value="Username" name="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'user';}" required="">
                         <div class="clearfix"></div>
                     </div>
+                    @ViewData["loi2"]
                     <div class="key">
                         <i class="fa fa-lock" aria-hidden="true"></i>
                         <input type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
