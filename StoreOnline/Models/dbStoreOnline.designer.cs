@@ -30,9 +30,6 @@ namespace StoreOnline.Models
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertADMIN(ADMIN instance);
-    partial void UpdateADMIN(ADMIN instance);
-    partial void DeleteADMIN(ADMIN instance);
     partial void InsertSANPHAM(SANPHAM instance);
     partial void UpdateSANPHAM(SANPHAM instance);
     partial void DeleteSANPHAM(SANPHAM instance);
@@ -51,7 +48,7 @@ namespace StoreOnline.Models
     #endregion
 		
 		public dbStoreOnlineDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SHOPDACSANConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SHOPDACSANConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -80,11 +77,11 @@ namespace StoreOnline.Models
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<ADMIN> ADMINs
+		public System.Data.Linq.Table<CTDONDATHANG> CTDONDATHANGs
 		{
 			get
 			{
-				return this.GetTable<ADMIN>();
+				return this.GetTable<CTDONDATHANG>();
 			}
 		}
 		
@@ -93,14 +90,6 @@ namespace StoreOnline.Models
 			get
 			{
 				return this.GetTable<SANPHAM>();
-			}
-		}
-		
-		public System.Data.Linq.Table<CTDONDATHANG> CTDONDATHANGs
-		{
-			get
-			{
-				return this.GetTable<CTDONDATHANG>();
 			}
 		}
 		
@@ -153,112 +142,119 @@ namespace StoreOnline.Models
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ADMIN")]
-	public partial class ADMIN : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CTDONDATHANG")]
+	public partial class CTDONDATHANG
 	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		private string _MAHD;
 		
-		private string _USERADMIN;
+		private System.Nullable<decimal> _TONGTIEN;
 		
-		private string _PASSADMIN;
+		private System.Nullable<bool> _DATHANHTOAN;
 		
-		private string _HOTEN;
+		private System.Nullable<bool> _TINHTRANGGIAO;
 		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnUSERADMINChanging(string value);
-    partial void OnUSERADMINChanged();
-    partial void OnPASSADMINChanging(string value);
-    partial void OnPASSADMINChanged();
-    partial void OnHOTENChanging(string value);
-    partial void OnHOTENChanged();
-    #endregion
+		private System.Nullable<System.DateTime> _NGAYDAT;
 		
-		public ADMIN()
+		private string _MAKH;
+		
+		public CTDONDATHANG()
 		{
-			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERADMIN", DbType="VarChar(30) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string USERADMIN
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAHD", DbType="VarChar(7)")]
+		public string MAHD
 		{
 			get
 			{
-				return this._USERADMIN;
+				return this._MAHD;
 			}
 			set
 			{
-				if ((this._USERADMIN != value))
+				if ((this._MAHD != value))
 				{
-					this.OnUSERADMINChanging(value);
-					this.SendPropertyChanging();
-					this._USERADMIN = value;
-					this.SendPropertyChanged("USERADMIN");
-					this.OnUSERADMINChanged();
+					this._MAHD = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASSADMIN", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
-		public string PASSADMIN
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TONGTIEN", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> TONGTIEN
 		{
 			get
 			{
-				return this._PASSADMIN;
+				return this._TONGTIEN;
 			}
 			set
 			{
-				if ((this._PASSADMIN != value))
+				if ((this._TONGTIEN != value))
 				{
-					this.OnPASSADMINChanging(value);
-					this.SendPropertyChanging();
-					this._PASSADMIN = value;
-					this.SendPropertyChanged("PASSADMIN");
-					this.OnPASSADMINChanged();
+					this._TONGTIEN = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HOTEN", DbType="NVarChar(50)")]
-		public string HOTEN
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DATHANHTOAN", DbType="Bit")]
+		public System.Nullable<bool> DATHANHTOAN
 		{
 			get
 			{
-				return this._HOTEN;
+				return this._DATHANHTOAN;
 			}
 			set
 			{
-				if ((this._HOTEN != value))
+				if ((this._DATHANHTOAN != value))
 				{
-					this.OnHOTENChanging(value);
-					this.SendPropertyChanging();
-					this._HOTEN = value;
-					this.SendPropertyChanged("HOTEN");
-					this.OnHOTENChanged();
+					this._DATHANHTOAN = value;
 				}
 			}
 		}
 		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TINHTRANGGIAO", DbType="Bit")]
+		public System.Nullable<bool> TINHTRANGGIAO
 		{
-			if ((this.PropertyChanging != null))
+			get
 			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
+				return this._TINHTRANGGIAO;
+			}
+			set
+			{
+				if ((this._TINHTRANGGIAO != value))
+				{
+					this._TINHTRANGGIAO = value;
+				}
 			}
 		}
 		
-		protected virtual void SendPropertyChanged(String propertyName)
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYDAT", DbType="DateTime")]
+		public System.Nullable<System.DateTime> NGAYDAT
 		{
-			if ((this.PropertyChanged != null))
+			get
 			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this._NGAYDAT;
+			}
+			set
+			{
+				if ((this._NGAYDAT != value))
+				{
+					this._NGAYDAT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAKH", DbType="VarChar(7)")]
+		public string MAKH
+		{
+			get
+			{
+				return this._MAKH;
+			}
+			set
+			{
+				if ((this._MAKH != value))
+				{
+					this._MAKH = value;
+				}
 			}
 		}
 	}
@@ -559,123 +555,6 @@ namespace StoreOnline.Models
 		{
 			this.SendPropertyChanging();
 			entity.SANPHAM = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CTDONDATHANG")]
-	public partial class CTDONDATHANG
-	{
-		
-		private string _MAHD;
-		
-		private System.Nullable<decimal> _TONGTIEN;
-		
-		private System.Nullable<bool> _DATHANHTOAN;
-		
-		private System.Nullable<bool> _TINHTRANGGIAO;
-		
-		private System.Nullable<System.DateTime> _NGAYDAT;
-		
-		private string _MAKH;
-		
-		public CTDONDATHANG()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAHD", DbType="VarChar(7)")]
-		public string MAHD
-		{
-			get
-			{
-				return this._MAHD;
-			}
-			set
-			{
-				if ((this._MAHD != value))
-				{
-					this._MAHD = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TONGTIEN", DbType="Decimal(18,0)")]
-		public System.Nullable<decimal> TONGTIEN
-		{
-			get
-			{
-				return this._TONGTIEN;
-			}
-			set
-			{
-				if ((this._TONGTIEN != value))
-				{
-					this._TONGTIEN = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DATHANHTOAN", DbType="Bit")]
-		public System.Nullable<bool> DATHANHTOAN
-		{
-			get
-			{
-				return this._DATHANHTOAN;
-			}
-			set
-			{
-				if ((this._DATHANHTOAN != value))
-				{
-					this._DATHANHTOAN = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TINHTRANGGIAO", DbType="Bit")]
-		public System.Nullable<bool> TINHTRANGGIAO
-		{
-			get
-			{
-				return this._TINHTRANGGIAO;
-			}
-			set
-			{
-				if ((this._TINHTRANGGIAO != value))
-				{
-					this._TINHTRANGGIAO = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYDAT", DbType="DateTime")]
-		public System.Nullable<System.DateTime> NGAYDAT
-		{
-			get
-			{
-				return this._NGAYDAT;
-			}
-			set
-			{
-				if ((this._NGAYDAT != value))
-				{
-					this._NGAYDAT = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAKH", DbType="VarChar(7)")]
-		public string MAKH
-		{
-			get
-			{
-				return this._MAKH;
-			}
-			set
-			{
-				if ((this._MAKH != value))
-				{
-					this._MAKH = value;
-				}
-			}
 		}
 	}
 	

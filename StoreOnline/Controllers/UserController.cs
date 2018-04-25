@@ -146,11 +146,10 @@ namespace StoreOnline.Controllers
             }
             else
             {
-                KHACHHANG kh = db.KHACHHANGs.SingleOrDefault(n => n.TK == taikhoan && n.EMAILKH == mail);
+                KHACHHANG kh = db.KHACHHANGs.Where(n => n.TK == taikhoan && n.EMAILKH == mail).Single();
                 if (kh != null)
                 {
                     kh.MK = matkhau;
-                    db.KHACHHANGs.InsertOnSubmit(kh);
                     db.SubmitChanges();
                     return RedirectToAction("Login");
                 }
