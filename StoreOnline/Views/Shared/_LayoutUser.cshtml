@@ -305,9 +305,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-md-3 footer-grid">
                 <h3>Tài Khoản</h3>
                 <ul>
-                    <li><a href="@Url.Action("Login", "User")">Đăng Nhập</a></li>
-                    <li><a href="@Url.Action("Register", "User")">Đăng Ký</a></li>
-                    <li><a href="@Url.Action("Wishlist", "User")">Danh Sách Yêu Thích</a></li>
+                    @{ 
+                        if(Session["TK"] != null)
+                        {
+                            <li><a href="#"><span>Xin chào, </span>@Session["TK"]</a></li>
+                            <li><a href="@Url.Action("Wishlist", "User")">Danh Sách Yêu Thích</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="@Url.Action("Login", "User")">Đăng Nhập</a></li>
+                            <li><a href="@Url.Action("Register", "User")">Đăng Ký</a></li>
+                            <li><a href="@Url.Action("Forgotpassword", "User")">Quên Mật Khẩu</a></li>
+                        }
+                    }
 
                 </ul>
             </div>
