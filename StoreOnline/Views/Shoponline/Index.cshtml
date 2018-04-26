@@ -186,22 +186,46 @@
         </div>
     </div>
     <!--Test San Pham-->
-    @*<div class="content-top ">
+    <div class="content-top ">
         <div class="container ">
             <div class="spec ">
-                <h3>Sản Phẩm Nổi Bật</h3>
+                <h3>Đặc Sản Nổi Bật</h3>
                 <div class="ser-t">
                     <b></b>
                     <span><i></i></span>
                     <b class="line"></b>
                 </div>
             </div>
-            @foreach (var SANPHAM in Model)
-            {
-                <li>
+            <div class="row">
+                @foreach (var sanpham in Model)
+                {
+
+                    <div class="col-md-3 m-wthree">
+                        <div class="col-m">
+                            <a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
+                                <img src="~/images/ab.jpg" class="img-responsive" alt="@sanpham.TENSP">
+                                <div class="offer"><p><span>Đặc Sản Nổi Bật</span></p></div>
+                            </a>
+                            <div class="mid-1">
+                                <div class="women">
+                                    <h6><a href="#">@sanpham.TENSP</a></h6>
+                                </div>
+                                <div class="mid-2">
+                                    <p><em class="item_price">@sanpham.GIABAN<span> VNĐ</span></em></p>
+                                    <div class="block">
+                                        <div class="starbox small ghosting"> </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="add">
+                                    <button class="btn btn-danger my-cart-btn my-cart-b " data-id="1" data-name="Moong" data-summary="summary 1" data-price="1.50" data-quantity="1" data-image="images/of.png">Thêm Vào Giỏ Hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            </div>
+            </div>
                     
-                </li>
-            }
-        </div>
-    </div>*@
 </body>

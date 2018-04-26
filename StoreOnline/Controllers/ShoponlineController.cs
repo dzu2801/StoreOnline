@@ -17,12 +17,18 @@ namespace StoreOnline.Controllers
         //}
 
         // GET: Shoponline
+        //Tao doi tuong daya chưa dữ liệu từ model dbBansach đã tạo. 
+        private List<SANPHAM> Laysanpham(int count)
+        {
+            //Sắp xếp sách theo ngày cập nhật, sau đó lấy top @count 
+            return db.SANPHAMs.OrderByDescending(a => a.TENSP).Take(count).ToList();
+        }
         public ActionResult Index()
         {
-            //var SpHot = SanPhamHot(5);
-            return View();
-        }
-
+            //Lấy top 5 Album bán chạy nhất
+            var sanpham = Laysanpham(30);
+            return View(sanpham);
+        }        
         public ActionResult Contact()
         {
             return View();
