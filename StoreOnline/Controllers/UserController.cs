@@ -193,5 +193,12 @@ namespace StoreOnline.Controllers
         //    }
         //    return View();
         //}
+
+        public ActionResult Logout()
+        {
+            Session["TK"] = null;
+            return RedirectToAction("Index","Shoponline");
+            
+        }
     }
 }
