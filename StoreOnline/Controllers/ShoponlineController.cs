@@ -25,7 +25,7 @@ namespace StoreOnline.Controllers
             int pageSize = 8;
             int pageNum = (page ?? 1);
             //Lấy sản phẩm
-            var sanpham = Laysanpham(30);
+            var sanpham = Laysanpham(50);
             return View(sanpham.ToPagedList(pageNum, pageSize));
         }        
         public ActionResult Contact()

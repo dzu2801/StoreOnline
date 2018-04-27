@@ -285,6 +285,8 @@ namespace StoreOnline.Models
 		
 		private System.Nullable<decimal> _GIABAN;
 		
+		private string _HINHANH;
+		
 		private EntitySet<DONDATHANG> _DONDATHANGs;
 		
 		private EntityRef<NHACUNGCAP> _NHACUNGCAP;
@@ -309,6 +311,8 @@ namespace StoreOnline.Models
     partial void OnGIAVONChanged();
     partial void OnGIABANChanging(System.Nullable<decimal> value);
     partial void OnGIABANChanged();
+    partial void OnHINHANHChanging(string value);
+    partial void OnHINHANHChanged();
     #endregion
 		
 		public SANPHAM()
@@ -478,6 +482,26 @@ namespace StoreOnline.Models
 					this._GIABAN = value;
 					this.SendPropertyChanged("GIABAN");
 					this.OnGIABANChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HINHANH", DbType="VarChar(100)")]
+		public string HINHANH
+		{
+			get
+			{
+				return this._HINHANH;
+			}
+			set
+			{
+				if ((this._HINHANH != value))
+				{
+					this.OnHINHANHChanging(value);
+					this.SendPropertyChanging();
+					this._HINHANH = value;
+					this.SendPropertyChanged("HINHANH");
+					this.OnHINHANHChanged();
 				}
 			}
 		}

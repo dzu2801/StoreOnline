@@ -17,6 +17,7 @@
       <Column Name="DONVITINH" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="GIAVON" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="GIABAN" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="HINHANH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Association Name="SANPHAM_DONDATHANG" Member="DONDATHANGs" ThisKey="MASP" OtherKey="MASP" Type="DONDATHANG" />
       <Association Name="SANPHAM_GIAMGIA" Member="GIAMGIAs" ThisKey="MASP" OtherKey="MASP" Type="GIAMGIA" />
       <Association Name="NHACUNGCAP_SANPHAM" Member="NHACUNGCAP" ThisKey="MANCC" OtherKey="MANCC" Type="NHACUNGCAP" IsForeignKey="true" />
