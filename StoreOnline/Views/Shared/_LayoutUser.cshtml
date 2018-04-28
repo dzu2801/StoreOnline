@@ -257,8 +257,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </ul>
                             </div>
                         </nav>
-                        <div >
-                            <span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+                        <div class="cart">
+                            <a href="@Url.Action("Giohang", "Giohang")"> <span class="fa fa-shopping-cart my-cart-icon">
+                                <span class="badge badge-notify my-cart-badge" @Html.Action("GiohangPartial", "Giohang")</span></span>
+                            </a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -365,7 +367,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     $().UItoTop({ easingType: 'easeOutQuart' });
                 });
     </script>
-    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+    @*<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
     <!-- //smooth scrolling -->
     <!-- for bootstrap working -->
     <script src="~/Scripts/bootstrap.js"></script>
@@ -409,10 +412,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
 
         });
-    </script>
+    </script>*@
 
     <!-- product -->
-    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    @*<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-info">
                 <div class="modal-header">
@@ -1178,6 +1181,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
         </div>
-    </div>
+    </div>*@
 </body>
 </html>

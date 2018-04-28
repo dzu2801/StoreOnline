@@ -42,7 +42,7 @@
                     
                     <div class="col-sm-4 col-lg-3 col-md-4 pro-1">
                         <div class="thumbnail col-m">
-                            <a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
+                            <a href="@Url.Action("Details", "Shoponline", new { masp = sanpham.MASP})" data-toggle="modal" data-target="#myModal1" class="offer-img">
                                 <img  alt="@sanpham.TENSP" src="~/images/sanpham/@sanpham.HINHANH" sizes="auto" class="img-responsive">
                                 <div class="offer"><p><span>Nổi Bật</span></p></div>
                             </a>
@@ -58,15 +58,14 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div>
-                                    <div id="Datmua">
-                                        <a href="@Url.Action("ThemGiohang", "GioHang", new { @iMasp= sanpham.MASP, @strURL=Request.Url.ToString() })" class="list-group-item">
-                                            ĐẶT MUA
-                                        </a>
+                                    <div class="add add-3">
+                                        <button class="btn btn-danger my-cart-btn my-cart-b ">
+                                            <a href="@Url.Action("ThemGiohang", "GioHang", new { @iMasp= sanpham.MASP, @strURL=Request.Url.ToString() })">
+                                                <p style="color:black">ĐẶT MUA</p>
+                                            </a>
+                                        </button>
                                     </div>
                                 </div>
-                                @*<div class="add">
-            <button class="btn btn-danger my-cart-btn my-cart-b " data-id=@sanpham.MASP data-name=@sanpham.TENSP data-summary="summary 1" data-price=@sanpham.GIABAN data-quantity="1" data-image="images/of.png">Thêm Vào Giỏ Hàng</button>
-        </div>*@
                             </div>
                         </div>
                     </div>

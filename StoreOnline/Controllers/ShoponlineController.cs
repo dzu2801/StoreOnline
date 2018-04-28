@@ -32,5 +32,13 @@ namespace StoreOnline.Controllers
         {
             return View();
         }
+
+        public ActionResult Details(string masp)
+        {
+            var sp = from s in db.SANPHAMs
+                     where s.MASP == masp
+                     select s;
+            return View(sp.Single());
+        }
     }
 }

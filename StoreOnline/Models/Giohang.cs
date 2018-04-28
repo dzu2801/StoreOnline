@@ -8,7 +8,7 @@ namespace StoreOnline.Models
     public class Giohang
     {
         //Tao doi tuong data chua dữ liệu từ model dbStoreOnline đã tạo. 
-         dbStoreOnlineDataContext data = new dbStoreOnlineDataContext();
+         dbStoreOnlineDataContext db = new dbStoreOnlineDataContext();
         public string iMasp { set; get; }
         public string sTensp { set; get; }
         public string sAnhsp { set; get; }
@@ -23,7 +23,7 @@ namespace StoreOnline.Models
         public Giohang(string Masach)
         {
             iMasp = Masach;
-            SANPHAM sp = data.SANPHAMs.Single(n => n.MASP == iMasp);
+            SANPHAM sp = db.SANPHAMs.Single(n => n.MASP == iMasp);
             sTensp = sp.TENSP;
             sAnhsp = sp.HINHANH;
             dDongia = double.Parse(sp.GIABAN.ToString());
