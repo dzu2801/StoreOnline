@@ -105,7 +105,7 @@ namespace StoreOnline.Controllers
 
         public ActionResult Wishlist()
         {
-            if (Session["tentk"] == null || Session["Taikhoan"] == null)
+            if (Session["TK"] == null)
             {
                 return RedirectToAction("Login", "User");
             }
@@ -203,6 +203,10 @@ namespace StoreOnline.Controllers
 
         public ActionResult Info()
         {
+            if (Session["TK"] == null)
+            {
+                return RedirectToAction("Login", "User");
+            }
             return View();
         }
     }
