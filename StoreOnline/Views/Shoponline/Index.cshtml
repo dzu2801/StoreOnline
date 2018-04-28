@@ -57,9 +57,16 @@
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
-                                <div class="add">
-                                    <button class="btn btn-danger my-cart-btn my-cart-b " data-id=@sanpham.MASP data-name=@sanpham.TENSP data-summary="summary 1" data-price=@sanpham.GIABAN data-quantity="1" data-image="images/of.png">Thêm Vào Giỏ Hàng</button>
+                                <div>
+                                    <div id="Datmua">
+                                        <a href="@Url.Action("ThemGiohang", "GioHang", new { @iMasp= sanpham.MASP, @strURL=Request.Url.ToString() })" class="list-group-item">
+                                            ĐẶT MUA
+                                        </a>
+                                    </div>
                                 </div>
+                                @*<div class="add">
+            <button class="btn btn-danger my-cart-btn my-cart-b " data-id=@sanpham.MASP data-name=@sanpham.TENSP data-summary="summary 1" data-price=@sanpham.GIABAN data-quantity="1" data-image="images/of.png">Thêm Vào Giỏ Hàng</button>
+        </div>*@
                             </div>
                         </div>
                     </div>
