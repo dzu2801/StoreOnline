@@ -25,6 +25,10 @@ namespace StoreOnline.Controllers
         //Them hang vao gio
         public ActionResult ThemGiohang(string iMasp, string strURL)
         {
+            if (Session["TK"] == null || Session["TK"].ToString() == "")
+            {
+                return RedirectToAction("Login", "User");
+            }
             //Lay ra Session gio hang
             List<Giohang> lstGiohang = Laygiohang();
             //Kiem tra sách này tồn tại trong Session["Giohang"] chưa?
