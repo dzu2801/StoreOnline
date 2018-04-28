@@ -955,3 +955,167 @@ html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+.wrap .account-profile .form-group .btn-update {
+    border: none;
+    width: 176px;
+    height: 40px;
+    border-radius: 4px;
+    color: #4a4a4a;
+    font-size: 14px;
+    background-color: #fdd835;
+}
+
+.btn-info {
+    background: #00b6f0;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .btn, .btn-adn.active, .btn-adn:active, .btn-bitbucket.active, .btn-bitbucket:active, .btn-danger.active, .btn-danger:active, .btn-default.active, .btn-default:active, .btn-dropbox.active, .btn-dropbox:active, .btn-facebook.active, .btn-facebook:active, .btn-flickr.active, .btn-flickr:active, .btn-github.active, .btn-github:active, .btn-google.active, .btn-google:active, .btn-info.active, .btn-info:active, .btn-instagram.active, .btn-instagram:active, .btn-linkedin.active, .btn-linkedin:active, .btn-microsoft.active, .btn-microsoft:active, .btn-odnoklassniki.active, .btn-odnoklassniki:active, .btn-openid.active, .btn-openid:active, .btn-pinterest.active, .btn-pinterest:active, .btn-primary.active, .btn-primary:active, .btn-reddit.active, .btn-reddit:active, .btn-soundcloud.active, .btn-soundcloud:active, .btn-success.active, .btn-success:active, .btn-tumblr.active, .btn-tumblr:active, .btn-twitter.active, .btn-twitter:active, .btn-vimeo.active, .btn-vimeo:active, .btn-vk.active, .btn-vk:active, .btn-warning.active, .btn-warning:active, .btn-yahoo.active, .btn-yahoo:active, .btn-zalo.active, .btn-zalo:active, .btn.active, .btn:active, .dropdown-menu > .disabled > a:focus, .dropdown-menu > .disabled > a:hover, .form-control, .open > .btn-adn.dropdown-toggle, .open > .btn-bitbucket.dropdown-toggle, .open > .btn-danger.dropdown-toggle, .open > .btn-default.dropdown-toggle, .open > .btn-dropbox.dropdown-toggle, .open > .btn-facebook.dropdown-toggle, .open > .btn-flickr.dropdown-toggle, .open > .btn-github.dropdown-toggle, .open > .btn-google.dropdown-toggle, .open > .btn-info.dropdown-toggle, .open > .btn-instagram.dropdown-toggle, .open > .btn-linkedin.dropdown-toggle, .open > .btn-microsoft.dropdown-toggle, .open > .btn-odnoklassniki.dropdown-toggle, .open > .btn-openid.dropdown-toggle, .open > .btn-pinterest.dropdown-toggle, .open > .btn-primary.dropdown-toggle, .open > .btn-reddit.dropdown-toggle, .open > .btn-soundcloud.dropdown-toggle, .open > .btn-success.dropdown-toggle, .open > .btn-tumblr.dropdown-toggle, .open > .btn-twitter.dropdown-toggle, .open > .btn-vimeo.dropdown-toggle, .open > .btn-vk.dropdown-toggle, .open > .btn-warning.dropdown-toggle, .open > .btn-yahoo.dropdown-toggle, .open > .btn-zalo.dropdown-toggle {
+        background-image: none;
+    }
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+    button, html input[type=button], input[type=reset], input[type=submit] {
+        -webkit-appearance: button;
+        cursor: pointer;
+    }
+
+button, select {
+    text-transform: none;
+}
+
+button {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    padding: 1px 6px;
+}
+
+user agent stylesheet
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}
+
+user agent stylesheet
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+
+user agent stylesheet
+input, textarea, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb !important;
+}
+
+user agent stylesheet
+button {
+    -webkit-appearance: button;
+}
+
+.tiki-account {
+    font-family: Roboto,sans-serif,arial;
+    background-color: #f4f4f4;
+}
+
+body {
+    min-height: 100%;
+    line-height: normal;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    background: #f4f4f4;
+    padding: 0 !important;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
