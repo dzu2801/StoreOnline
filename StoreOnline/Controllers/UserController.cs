@@ -200,5 +200,10 @@ namespace StoreOnline.Controllers
             return RedirectToAction("Index","Shoponline");
             
         }
+
+        public ActionResult Info()
+        {
+            return View();
+        }
     }
 }

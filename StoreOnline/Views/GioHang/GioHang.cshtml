@@ -29,7 +29,7 @@
     {
         <tr style="text-align:center; font-weight:bold">
             <td> @item.iMasp </td>
-            <td> @item.sTensp</td>
+            <td><a href="@Url.Action("Details", "Shoponline", new { masp = item.iMasp })">@item.sTensp</a></td>
             <td><img src="~/images/sanpham/@item.sAnhsp" width="70px" height="70px"></td>
             @using (Html.BeginForm("CapnhatGiohang", "Giohang", new { @iMaSp = item.iMasp }))
             {
