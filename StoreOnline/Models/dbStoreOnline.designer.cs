@@ -51,7 +51,7 @@ namespace StoreOnline.Models
     #endregion
 		
 		public dbStoreOnlineDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SHOPDACSANConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SHOPDACSANConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

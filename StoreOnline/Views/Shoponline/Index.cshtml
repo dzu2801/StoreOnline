@@ -17,7 +17,7 @@
                 </h3>
                 <div class="search-form">
                     <form action="#" method="post">
-                        <input type="text" placeholder="Search..." name="Search...">
+                        <input type="text" value="Search" name="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
                         <input type="submit" value=" ">
                     </form>
                 </div>
