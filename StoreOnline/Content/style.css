@@ -516,7 +516,7 @@ span.fa.fa-shopping-cart.my-cart-icon {
     -ms-transition: 0.5s all;
 }
  ::-webkit-input-placeholder{
-	color:#fff;
+	color:#ff;
 }
 
 :-moz-placeholder { /* Firefox 18- */

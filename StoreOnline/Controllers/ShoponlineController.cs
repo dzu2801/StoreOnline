@@ -44,5 +44,6 @@ namespace StoreOnline.Controllers
                      select s;
             return View(sp.Single());
         }
+
     }
 }

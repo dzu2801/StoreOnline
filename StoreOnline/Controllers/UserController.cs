@@ -221,7 +221,7 @@ namespace StoreOnline.Controllers
             
         }
 
-        public ActionResult Info()
+        public ActionResult Info(string tk)
         {
             if (Session["TK"] == null)
             {

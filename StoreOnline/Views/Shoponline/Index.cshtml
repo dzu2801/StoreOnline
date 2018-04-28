@@ -39,12 +39,11 @@
             <div class="row">
                 @foreach (var sanpham in Model)
                 {
-
                     <div class="col-sm-4 col-lg-3 col-md-4 pro-1">
                         <div class="thumbnail col-m">
                             <a href="@Url.Action("Details", "Shoponline", new { masp = sanpham.MASP })" data-toggle="modal" data-target="#myModal1" class="offer-img">
-                                <img  alt="@sanpham.TENSP" src="~/images/sanpham/@sanpham.HINHANH" sizes="auto" class="img-responsive">
-                                <div class="offer"><p><span>Nổi Bật</span></p></div>
+                                <img alt="@sanpham.TENSP" src="~/images/sanpham/@sanpham.HINHANH" sizes="auto" class="img-responsive">
+                                <div class="offer"><p><span>@sanpham.LOAI</span></p></div>
                             </a>
                             <div class="mid-1">
                                 <div style="height:30px">
@@ -76,9 +75,9 @@
                     <li>
                         @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
                     </li>
-			    </ul>
+                </ul>
             </div>
         </div>
     </div>
-                    
+
 </body>
