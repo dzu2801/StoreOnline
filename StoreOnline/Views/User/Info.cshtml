@@ -3,9 +3,6 @@
     ViewBag.Title = "Info";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
-@*@{ 
-    KHACHHANG kh = (KHACHHANG)Session["TK"];
-}*@
 @Html.ValidationSummary(true)
 <div class="banner-top">
     <div class="container">
@@ -60,25 +57,61 @@
                                 <div class="row">
                                     <div class="col-xs-4">
                                         <label>
-                                            <input type="radio" name="gender" value="on" id="gender_male" class="gender" checked="">
-                                            <span>
-                                                <i class="ico"></i>
-                                            </span>
+                                            @if (Model.GIOITINH.ToString().Contains("Nam"))
+            {
+                                <input type="radio" name="gender" value="Nam" id="gender_male" class="gender" checked="">
+                                <span>
+                                    <i class="ico"></i>
+                                </span>
+}
+else
+{
+                                <input type="radio" name="gender" value="Nam" id="gender_male" class="gender">
+                                <span>
+                                    <i class="ico"></i>
+                                </span>
+}
                                             Nam
 
                                         </label>
-
                                     </div>
                                     <div class="col-xs-4">
                                         <label>
-
-                                            <input type="radio" name="gender" value="off" id="gender_female" class="gender">
-                                            <span>
-                                                <i class="ico"></i>
-                                            </span>
+                                            @if (Model.GIOITINH.ToString().Contains("Nữ"))
+            {
+                                <input type="radio" name="gender" value="Nữ" id="gender_male" class="gender" checked="">
+                                <span>
+                                    <i class="ico"></i>
+                                </span>
+}
+else
+{
+                                <input type="radio" name="gender" value="Nữ" id="gender_male" class="gender">
+                                <span>
+                                    <i class="ico"></i>
+                                </span>
+}
                                             Nữ
                                         </label>
-
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <label>
+                                            @if (Model.GIOITINH.ToString().Contains("Khác"))
+                                            {
+                                                <input type="radio" name="gender" value="Khác" id="gender_male" class="gender" checked="">
+                                                <span>
+                                                    <i class="ico"></i>
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <input type="radio" name="gender" value="Khác" id="gender_male" class="gender">
+                                                <span>
+                                                    <i class="ico"></i>
+                                                </span>
+                                            }
+                                                Khác
+                                        </label>
                                     </div>
                                 </div>
                                 <span class="help-block">Vui lòng chọn giới tính</span>
