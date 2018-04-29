@@ -221,13 +221,16 @@ namespace StoreOnline.Controllers
             
         }
 
-        public ActionResult Info(string tk)
+        public ActionResult Info()
         {
-            if (Session["TK"] == null)
+            if (Session["TK"] == null || Session["TK"].ToString() == "")
             {
                 return RedirectToAction("Login", "User");
             }
-            return View();
+            var kh = from s in db.KHACHHANGs
+                     where s.TK == Session["TK"].ToString()
+                     select s;
+            return View(kh.Single());
         }
     }
 }
