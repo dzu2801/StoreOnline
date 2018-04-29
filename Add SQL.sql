@@ -144,7 +144,7 @@ VALUES ('', N'Khô Cá Điêu Hồng 200gr', N'Khô', 0, N'NCC0008', N'Gói', CA
 
 /************************TƯ BÔNG**************************************/
 INSERT [dbo].[SANPHAM] ([MASP], [TENSP], [LOAI], [SOLUONG], [MANCC], [DONVITINH], [GIAVON], [GIABAN], [HINHANH]) 
-VALUES ('', N'Mứt Khóm 220gr', N'Mứt', 0, N'NCC0009', N'Hộp', CAST(38000 AS Decimal(18, 0)), CAST(40000 AS Decimal(18, 0)), N'mut khom.jpg')
+VALUES ('', N'Mứt Khóm 220gr', N'Mứt', 0, N'NCC0009', N'Hộp', CAST(38000 AS Decimal(18, 0)), CAST(40000 AS Decimal(18, 0)), N'mut khom 220gr.jpg')
 INSERT [dbo].[SANPHAM] ([MASP], [TENSP], [LOAI], [SOLUONG], [MANCC], [DONVITINH], [GIAVON], [GIABAN], [HINHANH]) 
 VALUES ('', N'Mứt Chuối Phồng Mè 220gr', N'Mứt', 0, N'NCC0009', N'Hộp', CAST(33000 AS Decimal(18, 0)), CAST(35000 AS Decimal(18, 0)), N'mut chuoi phong me 220gr.jpg')
 INSERT [dbo].[SANPHAM] ([MASP], [TENSP], [LOAI], [SOLUONG], [MANCC], [DONVITINH], [GIAVON], [GIABAN], [HINHANH]) 
@@ -152,7 +152,7 @@ VALUES ('', N'Mứt Chuối Phồng Hạt Điều 220gr', N'Mứt', 0, N'NCC0009
 INSERT [dbo].[SANPHAM] ([MASP], [TENSP], [LOAI], [SOLUONG], [MANCC], [DONVITINH], [GIAVON], [GIABAN], [HINHANH]) 
 VALUES ('', N'Mứt Chuối Phòng Hạt Điều 170gr', N'Mứt', 0, N'NCC0009', N'Hộp', CAST(31000 AS Decimal(18, 0)), CAST(32000 AS Decimal(18, 0)), N'mut chuoi phong hat dieu 170gr.jpg')
 INSERT [dbo].[SANPHAM] ([MASP], [TENSP], [LOAI], [SOLUONG], [MANCC], [DONVITINH], [GIAVON], [GIABAN], [HINHANH]) 
-VALUES ('', N'Mứt Chuối Phồng Mãng Cầu 220gr', N'Mứt', 0, N'NCC0009', N'Hộp', CAST(43000 AS Decimal(18, 0)), CAST(45000 AS Decimal(18, 0)), N'mut chuoi phong mang cau 220gr.jpg')
+VALUES ('', N'Mứt Chuối Phồng Mãng Cầu 220gr', N'Mứt', 0, N'NCC0009', N'Hộp', CAST(43000 AS Decimal(18, 0)), CAST(45000 AS Decimal(18, 0)), N'mut mang cau 220gr.jpg')
 INSERT [dbo].[SANPHAM] ([MASP], [TENSP], [LOAI], [SOLUONG], [MANCC], [DONVITINH], [GIAVON], [GIABAN], [HINHANH]) 
 VALUES ('', N'Mứt Chuối Phồng Mãng Cầu 150gr', N'Mứt', 0, N'NCC0009', N'Hộp', CAST(33000 AS Decimal(18, 0)), CAST(35000 AS Decimal(18, 0)), N'mut chuoi phong mang cau 150gr.jpg')
 INSERT [dbo].[SANPHAM] ([MASP], [TENSP], [LOAI], [SOLUONG], [MANCC], [DONVITINH], [GIAVON], [GIABAN], [HINHANH]) 
