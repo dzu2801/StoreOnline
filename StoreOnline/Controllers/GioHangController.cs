@@ -25,10 +25,10 @@ namespace StoreOnline.Controllers
         //Them hang vao gio
         public ActionResult ThemGiohang(string iMasp, string strURL)
         {
-            if (Session["TK"] == null || Session["TK"].ToString() == "")
-            {
-                return RedirectToAction("Login", "User");
-            }
+            //if (Session["TK"] == null || Session["TK"].ToString() == "")
+            //{
+            //    return RedirectToAction("Login", "User");
+            //}
             //Lay ra Session gio hang
             List<Giohang> lstGiohang = Laygiohang();
             //Kiem tra sách này tồn tại trong Session["Giohang"] chưa?
@@ -63,7 +63,7 @@ namespace StoreOnline.Controllers
         private int TongSoLuong()
         {
             int iTongSoLuong = 0;
-            List<Giohang> lstGiohang = Session["GioHang"] as List<Giohang>;
+            List<Giohang> lstGiohang = Session["Giohang"] as List<Giohang>;
             if (lstGiohang != null)
             {
                 iTongSoLuong = lstGiohang.Sum(n => n.iSoluong);
@@ -74,7 +74,7 @@ namespace StoreOnline.Controllers
         private double TongTien()
         {
             double iTongTien = 0;
-            List<Giohang> lstGiohang = Session["GioHang"] as List<Giohang>;
+            List<Giohang> lstGiohang = Session["Giohang"] as List<Giohang>;
             if (lstGiohang != null)
             {
                 iTongTien = lstGiohang.Sum(n => n.dThanhtien);
@@ -114,14 +114,14 @@ namespace StoreOnline.Controllers
             if (sanpham != null)
             {
                 lstGiohang.RemoveAll(n => n.iMasp == iMaSP);
-                return RedirectToAction("GioHang");
+                return RedirectToAction("Giohang");
 
             }
             if (lstGiohang.Count == 0)
             {
                 return RedirectToAction("Index", "Shoponline");
             }
-            return RedirectToAction("GioHang");
+            return RedirectToAction("Giohang");
         }
         //Xoa tat ca thong tin trong Gio hang
         public ActionResult XoaTatcaGiohang()
@@ -131,5 +131,17 @@ namespace StoreOnline.Controllers
             lstGiohang.Clear();
             return RedirectToAction("Index", "Shoponline");
         }
+
+//        public ActionResult test()
+//        {
+//            List<Giohang> lstGiohang = Laygiohang();
+//            if (lstGiohang.Count == 0)
+//            {
+//                return RedirectToAction("Index", "Shoponline");
+//            }
+//            ViewBag.Tongsoluong = TongSoLuong();
+//            ViewBag.Tongtien = TongTien();
+//            return View(lstGiohang);
+//=        }
     }
 }

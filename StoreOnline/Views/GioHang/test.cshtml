@@ -1,0 +1,61 @@
+﻿@using StoreOnline.Models
+@model List<Giohang>
+@{
+    ViewBag.Title = "test";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div class="modal fade in" id="my-cart-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block; padding-right: 0px;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng của tôi</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-hover table-responsive" id="my-cart-table">
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr title="summary 3" data-id="3" data-price="2.00">
+                                <td class="text-center" style="width: 30px;">
+                                    <img width="30px" height="30px" src="~/images/sanpham/@item.sAnhsp">
+                                </td>
+                                <td>@item.sTensp</td>
+                                <td title="Remove from Cart" class="text-center" style="width: 30px;">
+                                    <a href="javascript:void(0);" class="btn btn-xs btn-danger my-product-remove">X</a>
+                                </td>
+                                @using (Html.BeginForm("CapnhatGiohang", "Giohang", new { @iMaSp = item.iMasp }))
+                                {
+                                    <td title="Quantity">
+                                        <input type="number" min="1" style="width: 70px;" class="my-product-quantity" value="@item.iSoluong">
+                                    </td>
+                                    <td title="Unit Price">@String.Format("{0:0,0}", item.dDongia)</td>
+                                    <td title="Total" class="my-product-total">@String.Format("{0:0,0}", item.dThanhtien)</td>
+
+                                    <td> <span style="color:red">@Html.ActionLink("Xóa", "XoaGiohang", new { @iMaSp = item.iMasp })</span></td>
+                                    <td> <input type="submit" value="Cập Nhật" style="color:blue" /></td>
+                                }
+
+                            </tr>
+                        }
+                        <tr>
+                                <td></td>
+                                <td><strong>Tổng Tiền</strong></td>
+                                <td></td>
+                                <td></td>
+                                <td><strong id="my-cart-grand-total">@String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ</strong></td>
+                                <td></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+             </div>
+             <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+             </div>
+        </div>
+    </div>
+</div>

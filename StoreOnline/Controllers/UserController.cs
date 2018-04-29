@@ -86,7 +86,7 @@ namespace StoreOnline.Controllers
 
             return this.Register();
         }
-
+        
         [HttpGet]
         public ActionResult Login()
         {
@@ -176,43 +176,11 @@ namespace StoreOnline.Controllers
                 else
                 {
                     ViewBag.Thongbao = "Tài khoản hoặc Email không đúng";
+                    return View();
                 }
             }
             return View();
         }
-
-        //[HttpGet]
-        //public ActionResult Resetpassword()
-        //{
-        //    return View();
-        //}
-        //[HttpPost]
-        //public ActionResult Resetpassword(FormCollection collection, KHACHHANG kh)
-        //{
-        //    var matkhau = collection["Password"];
-        //    var matkhaunl = collection["Confirm Password"];
-        //    if (Convert.ToString(matkhau) == "Password")
-        //    {
-        //        ViewData["loi1"] = "Không được bỏ trống";
-        //    }
-        //    else if (Convert.ToString(matkhaunl) == "Confirm Password")
-        //    {
-        //        ViewData["loi2"] = "Không được bỏ trống";
-        //    }
-        //    else if (Convert.ToString(matkhau) != Convert.ToString(matkhaunl))
-        //    {
-        //        ViewData["loi3"] = "Mật khẩu nhập lại phải trùng trước đó";
-        //    }
-        //    else
-        //    {
-        //        kh = (KHACHHANG)Session["tkrs"];    
-        //        kh.MK = matkhau;
-        //        db.KHACHHANGs.InsertOnSubmit(kh);
-        //        db.SubmitChanges();
-        //        return RedirectToAction("Login");
-        //    }
-        //    return View();
-        //}
 
         public ActionResult Logout()
         {
@@ -220,7 +188,7 @@ namespace StoreOnline.Controllers
             return RedirectToAction("Index","Shoponline");
             
         }
-
+        [HttpGet]
         public ActionResult Info()
         {
             if (Session["TK"] == null || Session["TK"].ToString() == "")
@@ -231,6 +199,23 @@ namespace StoreOnline.Controllers
                      where s.TK == Session["TK"].ToString()
                      select s;
             return View(kh.Single());
+        }
+        [HttpPost]
+        public ActionResult Info(FormCollection collection)
+        {
+            ViewData["loi2"] = "Cập nhập không thành công";
+            var tenkh = collection["Tenkh"];
+            var email = collection["Email"];
+            var diachi = collection["Diachi"];
+            var dienthoai = collection["Dienthoai"];
+            var matk = collection["Matk"];
+            KHACHHANG kh = db.KHACHHANGs.Where(s => s.MAKH == matk.ToString()).Single();
+            kh.EMAILKH = email;
+            kh.TENKH = tenkh;
+            kh.DIACHIKH = diachi;
+            kh.DTKH = dienthoai;
+            db.SubmitChanges();
+            return RedirectToAction("Index", "Shoponline");
         }
     }
 }
