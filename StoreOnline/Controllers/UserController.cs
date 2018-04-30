@@ -108,7 +108,7 @@ namespace StoreOnline.Controllers
             }
             else
             {
-                KHACHHANG kh = db.KHACHHANGs.SingleOrDefault(n => n.TK == taikhoan && n.MK == matkhau);
+                KHACHHANG kh = db.KHACHHANGs.Where(n => n.TK == taikhoan && n.MK == matkhau).Single();
                 if (kh != null)
                 {
                     Session["TK"] = taikhoan;
@@ -209,13 +209,19 @@ namespace StoreOnline.Controllers
             var diachi = collection["Diachi"];
             var dienthoai = collection["Dienthoai"];
             var matk = collection["Matk"];
-            KHACHHANG kh = db.KHACHHANGs.Where(s => s.MAKH == matk.ToString()).Single();
-            kh.EMAILKH = email;
-            kh.TENKH = tenkh;
-            kh.DIACHIKH = diachi;
-            kh.DTKH = dienthoai;
-            db.SubmitChanges();
-            return RedirectToAction("Index", "Shoponline");
+            var matkhaucu = collection["Old Password"];
+            var matkhau = collection["Password"];
+            var matkhaunl = collection["Confirm Password"];
+
+                KHACHHANG kh = db.KHACHHANGs.Where(s => s.MAKH == matk.ToString()).Single();
+                
+                    kh.EMAILKH = email;
+                    kh.TENKH = tenkh;
+                    kh.DIACHIKH = diachi;
+                    kh.DTKH = dienthoai;
+                    kh.MK = matkhau;
+                    db.SubmitChanges();
+                    return RedirectToAction("Index", "Shoponline");
         }
     }
 }

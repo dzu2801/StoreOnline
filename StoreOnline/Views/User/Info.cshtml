@@ -15,151 +15,133 @@
 <div class="login">
     <div class="main-agileits">
         <div class="form-w3agile form1">
-            @ViewData["loi2"]
-            <div class="content-right">
-                <h1 class="have-margin">Thông Tin Tài Khoản</h1>
-                <div class="account-profile register-form">
-                    <form class="content">
-                        <div class="form-group">
-                            <label class="control-label" for="full_name">Họ tên </label>
-                            <div class="input-wrap">
-                                <input type="text" name="Tenkh" class="form-control" value="@Model.TENKH" placeholder="Họ tên">
-                                <span class="help-block"></span>
-                            </div>
-                        </div>
+            <h3>Thông Tin</h3>
+            @ViewData["loi9"]
+            <form action="#" method="post">
+                <label>Họ tên</label>
+                @ViewData["loi2"]
+                <div class="key">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="text" value="@Model.TENKH" name="Tenkh" onfocus="this.value = '@Model.TENKH'; onblur="if (this.value == '') {this.value = 'Họ Tên';}" required="">
+                    <span class="help-block"></span>
+                    <div class="clearfix"></div>
+                </div>
 
-                        <div class="form-group ">
-                            <label class="control-label" for="phone_number">Số điện thoại</label>
-                            <div class="input-wrap update-phone">
-                                <input type="text" placeholder="Hãy nhập SĐT để trải nghiệm tốt hơn" name="Sdt" value="@Model.DTKH" class="form-control">
-                                <span class="help-block"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="email">Email</label>
-                            <div class="input-wrap">
-                                <input type="email" name="Email" value="@Model.EMAILKH" class="form-control" placeholder="Email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="address">Address</label>
-                            <div class="input-wrap">
-                                <input type="text" name="Diachi" value="@Model.DIACHIKH" class="form-control" placeholder="Address">
-                            </div>
-                        </div>
-                        <div class="form-group gender-select-wrap" id="register_name">
-                            <label class="control-label" for="pasword">Giới tính</label>
-                            <div class="input-wrap">
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <label>
-                                            @if (Model.GIOITINH.ToString().Contains("Nam"))
+                <label>Email</label>
+                @ViewData["loi3"]
+                <div class="key">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <input type="text" value="@Model.EMAILKH" name="Email" onfocus="this.value = '@Model.EMAILKH';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                    <div class="clearfix"></div>
+                </div>
+                <label>Địa chỉ</label>
+                @ViewData["loi4"]
+                <div class="key">
+                    <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
+                    <input type="text" value="@Model.DIACHIKH" name="Diachi" onfocus="this.value = '@Model.DIACHIKH';" onblur="if (this.value == '') {this.value = 'Địa Chỉ';}" required="">
+                    <div class="clearfix"></div>
+                </div>
+                <label>Điện thoại</label>
+                @ViewData["loi5"]
+                <div class="key">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <input type="text" value="@Model.DTKH" name="Dienthoai" onfocus="this.value = '@Model.DTKH';" onblur="if (this.value == '') {this.value = 'Số Điện Thoại';}" required="">
+                    <div class="clearfix"></div>
+                </div>
+                <div class="form-group gender-select-wrap" id="register_name">
+                    <label class="control-label" for="pasword">Giới tính</label>
+                    <div class="input-wrap">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <label>
+                                    @if (Model.GIOITINH.ToString().Contains("Nam"))
                                     {
                                         <input type="radio" name="gender" value="Nam" id="gender_male" class="gender" checked="">
                                         <span>
                                             <i class="ico"></i>
                                         </span>
-                            }
-                            else
-                            {
-                                <input type="radio" name="gender" value="Nam" id="gender_male" class="gender">
-                                <span>
-                                    <i class="ico"></i>
-                                </span>
-                    }
-                                            Nam
-
-                                        </label>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <label>
-                                            @if (Model.GIOITINH.ToString().Contains("Nữ"))
+                                    }
+                                    else
+                                    {
+                                        <input type="radio" name="gender" value="Nam" id="gender_male" class="gender">
+                                        <span>
+                                            <i class="ico"></i>
+                                        </span>
+                                    }
+                                    Nam
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label>
+                                    @if (Model.GIOITINH.ToString().Contains("Nữ"))
                                     {
                                         <input type="radio" name="gender" value="Nữ" id="gender_male" class="gender" checked="">
                                         <span>
                                             <i class="ico"></i>
                                         </span>
-                            }
-                            else
-                            {
-                                <input type="radio" name="gender" value="Nữ" id="gender_male" class="gender">
-                                <span>
-                                    <i class="ico"></i>
-                                </span>
-                    }
-                                            Nữ
-                                        </label>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <label>
-                                            @if (Model.GIOITINH.ToString().Contains("Khác"))
+                                    }
+                                    else
+                                    {
+                                        <input type="radio" name="gender" value="Nữ" id="gender_male" class="gender">
+                                        <span>
+                                            <i class="ico"></i>
+                                        </span>
+                                    }
+                                    Nữ
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label>
+                                    @if (Model.GIOITINH.ToString().Contains("Khác"))
                                     {
                                         <input type="radio" name="gender" value="Khác" id="gender_male" class="gender" checked="">
                                         <span>
                                             <i class="ico"></i>
                                         </span>
-                            }
-                            else
-                            {
-                                <input type="radio" name="gender" value="Khác" id="gender_male" class="gender">
-                                <span>
-                                    <i class="ico"></i>
-                                </span>
-                    }
-                                            Khác
-                                        </label>
-                                    </div>
-                                </div>
-                                <span class="help-block">Vui lòng chọn giới tính</span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-wrap margin">
-                                <!-- <label for="change-password" class="icheck-wrap">
-                            <input type="checkbox" id="change-password" class="icheck js-icheck" >
-                            Thay đổi mật khẩu.
-                        </label> -->
-                                <label class="checkbox">
-
-                                    <input type="checkbox" id="is_change_pass" name="is_change_pass" value="checked">
-                                    <span class="ico"></span> Thay đổi mật khẩu
-
+                                    }
+                                    else
+                                    {
+                                        <input type="radio" name="gender" value="Khác" id="gender_male" class="gender">
+                                        <span>
+                                            <i class="ico"></i>
+                                        </span>
+                                    }
+                                    Khác
                                 </label>
-
                             </div>
                         </div>
-                        <div class="password-group" style="display: block;">
-                            <div class="form-group">
-                                <label class="control-label" for="old_password">Mật khẩu cũ</label>
-                                <div class="input-wrap">
-                                    <input type="password" name="old_password" class="form-control" id="old_password" value="" autocomplete="off" placeholder="Nhập mật khẩu cũ">
-                                    <span class="help-block"></span>
-                                </div>
-
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label" for="new-password">Mật khẩu mới</label>
-                                <div class="input-wrap">
-                                    <input type="password" name="new_password" class="form-control" id="new_password" value="" autocomplete="off" placeholder="Mật khẩu từ 6 đến 32 ký tự">
-                                    <span class="help-block"></span>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label" for="re_new_password">Nhập lại</label>
-                                <div class="input-wrap">
-                                    <input type="password" name="re_new_password" class="form-control" id="re_new_password" value="" autocomplete="off" placeholder="Nhập lại mật khẩu mới">
-                                    <span class="help-block"></span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <input type="hidden" name="Matk" value=@Model.MAKH>
-                        <input type="submit" value="Cập Nhập">
-                    </form>
+                        <span class="help-block"></span>
+                        <div class="clearfix"></div>
+                    </div>
                 </div>
-            </div>
+                <label>Mật khẩu cũ</label>
+                @ViewData["loi7"]
+                <div class="key">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" value="Nhập Lại Mật Khẩu Mới" name="Old Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập Lại Mật Khẩu Mới';}" required="">
+                    <div class="clearfix"></div>
+                </div>
+                <label>Mật khẩu mới</label>
+                @ViewData["loi7"]
+                <div class="key">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" value="Nhập Lại Mật Khẩu Mới" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập Lại Mật Khẩu Mới';}" required="">
+                    <div class="clearfix"></div>
+                </div>
+
+                <label>Nhập lại mật khẩu</label>
+                @ViewData["loi8"]
+                <div class="key">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" value="Nhập Lại Mật Khẩu Mới" name="Confirm Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập Lại Mật Khẩu Mới';}" required="">
+                    <div class="clearfix"></div>
+                </div>
+                <input type="hidden" name="Matk" value=@Model.MAKH>
+
+                <input type="submit" value="Cập Nhật">
+            </form>
         </div>
+
     </div>
 </div>
+
