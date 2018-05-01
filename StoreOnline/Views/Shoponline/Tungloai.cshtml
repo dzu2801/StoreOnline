@@ -6,7 +6,12 @@
 
 <div class="banner-top">
     <div class="container">
-        <h3>Các Đặc Sản</h3>
+        @foreach (var sp in Model) 
+        {
+            <h3>Loại @sp.LOAI</h3>
+            break;
+        }
+        
         <h4><a href="@Url.Action("Index", "Shoponline")">Trang Chủ</a><label>/</label><span>Các Đặc Sản: </span>Loai</h4>
         <div class="clearfix"> </div>
     </div>

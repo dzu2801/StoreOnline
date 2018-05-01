@@ -58,5 +58,13 @@ namespace StoreOnline.Controllers
                      select s;
             return View(sp);
         }
+        public ActionResult Giaohang()
+        {
+            return View();
+        }
+        public ActionResult Mota()
+        {
+            return View();
+        }
     }
 }

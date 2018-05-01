@@ -84,7 +84,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li><a href="@Url.Action("Logout", "User")"><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng Xuất</a></li>
                             <li><a href="@Url.Action("Wishlist", "User")"><i class="fa fa-heart" aria-hidden="true"></i>Danh Sách Yêu Thích</a></li>
                             <li><a href="about.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Lịch Sử Đặt Hàng</a></li>
-                            <li><a href="shipping.html"><i class="fa fa-ship" aria-hidden="true"></i>Giao Hàng</a></li>
+                            <li><a href="@Url.Action("Giaohang", "Shoponline")"><i class="fa fa-ship" aria-hidden="true"></i>Giao Hàng</a></li>
                         }
                         else
                         {
@@ -229,7 +229,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         </ul>
                                     </li>
 
-                                    <li><a href="codes.html" class="hyper"> <span>Mô Tả</span></a></li>
+                                    <li><a href="@Url.Action("Mota", "Shoponline")" class="hyper"> <span>Mô Tả</span></a></li>
                                     <li><a href="@Url.Action("Contact", "Shoponline")" class="hyper"><span>Liên Hệ</span></a></li>
                                 </ul>
                             </div>
@@ -272,14 +272,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li><a href="kitchen.html">Kitchen</a></li>
                     <li><a href="care.html">Personal Care</a></li>
                     <li><a href="hold.html">Household</a></li>
-                    <li><a href="codes.html">Mô Tả</a></li>
+                    <li><a href="@Url.Action("Mota", "Shoponline")">Mô Tả</a></li>
                     <li><a href="@Url.Action("Contact", "Shoponline")">Liên Hệ</a></li>
                 </ul>
             </div>
             <div class="col-md-3 footer-grid ">
                 <h3>Dịch Vụ Khách Hàng</h3>
                 <ul>
-                    <li><a href="shipping.html">Giao Hàng</a></li>
+                    <li><a href="@Url.Action("Giaohang", "Shoponline")">Giao Hàng</a></li>
                     <li><a href="terms.html">Terms & Conditions</a></li>
                     <li><a href="faqs.html">Faqs</a></li>
                     <li><a href="@Url.Action("Contact", "Shoponline")">Liên Hệ</a></li>

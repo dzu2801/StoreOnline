@@ -131,17 +131,37 @@ namespace StoreOnline.Controllers
             lstGiohang.Clear();
             return RedirectToAction("Index", "Shoponline");
         }
+        public ActionResult DatHang()
+        {
+            //Kiem tra dang nhap
+            if (Session["TK"] == null || Session["TK"].ToString() == "")
+            {
+                return RedirectToAction("Login", "User");
+            }
+            if (Session["Giohang"] == null)
+            {
+                return RedirectToAction("Index", "Shoponline");
+            }
 
-//        public ActionResult test()
-//        {
-//            List<Giohang> lstGiohang = Laygiohang();
-//            if (lstGiohang.Count == 0)
-//            {
-//                return RedirectToAction("Index", "Shoponline");
-//            }
-//            ViewBag.Tongsoluong = TongSoLuong();
-//            ViewBag.Tongtien = TongTien();
-//            return View(lstGiohang);
-//=        }
+            //Lay gio hang tu Session
+            List<Giohang> lstGiohang = Laygiohang();
+            ViewBag.Tongsoluong = TongSoLuong();
+            ViewBag.Tongtien = TongTien();
+
+            return View(lstGiohang);
+        }
     }
+
+    //        public ActionResult test()
+    //        {
+    //            List<Giohang> lstGiohang = Laygiohang();
+    //            if (lstGiohang.Count == 0)
+    //            {
+    //                return RedirectToAction("Index", "Shoponline");
+    //            }
+    //            ViewBag.Tongsoluong = TongSoLuong();
+    //            ViewBag.Tongtien = TongTien();
+    //            return View(lstGiohang);
+    //=        }
+
 }

@@ -407,6 +407,9 @@
     <Content Include="Views\Shoponline\Phanloai.cshtml" />
     <Content Include="Views\Shoponline\test.cshtml" />
     <Content Include="Views\Shoponline\Tungloai.cshtml" />
+    <Content Include="Views\Shoponline\Giaohang.cshtml" />
+    <Content Include="Views\Shoponline\Mota.cshtml" />
+    <Content Include="Views\GioHang\DatHang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

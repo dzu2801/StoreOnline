@@ -163,3 +163,10 @@ as
 	end
 GO
 
+create view LOAI
+AS
+(
+	SELECT LOAI
+	FROM SANPHAM
+	GROUP BY LOAI
+)
