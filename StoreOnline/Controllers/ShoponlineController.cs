@@ -45,5 +45,18 @@ namespace StoreOnline.Controllers
             return View(sp.Single());
         }
 
+        public ActionResult Phanloai()
+        {
+            var loaisp = from sp in db.LOAIs select sp;
+            return PartialView(loaisp);
+        }
+
+        public ActionResult Tungloai(string loai)
+        {
+            var sp = from s in db.SANPHAMs
+                     where s.LOAI == loai
+                     select s;
+            return View(sp);
+        }
     }
 }

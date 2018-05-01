@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Tungloai";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div class="banner-top">
+    <div class="container">
+        <h3>Các Đặc Sản</h3>
+        <h4><a href="@Url.Action("Index", "Shoponline")">Trang Chủ</a><label>/</label><span>Các Đặc Sản: </span>Loai</h4>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<div class="content-top ">
+    <div class="container ">
+        <div class="row">
+            @foreach (var sanpham in Model)
+            {
+                <div class="col-sm-4 col-lg-3 col-md-4 pro-1">
+                    <div class="thumbnail col-m">
+                        <a href="@Url.Action("Details", "Shoponline", new { masp = sanpham.MASP })" data-toggle="modal" data-target="#myModal1" class="offer-img">
+                            <img alt="@sanpham.TENSP" src="~/images/sanpham/@sanpham.HINHANH" sizes="auto" class="img-responsive">
+                            <div class="offer"><p><span>@sanpham.LOAI</span></p></div>
+                        </a>
+                        <div class="mid-1">
+                            <div style="height:30px">
+                                <h6><a href="@Url.Action("Details", "Shoponline", new { masp = sanpham.MASP })">@sanpham.TENSP</a></h6>
+                            </div>
+                            <div class="mid-2">
+                                <p><em class="item_price">@sanpham.GIABAN<span> VNĐ</span></em></p>
+                                <div class="block">
+                                    <div class="starbox small ghosting"> </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div>
+                                <div class="add add-3">
+                                    <button class="btn btn-danger my-cart-btn my-cart-b ">
+                                        <a href="@Url.Action("ThemGiohang", "GioHang", new { @iMasp= sanpham.MASP, @strURL=Request.Url.ToString() })">
+                                            <p style="color:black">ĐẶT MUA</p>
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

@@ -51,7 +51,7 @@ namespace StoreOnline.Models
     #endregion
 		
 		public dbStoreOnlineDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SHOPDACSANConnectionString1"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SHOPDACSANConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -149,6 +149,14 @@ namespace StoreOnline.Models
 			get
 			{
 				return this.GetTable<PHIEUNHAP>();
+			}
+		}
+		
+		public System.Data.Linq.Table<LOAI> LOAIs
+		{
+			get
+			{
+				return this.GetTable<LOAI>();
 			}
 		}
 	}
@@ -1661,6 +1669,33 @@ namespace StoreOnline.Models
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LOAI")]
+	public partial class LOAI
+	{
+		
+		private string _LOAI1;
+		
+		public LOAI()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="LOAI", Storage="_LOAI1", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
+		public string LOAI1
+		{
+			get
+			{
+				return this._LOAI1;
+			}
+			set
+			{
+				if ((this._LOAI1 != value))
+				{
+					this._LOAI1 = value;
+				}
 			}
 		}
 	}

@@ -1,0 +1,7 @@
+﻿@model IEnumerable<StoreOnline.Models.LOAI>
+
+@foreach (var item in Model)
+{
+
+    <li><a href="@Url.Action("Tungloai", "Shoponline", new {loai=item.LOAI1})"><i class="fa fa-angle-right" aria-hidden="true"></i>@item.LOAI1</a></li>
+}

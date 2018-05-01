@@ -404,6 +404,9 @@
     <Content Include="Views\Shoponline\Details.cshtml" />
     <Content Include="Views\User\Info.cshtml" />
     <Content Include="Views\GioHang\test.cshtml" />
+    <Content Include="Views\Shoponline\Phanloai.cshtml" />
+    <Content Include="Views\Shoponline\test.cshtml" />
+    <Content Include="Views\Shoponline\Tungloai.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
