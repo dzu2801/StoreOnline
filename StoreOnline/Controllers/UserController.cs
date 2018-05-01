@@ -37,51 +37,70 @@ namespace StoreOnline.Controllers
             {
                 ViewData["loi1"] = "Không được bỏ trống";
             }
-            else if (Convert.ToString(tenkh) == "Name")
-            {
-                ViewData["loi2"] = "Không được bỏ trống";
-            }
-            else if (Convert.ToString(email) == "Email")
-            {
-                ViewData["loi3"] = "Không được bỏ trống";
-            }
-            else if (Convert.ToString(diachi) == "Add")
-            {
-                ViewData["loi4"] = "Không được bỏ trống";
-            }
-            else if (Convert.ToString(dienthoai) == "Phone")
-            {
-                ViewData["loi5"] = "Không được bỏ trống";
-            }
-            else if (Convert.ToString(gioitinh) == "Sex")
-            {
-                ViewData["loi6"] = "Không được bỏ trống";
-            }
-            else if (Convert.ToString(matkhau) == "Password")
-            {
-                ViewData["loi7"] = "Không được bỏ trống";
-            }
-            else if (Convert.ToString(matkhaunl) == "Confirm Password")
-            {
-                ViewData["loi8"] = "Không được bỏ trống";
-            }
-            else if (Convert.ToString(matkhau) != Convert.ToString(matkhaunl))
-            {
-                ViewData["loi9"] = "Mật khẩu nhập lại phải trùng trước đó";
-            }
             else
             {
-                kh.TK = taikhoan;
-                kh.MK = matkhau;
-                kh.EMAILKH = email;
-                kh.TENKH = tenkh;
-                kh.GIOITINH = gioitinh;
-                kh.DIACHIKH = diachi;
-                kh.DTKH = dienthoai;
-                kh.MAKH = "";
-                db.KHACHHANGs.InsertOnSubmit(kh);
-                db.SubmitChanges();
-                return RedirectToAction("Login");
+                KHACHHANG k = db.KHACHHANGs.SingleOrDefault(n => n.TK == taikhoan);
+                if (k != null)
+                {
+                    ViewData["loi1"] = "Tài Khoản đã tồn tại";
+                }            
+                else if (Convert.ToString(tenkh) == "Name")
+                {
+                    ViewData["loi2"] = "Không được bỏ trống";
+                }
+                else if (Convert.ToString(email) == "Email")
+                {
+                    ViewData["loi3"] = "Không được bỏ trống";
+                }
+                else if (Convert.ToString(diachi) == "Add")
+                {
+                    ViewData["loi4"] = "Không được bỏ trống";
+                }
+                else if (Convert.ToString(dienthoai) == "Phone")
+                {
+                    ViewData["loi5"] = "Không được bỏ trống";
+                }
+
+
+                //chổ cần sửa giới tính
+                else if (Convert.ToString(gioitinh) == "Sex")
+                {
+                    ViewData["loi6"] = "Không được bỏ trống";
+                }
+                else if (Convert.ToString(matkhau) == "Password")
+                {
+                    ViewData["loi7"] = "Không được bỏ trống";
+                }
+                else if (Convert.ToString(matkhaunl) == "Confirm Password")
+                {
+                    ViewData["loi8"] = "Không được bỏ trống";
+                }
+                else if (Convert.ToString(matkhau) != Convert.ToString(matkhaunl))
+                {
+                    ViewData["loi8"] = "Mật khẩu nhập lại phải trùng trước đó";
+                }
+                else
+                {
+                    try
+                    {
+                        kh.TK = taikhoan;
+                        kh.MK = matkhau;
+                        kh.EMAILKH = email;
+                        kh.TENKH = tenkh;
+                        kh.GIOITINH = gioitinh;
+                        kh.DIACHIKH = diachi;
+                        kh.DTKH = dienthoai;
+                        kh.MAKH = "";
+                        db.KHACHHANGs.InsertOnSubmit(kh);
+                        db.SubmitChanges();
+                        return RedirectToAction("Login");
+                    }
+                    catch
+                    {
+                        ViewData["loi8"] = "Đã xảy ra lỗi!!! Cập nhập tài khoản không thành công!!!";
+                        return this.Register();
+                    }
+                }
             }
 
             return this.Register();
@@ -108,7 +127,7 @@ namespace StoreOnline.Controllers
             }
             else
             {
-                KHACHHANG kh = db.KHACHHANGs.Where(n => n.TK == taikhoan && n.MK == matkhau).Single();
+                KHACHHANG kh = db.KHACHHANGs.SingleOrDefault(n => n.TK == taikhoan && n.MK == matkhau);
                 if (kh != null)
                 {
                     Session["TK"] = taikhoan;
@@ -166,7 +185,7 @@ namespace StoreOnline.Controllers
             }
             else
             {
-                KHACHHANG kh = db.KHACHHANGs.Where(n => n.TK == taikhoan && n.EMAILKH == mail).Single();
+                KHACHHANG kh = db.KHACHHANGs.SingleOrDefault(n => n.TK == taikhoan && n.EMAILKH == mail);
                 if (kh != null)
                 {
                     kh.MK = matkhau;
@@ -202,26 +221,35 @@ namespace StoreOnline.Controllers
         }
         [HttpPost]
         public ActionResult Info(FormCollection collection)
-        {
-            ViewData["loi2"] = "Cập nhập không thành công";
+        {           
             var tenkh = collection["Tenkh"];
             var email = collection["Email"];
             var diachi = collection["Diachi"];
             var dienthoai = collection["Dienthoai"];
             var matk = collection["Matk"];
-            var matkhaucu = collection["Old Password"];
-            var matkhau = collection["Password"];
-            var matkhaunl = collection["Confirm Password"];
-
+            var gioitinh = collection["gender"];
+            //var matkhaucu = collection["Old Password"];
+            //var matkhau = collection["Password"];
+            //var matkhaunl = collection["Confirm Password"];
+            try
+            {
                 KHACHHANG kh = db.KHACHHANGs.Where(s => s.MAKH == matk.ToString()).Single();
-                
-                    kh.EMAILKH = email;
-                    kh.TENKH = tenkh;
-                    kh.DIACHIKH = diachi;
-                    kh.DTKH = dienthoai;
-                    kh.MK = matkhau;
-                    db.SubmitChanges();
-                    return RedirectToAction("Index", "Shoponline");
+                kh.EMAILKH = email;
+                kh.TENKH = tenkh;
+                kh.DIACHIKH = diachi;
+                kh.DTKH = dienthoai;
+                kh.GIOITINH = gioitinh;
+                //kh.MK = matkhau;
+                db.SubmitChanges();
+                ViewData["loi2"] = "Cập nhập thành công";
+                return this.Info();
+            }
+            catch
+            {
+                ViewData["loi2"] = "Cập nhập không thành công";
+                return View();
+            }
+               
         }
     }
 }
