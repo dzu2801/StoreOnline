@@ -162,8 +162,21 @@ namespace StoreOnline.Controllers
             ddh.MAHD ="";
             ddh.MAKH = kh.MAKH;
             ddh.NGAYDAT = DateTime.Now;
-            var ngaygiao = String.Format("{0:MM/dd/yyyy}", collection["Ngaygiao"]);
-            ddh.NGAYGIAO = DateTime.Parse(ngaygiao);
+            try
+            {
+                var ngaygiao = String.Format("{0:MM/dd/yyyy}", collection["Ngaygiao"]);
+                ddh.NGAYGIAO = DateTime.Parse(ngaygiao);
+                if (ddh.NGAYGIAO < ddh.NGAYDAT)
+                {
+                    ViewData["loi"] = "Bạn chưa chọn ngày giao hoặc ngày giao nhỏ hơn ngày đặt!!!";
+                    return this.DatHang();
+                }
+            }
+            catch
+            {
+                ViewData["loi"] = "Bạn chưa chọn ngày giao hoặc ngày giao nhỏ hơn ngày đặt!!!";
+                return this.DatHang();
+            }
             ddh.TINHTRANGGIAO = false;
             ddh.DATHANHTOAN = false;
             ddh.THANHTIEN = (decimal)TongTien();

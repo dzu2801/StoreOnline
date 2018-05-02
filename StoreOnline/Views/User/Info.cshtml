@@ -16,7 +16,6 @@
     <div class="main-agileits">
         <div class="form-w3agile form1">
             <h3>Thông Tin</h3>
-            @ViewData["loi9"]
             <form action="#" method="post">
                 <label>Họ tên</label>
                 @ViewData["loi2"]
@@ -55,63 +54,72 @@
                             <div class="col-xs-4">
                                 <label>
                                     @if (Model.GIOITINH.ToString().Contains("Nam"))
-                                    {
-                                        <input type="radio" name="gender" value="Nam" id="gender_male" class="gender" checked="">
-                                        <span>
-                                            <i class="ico"></i>
-                                        </span>
-                                    }
-                                    else
-                                    {
-                                        <input type="radio" name="gender" value="Nam" id="gender_male" class="gender">
-                                        <span>
-                                            <i class="ico"></i>
-                                        </span>
-                                    }
+                        {
+                            <input type="radio" name="gender" value="Nam" id="gender_male" class="gender" checked="">
+                            <span>
+                                <i class="ico"></i>
+                            </span>
+            }
+            else
+            {
+                <input type="radio" name="gender" value="Nam" id="gender_male" class="gender">
+                <span>
+                    <i class="ico"></i>
+                </span>
+}
                                     Nam
                                 </label>
                             </div>
                             <div class="col-xs-4">
                                 <label>
                                     @if (Model.GIOITINH.ToString().Contains("Nữ"))
-                                    {
-                                        <input type="radio" name="gender" value="Nữ" id="gender_male" class="gender" checked="">
-                                        <span>
-                                            <i class="ico"></i>
-                                        </span>
-                                    }
-                                    else
-                                    {
-                                        <input type="radio" name="gender" value="Nữ" id="gender_male" class="gender">
-                                        <span>
-                                            <i class="ico"></i>
-                                        </span>
-                                    }
+                        {
+                            <input type="radio" name="gender" value="Nữ" id="gender_male" class="gender" checked="">
+                            <span>
+                                <i class="ico"></i>
+                            </span>
+            }
+            else
+            {
+                <input type="radio" name="gender" value="Nữ" id="gender_male" class="gender">
+                <span>
+                    <i class="ico"></i>
+                </span>
+}
                                     Nữ
                                 </label>
                             </div>
                             <div class="col-xs-4">
                                 <label>
                                     @if (Model.GIOITINH.ToString().Contains("Khác"))
-                                    {
-                                        <input type="radio" name="gender" value="Khác" id="gender_male" class="gender" checked="">
-                                        <span>
-                                            <i class="ico"></i>
-                                        </span>
-                                    }
-                                    else
-                                    {
-                                        <input type="radio" name="gender" value="Khác" id="gender_male" class="gender">
-                                        <span>
-                                            <i class="ico"></i>
-                                        </span>
-                                    }
+                        {
+                            <input type="radio" name="gender" value="Khác" id="gender_male" class="gender" checked="">
+                            <span>
+                                <i class="ico"></i>
+                            </span>
+            }
+            else
+            {
+                <input type="radio" name="gender" value="Khác" id="gender_male" class="gender">
+                <span>
+                    <i class="ico"></i>
+                </span>
+}
                                     Khác
                                 </label>
                             </div>
                         </div>
                         <span class="help-block"></span>
                         <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-wrap margin">
+                        <label class="checkbox">
+                            <input type="checkbox" name="doimatkhau" value="checked">
+                            <span class="ico"></span> Thay đổi mật khẩu
+                        </label>
+
                     </div>
                 </div>
                 <label>Mật khẩu cũ</label>
@@ -122,7 +130,7 @@
                     <div class="clearfix"></div>
                 </div>
                 <label>Mật khẩu mới</label>
-                @ViewData["loi7"]
+                @ViewData["loi8"]
                 <div class="key">
                     <i class="fa fa-lock" aria-hidden="true"></i>
                     <input type="password" value="Nhập Lại Mật Khẩu Mới" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập Lại Mật Khẩu Mới';}" required="">
@@ -130,7 +138,7 @@
                 </div>
 
                 <label>Nhập lại mật khẩu</label>
-                @ViewData["loi8"]
+                @ViewData["loi9"]
                 <div class="key">
                     <i class="fa fa-lock" aria-hidden="true"></i>
                     <input type="password" value="Nhập Lại Mật Khẩu Mới" name="Confirm Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập Lại Mật Khẩu Mới';}" required="">

@@ -30,7 +30,7 @@ namespace StoreOnline.Controllers
             var email = collection["Email"];
             var diachi = collection["Add"];
             var dienthoai = collection["Phone"];
-            var gioitinh = collection["Sex"];
+            var gioitinh = collection["gender"];
             var matkhau = collection["Password"];
             var matkhaunl = collection["Confirm Password"];
             if (Convert.ToString(taikhoan) == "Username")
@@ -63,7 +63,7 @@ namespace StoreOnline.Controllers
 
 
                 //chổ cần sửa giới tính
-                else if (Convert.ToString(gioitinh) == "Sex")
+                else if (Convert.ToString(gioitinh) == null)
                 {
                     ViewData["loi6"] = "Không được bỏ trống";
                 }
@@ -229,28 +229,82 @@ namespace StoreOnline.Controllers
             var dienthoai = collection["Dienthoai"];
             var matk = collection["Matk"];
             var gioitinh = collection["gender"];
-            //var matkhaucu = collection["Old Password"];
-            //var matkhau = collection["Password"];
-            //var matkhaunl = collection["Confirm Password"];
-            try
+            var chondoimk = collection["doimatkhau"];
+            var matkhaucu = collection["Old Password"];
+            var matkhau = collection["Password"];
+            var matkhaunl = collection["Confirm Password"];
+
+            if (Convert.ToString(tenkh) == "Họ Tên")
             {
-                KHACHHANG kh = db.KHACHHANGs.Where(s => s.MAKH == matk.ToString()).Single();
-                kh.EMAILKH = email;
-                kh.TENKH = tenkh;
-                kh.DIACHIKH = diachi;
-                kh.DTKH = dienthoai;
-                kh.GIOITINH = gioitinh;
-                //kh.MK = matkhau;
-                db.SubmitChanges();
-                ViewData["loi2"] = "Cập nhập thành công";
-                return this.Info();
+                ViewData["loi2"] = "Không được bỏ trống";
             }
-            catch
+            else if (Convert.ToString(email) == "Email")
             {
-                ViewData["loi2"] = "Cập nhập không thành công";
-                return View();
+                ViewData["loi3"] = "Không được bỏ trống";
             }
-               
+            else if (Convert.ToString(diachi) == "Địa Chỉ")
+            {
+                ViewData["loi4"] = "Không được bỏ trống";
+            }
+            else if (Convert.ToString(dienthoai) == "Số Điện Thoại")
+            {
+                ViewData["loi5"] = "Không được bỏ trống";
+            }
+            else
+            {
+                try
+                {
+                    KHACHHANG kh = db.KHACHHANGs.Where(s => s.MAKH == matk.ToString()).Single();
+                    kh.EMAILKH = email;
+                    kh.TENKH = tenkh;
+                    kh.DIACHIKH = diachi;
+                    kh.DTKH = dienthoai;
+                    kh.GIOITINH = gioitinh;
+                    if (chondoimk.ToString() == "checked")
+                    {
+                        if (Convert.ToString(matkhaucu) == "Nhập Lại Mật Khẩu Mới")
+                        {
+                            ViewData["loi7"] = "Không được bỏ trống";
+                        }
+                        else if (Convert.ToString(matkhau) == "Nhập Lại Mật Khẩu Mới")
+                        {
+                            ViewData["loi8"] = "Không được bỏ trống";
+                        }
+                        else if (Convert.ToString(matkhaunl) == "Nhập Lại Mật Khẩu Mới")
+                        {
+                            ViewData["loi9"] = "Không được bỏ trống";
+                        }
+                        else if(Convert.ToString(matkhau)!=Convert.ToString(matkhaunl))
+                        {
+                            ViewData["loi9"] = "Mật khẩu nhập lại phải trùng trước đó";
+                        }
+                        else
+                        {
+                            kh.MK = matkhau;
+                        }
+                        ViewData["loi2"] = "Cập nhập không thành công";
+                        return View();
+                    }
+                    db.SubmitChanges();
+                    ViewData["loi2"] = "Cập nhập thành công";
+                    return this.Info();
+                }
+                catch
+                {
+                    ViewData["loi2"] = "Cập nhập không thành công";
+                    return View();
+                }
+            }
+            ViewData["loi2"] = "Cập nhập không thành công";
+            return View();
+        }
+        public ActionResult Lichsudathang()
+        {
+            if(Session["taikhoan"]==null)
+            {
+                return this.Login();
+            }
+            return View();
         }
     }
 }

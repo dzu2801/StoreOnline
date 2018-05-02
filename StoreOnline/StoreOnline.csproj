@@ -421,6 +421,7 @@
     <Content Include="Views\Shoponline\Mota.cshtml" />
     <Content Include="Views\GioHang\DatHang.cshtml" />
     <Content Include="Views\GioHang\Xacnhandonhang.cshtml" />
+    <Content Include="Views\User\Lichsudathang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
