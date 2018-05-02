@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<body>
+
+    <div class="banner-top">
+        <div class="container">
+            <h3>Đăng Nhập</h3>
+            <h4><a href="@Url.Action("Index", "Shoponline")">Trang Chủ</a><label>/</label>Đăng Nhập</h4>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!--login-->
+
+    <div class="login">
+
+        <div class="main-agileits">
+            <div class="form-w3agile">
+                <h3>Đăng Nhập</h3>
+                @ViewBag.Thongbao
+                <form action="#" method="post">
+                    @ViewData["loi1"]
+                    <div class="key">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input type="text" value="Username" name="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'user';}" required="">
+                        <div class="clearfix"></div>
+                    </div>
+                    @ViewData["loi2"]
+                    <div class="key">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input type="password" value="Nhập Lại Mật Khẩu Mới" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập Lại Mật Khẩu Mới';}" required="">
+                        <div class="clearfix"></div>
+                    </div>
+                        <input type="submit" value="Đăng Nhập">
+                </form>
+            </div>
+            <div class="forg">
+                <a href="@Url.Action("ForgotPassword", "User")" class="forg-left">Quên Mật Khẩu</a>
+                <a href="@Url.Action("Register", "User")" class="forg-right">Đăng Ký</a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</body>

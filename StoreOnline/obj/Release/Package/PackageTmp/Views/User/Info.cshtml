@@ -1,0 +1,147 @@
+﻿@using StoreOnline.Models
+@{
+    ViewBag.Title = "Info";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+@Html.ValidationSummary(true)
+<div class="banner-top">
+    <div class="container">
+        <h3>Thông Tin Tài Khoản</h3>
+        <h4><a href="@Url.Action("Index", "Shoponline")">Trang Chủ</a><label>/</label>Thông Tin Tài Khoản</h4>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+
+<div class="login">
+    <div class="main-agileits">
+        <div class="form-w3agile form1">
+            <h3>Thông Tin</h3>
+            @ViewData["loi9"]
+            <form action="#" method="post">
+                <label>Họ tên</label>
+                @ViewData["loi2"]
+                <div class="key">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="text" value="@Model.TENKH" name="Tenkh" onfocus="this.value = '@Model.TENKH';" onblur="if (this.value == '') {this.value = 'Họ Tên';}" required="">
+                    <span class="help-block"></span>
+                    <div class="clearfix"></div>
+                </div>
+
+                <label>Email</label>
+                @ViewData["loi3"]
+                <div class="key">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <input type="text" value="@Model.EMAILKH" name="Email" onfocus="this.value = '@Model.EMAILKH';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                    <div class="clearfix"></div>
+                </div>
+                <label>Địa chỉ</label>
+                @ViewData["loi4"]
+                <div class="key">
+                    <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
+                    <input type="text" value="@Model.DIACHIKH" name="Diachi" onfocus="this.value = '@Model.DIACHIKH';" onblur="if (this.value == '') {this.value = 'Địa Chỉ';}" required="">
+                    <div class="clearfix"></div>
+                </div>
+                <label>Điện thoại</label>
+                @ViewData["loi5"]
+                <div class="key">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <input type="text" value="@Model.DTKH" name="Dienthoai" onfocus="this.value = '@Model.DTKH';" onblur="if (this.value == '') {this.value = 'Số Điện Thoại';}" required="">
+                    <div class="clearfix"></div>
+                </div>
+                <div class="form-group gender-select-wrap" id="register_name">
+                    <label class="control-label" for="pasword">Giới tính</label>
+                    <div class="input-wrap">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <label>
+                                    @if (Model.GIOITINH.ToString().Contains("Nam"))
+                                    {
+                                        <input type="radio" name="gender" value="Nam" id="gender_male" class="gender" checked="">
+                                        <span>
+                                            <i class="ico"></i>
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <input type="radio" name="gender" value="Nam" id="gender_male" class="gender">
+                                        <span>
+                                            <i class="ico"></i>
+                                        </span>
+                                    }
+                                    Nam
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label>
+                                    @if (Model.GIOITINH.ToString().Contains("Nữ"))
+                                    {
+                                        <input type="radio" name="gender" value="Nữ" id="gender_male" class="gender" checked="">
+                                        <span>
+                                            <i class="ico"></i>
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <input type="radio" name="gender" value="Nữ" id="gender_male" class="gender">
+                                        <span>
+                                            <i class="ico"></i>
+                                        </span>
+                                    }
+                                    Nữ
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label>
+                                    @if (Model.GIOITINH.ToString().Contains("Khác"))
+                                    {
+                                        <input type="radio" name="gender" value="Khác" id="gender_male" class="gender" checked="">
+                                        <span>
+                                            <i class="ico"></i>
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <input type="radio" name="gender" value="Khác" id="gender_male" class="gender">
+                                        <span>
+                                            <i class="ico"></i>
+                                        </span>
+                                    }
+                                    Khác
+                                </label>
+                            </div>
+                        </div>
+                        <span class="help-block"></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <label>Mật khẩu cũ</label>
+                @ViewData["loi7"]
+                <div class="key">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" value="Nhập Lại Mật Khẩu Mới" name="Old Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập Lại Mật Khẩu Mới';}" required="">
+                    <div class="clearfix"></div>
+                </div>
+                <label>Mật khẩu mới</label>
+                @ViewData["loi7"]
+                <div class="key">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" value="Nhập Lại Mật Khẩu Mới" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập Lại Mật Khẩu Mới';}" required="">
+                    <div class="clearfix"></div>
+                </div>
+
+                <label>Nhập lại mật khẩu</label>
+                @ViewData["loi8"]
+                <div class="key">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" value="Nhập Lại Mật Khẩu Mới" name="Confirm Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập Lại Mật Khẩu Mới';}" required="">
+                    <div class="clearfix"></div>
+                </div>
+                <input type="hidden" name="Matk" value=@Model.MAKH>
+
+                <input type="submit" value="Cập Nhật">
+            </form>
+        </div>
+
+    </div>
+</div>
+

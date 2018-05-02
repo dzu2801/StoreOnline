@@ -1,0 +1,112 @@
+﻿
+@using StoreOnline.Models
+@model List<Giohang>
+@*@model IEnumerable<StoreOnline.Models.KHACHHANG>*@
+@{
+    ViewBag.Title = "DatHang";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div class="banner-top">
+    <div class="container">
+        <h3>Xác Nhận Đặt Hàng</h3>
+        <h4><a href="@Url.Action("Index", "Shoponline")">Trang Chủ</a><label>/</label>Xác Nhận Đặt Hàng</h4>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng của tôi</h4>
+        </div>
+        <div class="modal-body">
+            <table class="table table-hover table-responsive" id="my-cart-table">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><strong>Đơn Giá</strong></td>
+                    <td><strong>Thành Tiền</strong></td>
+                </tr>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr title="summary 3" data-id="3" data-price="2.00">
+                            <td class="text-center" style="width: 30px;">
+                                <img width="30px" height="30px" src="~/images/sanpham/@item.sAnhsp">
+                            </td>
+                            <td>@item.sTensp</td>
+                            @using (Html.BeginForm("CapnhatGiohang", "Giohang", new { @iMaSp = item.iMasp }))
+                            {
+                                <td title="Quantity">
+                                    <input type="number" disabled min="1" name="txtSoluong" style="width: 70px;" class="my-product-quantity" value="@item.iSoluong">
+                                </td>
+                                <td></td>
+                                <td title="Unit Price">@String.Format("{0:0,0}", item.dDongia)</td>
+                                <td title="Total" class="my-product-total">@String.Format("{0:0,0}", item.dThanhtien)</td>
+                                <td></td>
+                            }
+
+                        </tr>
+                    }
+                </tbody>
+                <tr>
+                    <td></td>
+                    <td><strong>Tổng Tiền</strong></td>
+                    <td></td>
+                    <td></td>
+                    <td><strong id="my-cart-grand-total">@String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ</strong></td>
+                    <td></td>
+                </tr>
+
+            </table>
+            <div class="modal-footer">
+                <a href="@Url.Action("Giohang", "Giohang")"><button type="button" class="btn btn-default" data-dismiss="modal">Quay Lại Giỏ Hàng</button></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<h2 style="text-align:center">THÔNG TIN ĐẶT HÀNG</h2>
+@{
+    KHACHHANG kh = (KHACHHANG)Session["Taikhoan"];
+}
+
+<table align="center">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <tr style="height:40px">
+            <td> Họ tên khách hàng:</td>
+            <td style="font-weight:bold">  @kh.TENKH </td>
+        </tr>
+        <tr style="height:40px">
+            <td> Địa chỉ:</td>
+            <td style="font-weight:bold">  @kh.DIACHIKH </td>
+        </tr>
+        <tr style="height:40px">
+            <td> Địện thoại:</td>
+            <td style="font-weight:bold">  @kh.DTKH </td>
+        </tr>
+        <tr style="height:40px">
+            <td> Ngày đặt:</td>
+            <td style="font-weight:bold"> @DateTime.Now.ToShortDateString() </td>
+        </tr>
+        <tr style="height:40px">
+            <td> Ngày giao hàng:</td>
+            <td style="font-weight:bold">
+                <input type="date" name="Ngaygiao" />
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td></td>
+            <td>
+                <input type="Submit" class="btn btn-default" value="ĐỒNG Ý ĐẶT HÀNG" />
+            </td>
+        </tr>
+    }
+</table>
+

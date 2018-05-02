@@ -1,0 +1,1121 @@
+﻿.tiki-account .wrap .account-profile {
+    display: block;
+    margin-bottom: 20px;
+    width: 100% !important;
+    padding: 30px 20px 20px !important;
+    background: #fff;
+    border-radius: 4px;
+}
+
+#register-form, .register-form {
+    display: none;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+div {
+    display: block;
+}
+
+.tiki-account {
+    font-family: Roboto,sans-serif,arial;
+    background-color: #f4f4f4;
+}
+
+body {
+    min-height: 100%;
+    line-height: normal;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    background: #f4f4f4;
+    padding: 0 !important;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.tiki-account .wrap .account-profile .form-group .input-wrap {
+    float: left;
+    width: 405px;
+}
+
+#register-form .content .input-wrap, .register-form .content .input-wrap {
+    float: right;
+    width: 375px;
+    margin: 0;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+div {
+    display: block;
+}
+
+.tiki-account {
+    font-family: Roboto,sans-serif,arial;
+    background-color: #f4f4f4;
+}
+
+body {
+    min-height: 100%;
+    line-height: normal;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    background: #f4f4f4;
+    padding: 0 !important;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.content .birthday-picker .form-control, .register-form .content .birthday-picker .form-control {
+    width: 30% !important;
+}
+
+.birthday-picker select {
+    display: inline-block;
+    width: 30%;
+}
+
+.form-control {
+    border-radius: 3px;
+    width: 100%;
+    height: 32px;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.form-control {
+    font-size: 13px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.wrap .account-profile .form-group .input-wrap.margin {
+    margin-left: 20%;
+}
+
+.tiki-account .wrap .account-profile .form-group .input-wrap {
+    float: left;
+    width: 405px;
+}
+
+#register-form .content .input-wrap, .register-form .content .input-wrap {
+    float: right;
+    width: 375px;
+    margin: 0;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+div {
+    display: block;
+}
+
+.tiki-account {
+    font-family: Roboto,sans-serif,arial;
+    background-color: #f4f4f4;
+}
+
+body {
+    min-height: 100%;
+    line-height: normal;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    background: #f4f4f4;
+    padding: 0 !important;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wrap .account-profile .form-group .input-wrap .checkbox input[type=checkbox] + span.ico {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background-image: url(../img/account/check-off.svg);
+    vertical-align: top;
+    color: #a6a6a6;
+    margin-right: 10px;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.tiki-account .wrap .account-profile .form-group .input-wrap .checkbox {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.tiki-account .wrap .account-profile .form-group .input-wrap label {
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+dt, kbd kbd, label {
+    font-weight: 700;
+}
+
+user agent stylesheet
+label {
+    cursor: default;
+}
+
+.tiki-account {
+    font-family: Roboto,sans-serif,arial;
+    background-color: #f4f4f4;
+}
+
+body {
+    min-height: 100%;
+    line-height: normal;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    background: #f4f4f4;
+    padding: 0 !important;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wrap .account-profile .password-group {
+    display: none;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+div {
+    display: block;
+}
+
+.tiki-account {
+    font-family: Roboto,sans-serif,arial;
+    background-color: #f4f4f4;
+}
+
+body {
+    min-height: 100%;
+    line-height: normal;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    background: #f4f4f4;
+    padding: 0 !important;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wrap h1.have-margin {
+    margin-bottom: 15px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    color: #242424;
+}
+
+.tiki-account .wrap h1 {
+    font-size: 15px;
+    margin: 20px 0 0;
+    font-weight: 600;
+}
+
+.h1, h1 {
+    font-size: 36px;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+h1 {
+    margin: .67em 0;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.tiki-account {
+    font-family: Roboto,sans-serif,arial;
+    background-color: #f4f4f4;
+}
+
+body {
+    min-height: 100%;
+    line-height: normal;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    background: #f4f4f4;
+    padding: 0 !important;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+.tiki-account .wrap h1:after, .tiki-account .wrap h1:before {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.tiki-account .wrap h1:after, .tiki-account .wrap h1:before {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.content-right {
+    width: 975px;
+    float: left;
+    margin-left: 5px;
+    position: relative;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+div {
+    display: block;
+}
+
+.tiki-account {
+    font-family: Roboto,sans-serif,arial;
+    background-color: #f4f4f4;
+}
+
+body {
+    min-height: 100%;
+    line-height: normal;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    background: #f4f4f4;
+    padding: 0 !important;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.content .birthday-picker .form-control, .register-form .content .birthday-picker .form-control {
+    width: 30% !important;
+}
+
+.birthday-picker select {
+    display: inline-block;
+    width: 30%;
+}
+
+.form-control {
+    border-radius: 3px;
+    width: 100%;
+    height: 32px;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.form-control {
+    font-size: 13px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control {
+    padding: 6px 12px;
+    background-color: #fff;
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+
+.form-control, output {
+    line-height: 1.42857;
+    display: block;
+}
+
+.btn, .btn-adn.active, .btn-adn:active, .btn-bitbucket.active, .btn-bitbucket:active, .btn-danger.active, .btn-danger:active, .btn-default.active, .btn-default:active, .btn-dropbox.active, .btn-dropbox:active, .btn-facebook.active, .btn-facebook:active, .btn-flickr.active, .btn-flickr:active, .btn-github.active, .btn-github:active, .btn-google.active, .btn-google:active, .btn-info.active, .btn-info:active, .btn-instagram.active, .btn-instagram:active, .btn-linkedin.active, .btn-linkedin:active, .btn-microsoft.active, .btn-microsoft:active, .btn-odnoklassniki.active, .btn-odnoklassniki:active, .btn-openid.active, .btn-openid:active, .btn-pinterest.active, .btn-pinterest:active, .btn-primary.active, .btn-primary:active, .btn-reddit.active, .btn-reddit:active, .btn-soundcloud.active, .btn-soundcloud:active, .btn-success.active, .btn-success:active, .btn-tumblr.active, .btn-tumblr:active, .btn-twitter.active, .btn-twitter:active, .btn-vimeo.active, .btn-vimeo:active, .btn-vk.active, .btn-vk:active, .btn-warning.active, .btn-warning:active, .btn-yahoo.active, .btn-yahoo:active, .btn-zalo.active, .btn-zalo:active, .btn.active, .btn:active, .dropdown-menu > .disabled > a:focus, .dropdown-menu > .disabled > a:hover, .form-control, .open > .btn-adn.dropdown-toggle, .open > .btn-bitbucket.dropdown-toggle, .open > .btn-danger.dropdown-toggle, .open > .btn-default.dropdown-toggle, .open > .btn-dropbox.dropdown-toggle, .open > .btn-facebook.dropdown-toggle, .open > .btn-flickr.dropdown-toggle, .open > .btn-github.dropdown-toggle, .open > .btn-google.dropdown-toggle, .open > .btn-info.dropdown-toggle, .open > .btn-instagram.dropdown-toggle, .open > .btn-linkedin.dropdown-toggle, .open > .btn-microsoft.dropdown-toggle, .open > .btn-odnoklassniki.dropdown-toggle, .open > .btn-openid.dropdown-toggle, .open > .btn-pinterest.dropdown-toggle, .open > .btn-primary.dropdown-toggle, .open > .btn-reddit.dropdown-toggle, .open > .btn-soundcloud.dropdown-toggle, .open > .btn-success.dropdown-toggle, .open > .btn-tumblr.dropdown-toggle, .open > .btn-twitter.dropdown-toggle, .open > .btn-vimeo.dropdown-toggle, .open > .btn-vk.dropdown-toggle, .open > .btn-warning.dropdown-toggle, .open > .btn-yahoo.dropdown-toggle, .open > .btn-zalo.dropdown-toggle {
+    background-image: none;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+
+user agent stylesheet
+select {
+    border-radius: 0px;
+    border-color: rgb(169, 169, 169);
+}
+
+user agent stylesheet
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+}
+
+user agent stylesheet
+select {
+    border-radius: 5px;
+}
+
+user agent stylesheet
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+
+user agent stylesheet
+input, textarea, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb !important;
+}
+
+.tiki-account {
+    font-family: Roboto,sans-serif,arial;
+    background-color: #f4f4f4;
+}
+
+body {
+    min-height: 100%;
+    line-height: normal;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    background: #f4f4f4;
+    padding: 0 !important;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.register-form .content .birthday-picker .form-control {
+    width: 30% !important;
+}
+
+.birthday-picker select[name="birth[month]"] {
+    margin: 0 5%;
+}
+
+.birthday-picker select {
+    display: inline-block;
+    width: 30%;
+}
+
+.form-control {
+    border-radius: 3px;
+    width: 100%;
+    height: 32px;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.form-control {
+    font-size: 13px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control {
+    padding: 6px 12px;
+    background-color: #fff;
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+
+.form-control, output {
+    line-height: 1.42857;
+    display: block;
+}
+
+.btn, .btn-adn.active, .btn-adn:active, .btn-bitbucket.active, .btn-bitbucket:active, .btn-danger.active, .btn-danger:active, .btn-default.active, .btn-default:active, .btn-dropbox.active, .btn-dropbox:active, .btn-facebook.active, .btn-facebook:active, .btn-flickr.active, .btn-flickr:active, .btn-github.active, .btn-github:active, .btn-google.active, .btn-google:active, .btn-info.active, .btn-info:active, .btn-instagram.active, .btn-instagram:active, .btn-linkedin.active, .btn-linkedin:active, .btn-microsoft.active, .btn-microsoft:active, .btn-odnoklassniki.active, .btn-odnoklassniki:active, .btn-openid.active, .btn-openid:active, .btn-pinterest.active, .btn-pinterest:active, .btn-primary.active, .btn-primary:active, .btn-reddit.active, .btn-reddit:active, .btn-soundcloud.active, .btn-soundcloud:active, .btn-success.active, .btn-success:active, .btn-tumblr.active, .btn-tumblr:active, .btn-twitter.active, .btn-twitter:active, .btn-vimeo.active, .btn-vimeo:active, .btn-vk.active, .btn-vk:active, .btn-warning.active, .btn-warning:active, .btn-yahoo.active, .btn-yahoo:active, .btn-zalo.active, .btn-zalo:active, .btn.active, .btn:active, .dropdown-menu > .disabled > a:focus, .dropdown-menu > .disabled > a:hover, .form-control, .open > .btn-adn.dropdown-toggle, .open > .btn-bitbucket.dropdown-toggle, .open > .btn-danger.dropdown-toggle, .open > .btn-default.dropdown-toggle, .open > .btn-dropbox.dropdown-toggle, .open > .btn-facebook.dropdown-toggle, .open > .btn-flickr.dropdown-toggle, .open > .btn-github.dropdown-toggle, .open > .btn-google.dropdown-toggle, .open > .btn-info.dropdown-toggle, .open > .btn-instagram.dropdown-toggle, .open > .btn-linkedin.dropdown-toggle, .open > .btn-microsoft.dropdown-toggle, .open > .btn-odnoklassniki.dropdown-toggle, .open > .btn-openid.dropdown-toggle, .open > .btn-pinterest.dropdown-toggle, .open > .btn-primary.dropdown-toggle, .open > .btn-reddit.dropdown-toggle, .open > .btn-soundcloud.dropdown-toggle, .open > .btn-success.dropdown-toggle, .open > .btn-tumblr.dropdown-toggle, .open > .btn-twitter.dropdown-toggle, .open > .btn-vimeo.dropdown-toggle, .open > .btn-vk.dropdown-toggle, .open > .btn-warning.dropdown-toggle, .open > .btn-yahoo.dropdown-toggle, .open > .btn-zalo.dropdown-toggle {
+    background-image: none;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+
+user agent stylesheet
+select {
+    border-radius: 0px;
+    border-color: rgb(169, 169, 169);
+}
+
+user agent stylesheet
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+}
+
+user agent stylesheet
+select {
+    border-radius: 5px;
+}
+
+user agent stylesheet
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+
+user agent stylesheet
+input, textarea, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb !important;
+}
+
+.tiki-account {
+    font-family: Roboto,sans-serif,arial;
+    background-color: #f4f4f4;
+}
+
+body {
+    min-height: 100%;
+    line-height: normal;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    background: #f4f4f4;
+    padding: 0 !important;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.register-form .content .birthday-picker .form-control {
+    width: 30% !important;
+}
+
+.birthday-picker select {
+    display: inline-block;
+    width: 30%;
+}
+
+.form-control {
+    border-radius: 3px;
+    width: 100%;
+    height: 32px;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.form-control {
+    font-size: 13px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control {
+    padding: 6px 12px;
+    background-color: #fff;
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+
+.form-control, output {
+    line-height: 1.42857;
+    display: block;
+}
+
+.btn, .btn-adn.active, .btn-adn:active, .btn-bitbucket.active, .btn-bitbucket:active, .btn-danger.active, .btn-danger:active, .btn-default.active, .btn-default:active, .btn-dropbox.active, .btn-dropbox:active, .btn-facebook.active, .btn-facebook:active, .btn-flickr.active, .btn-flickr:active, .btn-github.active, .btn-github:active, .btn-google.active, .btn-google:active, .btn-info.active, .btn-info:active, .btn-instagram.active, .btn-instagram:active, .btn-linkedin.active, .btn-linkedin:active, .btn-microsoft.active, .btn-microsoft:active, .btn-odnoklassniki.active, .btn-odnoklassniki:active, .btn-openid.active, .btn-openid:active, .btn-pinterest.active, .btn-pinterest:active, .btn-primary.active, .btn-primary:active, .btn-reddit.active, .btn-reddit:active, .btn-soundcloud.active, .btn-soundcloud:active, .btn-success.active, .btn-success:active, .btn-tumblr.active, .btn-tumblr:active, .btn-twitter.active, .btn-twitter:active, .btn-vimeo.active, .btn-vimeo:active, .btn-vk.active, .btn-vk:active, .btn-warning.active, .btn-warning:active, .btn-yahoo.active, .btn-yahoo:active, .btn-zalo.active, .btn-zalo:active, .btn.active, .btn:active, .dropdown-menu > .disabled > a:focus, .dropdown-menu > .disabled > a:hover, .form-control, .open > .btn-adn.dropdown-toggle, .open > .btn-bitbucket.dropdown-toggle, .open > .btn-danger.dropdown-toggle, .open > .btn-default.dropdown-toggle, .open > .btn-dropbox.dropdown-toggle, .open > .btn-facebook.dropdown-toggle, .open > .btn-flickr.dropdown-toggle, .open > .btn-github.dropdown-toggle, .open > .btn-google.dropdown-toggle, .open > .btn-info.dropdown-toggle, .open > .btn-instagram.dropdown-toggle, .open > .btn-linkedin.dropdown-toggle, .open > .btn-microsoft.dropdown-toggle, .open > .btn-odnoklassniki.dropdown-toggle, .open > .btn-openid.dropdown-toggle, .open > .btn-pinterest.dropdown-toggle, .open > .btn-primary.dropdown-toggle, .open > .btn-reddit.dropdown-toggle, .open > .btn-soundcloud.dropdown-toggle, .open > .btn-success.dropdown-toggle, .open > .btn-tumblr.dropdown-toggle, .open > .btn-twitter.dropdown-toggle, .open > .btn-vimeo.dropdown-toggle, .open > .btn-vk.dropdown-toggle, .open > .btn-warning.dropdown-toggle, .open > .btn-yahoo.dropdown-toggle, .open > .btn-zalo.dropdown-toggle {
+    background-image: none;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+
+user agent stylesheet
+select {
+    border-radius: 0px;
+    border-color: rgb(169, 169, 169);
+}
+
+user agent stylesheet
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+}
+
+user agent stylesheet
+select {
+    border-radius: 5px;
+}
+
+user agent stylesheet
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+
+user agent stylesheet
+input, textarea, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb !important;
+}
+
+.tiki-account {
+    font-family: Roboto,sans-serif,arial;
+    background-color: #f4f4f4;
+}
+
+body {
+    min-height: 100%;
+    line-height: normal;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    background: #f4f4f4;
+    padding: 0 !important;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wrap .account-profile .form-group .btn-update {
+    border: none;
+    width: 176px;
+    height: 40px;
+    border-radius: 4px;
+    color: #4a4a4a;
+    font-size: 14px;
+    background-color: #fdd835;
+}
+
+.btn-info {
+    background: #00b6f0;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .btn, .btn-adn.active, .btn-adn:active, .btn-bitbucket.active, .btn-bitbucket:active, .btn-danger.active, .btn-danger:active, .btn-default.active, .btn-default:active, .btn-dropbox.active, .btn-dropbox:active, .btn-facebook.active, .btn-facebook:active, .btn-flickr.active, .btn-flickr:active, .btn-github.active, .btn-github:active, .btn-google.active, .btn-google:active, .btn-info.active, .btn-info:active, .btn-instagram.active, .btn-instagram:active, .btn-linkedin.active, .btn-linkedin:active, .btn-microsoft.active, .btn-microsoft:active, .btn-odnoklassniki.active, .btn-odnoklassniki:active, .btn-openid.active, .btn-openid:active, .btn-pinterest.active, .btn-pinterest:active, .btn-primary.active, .btn-primary:active, .btn-reddit.active, .btn-reddit:active, .btn-soundcloud.active, .btn-soundcloud:active, .btn-success.active, .btn-success:active, .btn-tumblr.active, .btn-tumblr:active, .btn-twitter.active, .btn-twitter:active, .btn-vimeo.active, .btn-vimeo:active, .btn-vk.active, .btn-vk:active, .btn-warning.active, .btn-warning:active, .btn-yahoo.active, .btn-yahoo:active, .btn-zalo.active, .btn-zalo:active, .btn.active, .btn:active, .dropdown-menu > .disabled > a:focus, .dropdown-menu > .disabled > a:hover, .form-control, .open > .btn-adn.dropdown-toggle, .open > .btn-bitbucket.dropdown-toggle, .open > .btn-danger.dropdown-toggle, .open > .btn-default.dropdown-toggle, .open > .btn-dropbox.dropdown-toggle, .open > .btn-facebook.dropdown-toggle, .open > .btn-flickr.dropdown-toggle, .open > .btn-github.dropdown-toggle, .open > .btn-google.dropdown-toggle, .open > .btn-info.dropdown-toggle, .open > .btn-instagram.dropdown-toggle, .open > .btn-linkedin.dropdown-toggle, .open > .btn-microsoft.dropdown-toggle, .open > .btn-odnoklassniki.dropdown-toggle, .open > .btn-openid.dropdown-toggle, .open > .btn-pinterest.dropdown-toggle, .open > .btn-primary.dropdown-toggle, .open > .btn-reddit.dropdown-toggle, .open > .btn-soundcloud.dropdown-toggle, .open > .btn-success.dropdown-toggle, .open > .btn-tumblr.dropdown-toggle, .open > .btn-twitter.dropdown-toggle, .open > .btn-vimeo.dropdown-toggle, .open > .btn-vk.dropdown-toggle, .open > .btn-warning.dropdown-toggle, .open > .btn-yahoo.dropdown-toggle, .open > .btn-zalo.dropdown-toggle {
+        background-image: none;
+    }
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+    button, html input[type=button], input[type=reset], input[type=submit] {
+        -webkit-appearance: button;
+        cursor: pointer;
+    }
+
+button, select {
+    text-transform: none;
+}
+
+button {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    padding: 1px 6px;
+}
+
+user agent stylesheet
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}
+
+user agent stylesheet
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+
+user agent stylesheet
+input, textarea, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb !important;
+}
+
+user agent stylesheet
+button {
+    -webkit-appearance: button;
+}
+
+.tiki-account {
+    font-family: Roboto,sans-serif,arial;
+    background-color: #f4f4f4;
+}
+
+body {
+    min-height: 100%;
+    line-height: normal;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    background: #f4f4f4;
+    padding: 0 !important;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}

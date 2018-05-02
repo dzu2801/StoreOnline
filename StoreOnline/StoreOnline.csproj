@@ -271,8 +271,11 @@
     <Content Include="images\of7.png" />
     <Content Include="images\of8.png" />
     <Content Include="images\of9.png" />
+    <Content Include="images\sanpham\bang phong ca lang 3.jpg" />
+    <Content Include="images\sanpham\banh phong ca lang %282%29.jpg" />
     <Content Include="images\sanpham\banh phong ca lang.jpg" />
     <Content Include="images\sanpham\banh phong gao lut.jpg" />
+    <Content Include="images\sanpham\banh phong tao.jpg" />
     <Content Include="images\sanpham\banh phong tom cao cap SG tron.jpg" />
     <Content Include="images\sanpham\banh phong tom cao cap SG vuong.jpg" />
     <Content Include="images\sanpham\banh phong tom dac biet.jpg" />
@@ -281,18 +284,24 @@
     <Content Include="images\sanpham\banh phong tom vuong.jpg" />
     <Content Include="images\sanpham\bot 5 thu dau hat sen.jpg" />
     <Content Include="images\sanpham\bot dau den xanh long.jpg" />
-    <Content Include="images\sanpham\bot dau nang hat sen.jpg" />
     <Content Include="images\sanpham\bot dau nanh hat sen.jpg" />
     <Content Include="images\sanpham\bot dau xanh hat sen.jpg" />
     <Content Include="images\sanpham\bot gao lut hat sen.jpg" />
     <Content Include="images\sanpham\bot me den hat sen.jpg" />
-    <Content Include="images\sanpham\bot-5-thu-dau-bich-chi-350g-1.jpg" />
-    <Content Include="images\sanpham\bot-me-den-hat-sen.jpg" />
     <Content Include="images\sanpham\bun gao lut huyet rong.jpg" />
     <Content Include="images\sanpham\bun tuoi.jpg" />
     <Content Include="images\sanpham\cha bong ech.jpg" />
+    <Content Include="images\sanpham\cha ca loc khoi.jpg" />
+    <Content Include="images\sanpham\cha ca loc vien.jpg" />
     <Content Include="images\sanpham\dau ranee 250ml.jpg" />
     <Content Include="images\sanpham\dau ranee 950ml.jpg" />
+    <Content Include="images\sanpham\gao bon mua.jpg" />
+    <Content Include="images\sanpham\gao long chau.jpg" />
+    <Content Include="images\sanpham\gao lotus.jpg" />
+    <Content Include="images\sanpham\gao ngoc sa.jpg" />
+    <Content Include="images\sanpham\gao ramsar.png" />
+    <Content Include="images\sanpham\gao thap muoi.png" />
+    <Content Include="images\sanpham\gao tram chim.png" />
     <Content Include="images\sanpham\hst dac biet.jpg" />
     <Content Include="images\sanpham\hst.jpg" />
     <Content Include="images\sanpham\hu tieu bot loc.jpg" />
@@ -311,12 +320,12 @@
     <Content Include="images\sanpham\mut chuoi phong dau phong 170gr.jpg" />
     <Content Include="images\sanpham\mut chuoi phong hat dieu 170gr.jpg" />
     <Content Include="images\sanpham\mut chuoi phong hat dieu 220gr.jpg" />
+    <Content Include="images\sanpham\mut chuoi phong mang cau 170gr.png" />
     <Content Include="images\sanpham\mut chuoi phong me 220gr.jpg" />
     <Content Include="images\sanpham\mut khom 220gr.jpg" />
     <Content Include="images\sanpham\mut mang cau 220gr.jpg" />
     <Content Include="images\sanpham\nuoc mam hong ngu.jpg" />
     <Content Include="images\sanpham\sen say 100gr.jpg" />
-    <Content Include="images\sanpham\sen say 200gr.jpeg" />
     <Content Include="images\sanpham\sen say 200gr.jpg" />
     <Content Include="images\sanpham\sen say 40gr.jpg" />
     <Content Include="images\sanpham\sen say 500gr.jpg" />
@@ -351,6 +360,7 @@
     <None Include="Models\dbStoreOnline.dbml.layout">
       <DependentUpon>dbStoreOnline.dbml</DependentUpon>
     </None>
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\easing.js" />
     <Content Include="Scripts\easyResponsiveTabs.js" />

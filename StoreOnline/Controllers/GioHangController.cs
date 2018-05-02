@@ -166,6 +166,7 @@ namespace StoreOnline.Controllers
             ddh.NGAYGIAO = DateTime.Parse(ngaygiao);
             ddh.TINHTRANGGIAO = false;
             ddh.DATHANHTOAN = false;
+            ddh.THANHTIEN = (decimal)TongTien();
             data.DONDATHANGs.InsertOnSubmit(ddh);
             data.SubmitChanges();
             //Them chi tiet don hang  
@@ -176,7 +177,7 @@ namespace StoreOnline.Controllers
                 ctdh.MAHD = xx[0].MAHD;
                 ctdh.MASP = item.iMasp;
                 ctdh.SL = item.iSoluong;
-                ctdh.TONGTIEN = (decimal)item.dDongia;
+                ctdh.TONGTIEN = (decimal)item.dThanhtien;
                 data.CTDONDATHANGs.InsertOnSubmit(ctdh);
             }
             data.SubmitChanges();

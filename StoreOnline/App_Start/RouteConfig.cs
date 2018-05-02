@@ -16,7 +16,8 @@ namespace StoreOnline
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Shoponline", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Shoponline", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "StoreOnline.Controllers" }
             );
         }
     }
