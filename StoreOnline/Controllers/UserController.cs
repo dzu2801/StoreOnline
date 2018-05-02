@@ -130,6 +130,7 @@ namespace StoreOnline.Controllers
                 KHACHHANG kh = db.KHACHHANGs.SingleOrDefault(n => n.TK == taikhoan && n.MK == matkhau);
                 if (kh != null)
                 {
+                    Session["Taikhoan"] = kh;
                     Session["TK"] = taikhoan;
                     return RedirectToAction("Index", "Shoponline");
 

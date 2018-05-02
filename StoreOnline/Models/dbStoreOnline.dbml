@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SHOPDACSAN" Class="dbStoreOnlineDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=USERMIC-IDBDTVN\SQLEXPRESS;Initial Catalog=SHOPDACSAN;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SHOPDACSANConnectionString3" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DZU\SQLEXPRESS;Initial Catalog=SHOPDACSAN;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SHOPDACSANConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ADMIN" Member="ADMINs">
     <Type Name="ADMIN">
       <Column Name="USERADMIN" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -18,7 +18,7 @@
       <Column Name="GIAVON" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="GIABAN" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="HINHANH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Association Name="SANPHAM_CTDONDATHANG" Member="CTDONDATHANGs" ThisKey="MASP" OtherKey="MASP" Type="CTDONDATHANG" />
+      <Association Name="SANPHAM_DONDATHANG" Member="DONDATHANGs" ThisKey="MASP" OtherKey="MASP" Type="DONDATHANG" />
       <Association Name="SANPHAM_GIAMGIA" Member="GIAMGIAs" ThisKey="MASP" OtherKey="MASP" Type="GIAMGIA" />
       <Association Name="NHACUNGCAP_SANPHAM" Member="NHACUNGCAP" ThisKey="MANCC" OtherKey="MANCC" Type="NHACUNGCAP" IsForeignKey="true" />
     </Type>
@@ -26,11 +26,13 @@
   <Table Name="dbo.CTDONDATHANG" Member="CTDONDATHANGs">
     <Type Name="CTDONDATHANG">
       <Column Name="MAHD" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
-      <Column Name="MASP" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
-      <Column Name="SL" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TONGTIEN" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Association Name="SANPHAM_CTDONDATHANG" Member="SANPHAM" ThisKey="MASP" OtherKey="MASP" Type="SANPHAM" IsForeignKey="true" />
+      <Column Name="DATHANHTOAN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TINHTRANGGIAO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NGAYDAT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MAKH" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
       <Association Name="DONDATHANG_CTDONDATHANG" Member="DONDATHANG" ThisKey="MAHD" OtherKey="MAHD" Type="DONDATHANG" IsForeignKey="true" />
+      <Association Name="KHACHHANG_CTDONDATHANG" Member="KHACHHANG" ThisKey="MAKH" OtherKey="MAKH" Type="KHACHHANG" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CTPHIEUNHAP" Member="CTPHIEUNHAPs">
@@ -46,14 +48,11 @@
   <Table Name="dbo.DONDATHANG" Member="DONDATHANGs">
     <Type Name="DONDATHANG">
       <Column Name="MAHD" Type="System.String" DbType="VarChar(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="DATHANHTOAN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="TINHTRANGGIAO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="NGAYDAT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="NGAYGIAO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="MAKH" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="MASP" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="SL" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="THANHTIEN" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Association Name="DONDATHANG_CTDONDATHANG" Member="CTDONDATHANGs" ThisKey="MAHD" OtherKey="MAHD" Type="CTDONDATHANG" />
-      <Association Name="KHACHHANG_DONDATHANG" Member="KHACHHANG" ThisKey="MAKH" OtherKey="MAKH" Type="KHACHHANG" IsForeignKey="true" />
+      <Association Name="SANPHAM_DONDATHANG" Member="SANPHAM" ThisKey="MASP" OtherKey="MASP" Type="SANPHAM" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.GIAMGIA" Member="GIAMGIAs">
@@ -73,7 +72,7 @@
       <Column Name="DIACHIKH" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="DTKH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="GIOITINH" Type="System.String" DbType="NChar(4)" CanBeNull="true" />
-      <Association Name="KHACHHANG_DONDATHANG" Member="DONDATHANGs" ThisKey="MAKH" OtherKey="MAKH" Type="DONDATHANG" />
+      <Association Name="KHACHHANG_CTDONDATHANG" Member="CTDONDATHANGs" ThisKey="MAKH" OtherKey="MAKH" Type="CTDONDATHANG" />
     </Type>
   </Table>
   <Table Name="dbo.NHACUNGCAP" Member="NHACUNGCAPs">
