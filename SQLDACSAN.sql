@@ -30,6 +30,7 @@ create table SANPHAM
 	GIAVON DECIMAL,
 	GIABAN DECIMAL,
 	HINHANH VARCHAR(100),
+	MOTA NVARCHAR(MAX),
 	Constraint PK_SANPHAM PRIMARY KEY(MASP),
 	Constraint FK_Nhacungcap Foreign Key(MANCC) References NHACUNGCAP(MANCC), 
 )
