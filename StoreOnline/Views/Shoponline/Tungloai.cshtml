@@ -8,11 +8,15 @@
     <div class="container">
         @foreach (var sp in Model) 
         {
-            <h3>Loại @sp.LOAI</h3>
+            <h3>@sp.LOAI</h3>
+            break;
+
+        }
+        @foreach (var sp in Model)
+        {
+            <h4><a href="@Url.Action("Index", "Shoponline")">Trang Chủ</a><label>/</label><span>Các Đặc Sản: </span>@sp.LOAI</h4>
             break;
         }
-        
-        <h4><a href="@Url.Action("Index", "Shoponline")">Trang Chủ</a><label>/</label><span>Các Đặc Sản: </span>Loai</h4>
         <div class="clearfix"> </div>
     </div>
 </div>
