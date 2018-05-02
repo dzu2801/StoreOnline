@@ -131,6 +131,7 @@ namespace StoreOnline.Controllers
             lstGiohang.Clear();
             return RedirectToAction("Index", "Shoponline");
         }
+        [HttpGet]
         public ActionResult DatHang()
         {
             //Kiem tra dang nhap
@@ -150,18 +151,44 @@ namespace StoreOnline.Controllers
 
             return View(lstGiohang);
         }
+        //Xay dung chuc nang Dathang
+        [HttpPost]
+        public ActionResult DatHang(FormCollection collection)
+        {
+            //Them Don hang
+            DONDATHANG ddh = new DONDATHANG();
+            KHACHHANG kh = (KHACHHANG)Session["Taikhoan"];
+            List<Giohang> gh = Laygiohang();
+            ddh.MAHD ="";
+            ddh.MAKH = kh.MAKH;
+            ddh.NGAYDAT = DateTime.Now;
+            var ngaygiao = String.Format("{0:MM/dd/yyyy}", collection["Ngaygiao"]);
+            ddh.NGAYGIAO = DateTime.Parse(ngaygiao);
+            ddh.TINHTRANGGIAO = false;
+            ddh.DATHANHTOAN = false;
+            data.DONDATHANGs.InsertOnSubmit(ddh);
+            data.SubmitChanges();
+            //Them chi tiet don hang  
+            List<DONDATHANG> xx= data.DONDATHANGs.OrderByDescending(a => a.NGAYDAT).Take(1).ToList();
+            foreach (var item in gh)
+            {
+                CTDONDATHANG ctdh = new CTDONDATHANG();
+                ctdh.MAHD = xx[0].MAHD;
+                ctdh.MASP = item.iMasp;
+                ctdh.SL = item.iSoluong;
+                ctdh.TONGTIEN = (decimal)item.dDongia;
+                data.CTDONDATHANGs.InsertOnSubmit(ctdh);
+            }
+            data.SubmitChanges();
+            Session["Giohang"] = null;
+            return RedirectToAction("Xacnhandonhang", "Giohang");
+        }
+        public ActionResult Xacnhandonhang()
+        {
+            return View();
+        }
     }
 
-    //        public ActionResult test()
-    //        {
-    //            List<Giohang> lstGiohang = Laygiohang();
-    //            if (lstGiohang.Count == 0)
-    //            {
-    //                return RedirectToAction("Index", "Shoponline");
-    //            }
-    //            ViewBag.Tongsoluong = TongSoLuong();
-    //            ViewBag.Tongtien = TongTien();
-    //            return View(lstGiohang);
-    //=        }
+   
 
 }

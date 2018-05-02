@@ -36,6 +36,9 @@ namespace StoreOnline.Models
     partial void InsertSANPHAM(SANPHAM instance);
     partial void UpdateSANPHAM(SANPHAM instance);
     partial void DeleteSANPHAM(SANPHAM instance);
+    partial void InsertCTDONDATHANG(CTDONDATHANG instance);
+    partial void UpdateCTDONDATHANG(CTDONDATHANG instance);
+    partial void DeleteCTDONDATHANG(CTDONDATHANG instance);
     partial void InsertDONDATHANG(DONDATHANG instance);
     partial void UpdateDONDATHANG(DONDATHANG instance);
     partial void DeleteDONDATHANG(DONDATHANG instance);
@@ -51,7 +54,7 @@ namespace StoreOnline.Models
     #endregion
 		
 		public dbStoreOnlineDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SHOPDACSANConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SHOPDACSANConnectionString4"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -295,8 +298,6 @@ namespace StoreOnline.Models
 		
 		private string _HINHANH;
 		
-		private EntitySet<DONDATHANG> _DONDATHANGs;
-		
 		private EntityRef<NHACUNGCAP> _NHACUNGCAP;
 		
     #region Extensibility Method Definitions
@@ -325,7 +326,6 @@ namespace StoreOnline.Models
 		
 		public SANPHAM()
 		{
-			this._DONDATHANGs = new EntitySet<DONDATHANG>(new Action<DONDATHANG>(this.attach_DONDATHANGs), new Action<DONDATHANG>(this.detach_DONDATHANGs));
 			this._NHACUNGCAP = default(EntityRef<NHACUNGCAP>);
 			OnCreated();
 		}
@@ -514,19 +514,6 @@ namespace StoreOnline.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SANPHAM_DONDATHANG", Storage="_DONDATHANGs", ThisKey="MASP", OtherKey="MASP")]
-		public EntitySet<DONDATHANG> DONDATHANGs
-		{
-			get
-			{
-				return this._DONDATHANGs;
-			}
-			set
-			{
-				this._DONDATHANGs.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NHACUNGCAP_SANPHAM", Storage="_NHACUNGCAP", ThisKey="MANCC", OtherKey="MANCC", IsForeignKey=true)]
 		public NHACUNGCAP NHACUNGCAP
 		{
@@ -580,41 +567,42 @@ namespace StoreOnline.Models
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-		
-		private void attach_DONDATHANGs(DONDATHANG entity)
-		{
-			this.SendPropertyChanging();
-			entity.SANPHAM = this;
-		}
-		
-		private void detach_DONDATHANGs(DONDATHANG entity)
-		{
-			this.SendPropertyChanging();
-			entity.SANPHAM = null;
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CTDONDATHANG")]
-	public partial class CTDONDATHANG
+	public partial class CTDONDATHANG : INotifyPropertyChanging, INotifyPropertyChanged
 	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private string _MAHD;
 		
+		private string _MASP;
+		
+		private System.Nullable<int> _SL;
+		
 		private System.Nullable<decimal> _TONGTIEN;
 		
-		private System.Nullable<bool> _DATHANHTOAN;
-		
-		private System.Nullable<bool> _TINHTRANGGIAO;
-		
-		private System.Nullable<System.DateTime> _NGAYDAT;
-		
-		private string _MAKH;
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMAHDChanging(string value);
+    partial void OnMAHDChanged();
+    partial void OnMASPChanging(string value);
+    partial void OnMASPChanged();
+    partial void OnSLChanging(System.Nullable<int> value);
+    partial void OnSLChanged();
+    partial void OnTONGTIENChanging(System.Nullable<decimal> value);
+    partial void OnTONGTIENChanged();
+    #endregion
 		
 		public CTDONDATHANG()
 		{
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAHD", DbType="VarChar(7)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAHD", DbType="VarChar(7) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string MAHD
 		{
 			get
@@ -625,7 +613,51 @@ namespace StoreOnline.Models
 			{
 				if ((this._MAHD != value))
 				{
+					this.OnMAHDChanging(value);
+					this.SendPropertyChanging();
 					this._MAHD = value;
+					this.SendPropertyChanged("MAHD");
+					this.OnMAHDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MASP", DbType="VarChar(7) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MASP
+		{
+			get
+			{
+				return this._MASP;
+			}
+			set
+			{
+				if ((this._MASP != value))
+				{
+					this.OnMASPChanging(value);
+					this.SendPropertyChanging();
+					this._MASP = value;
+					this.SendPropertyChanged("MASP");
+					this.OnMASPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SL", DbType="Int")]
+		public System.Nullable<int> SL
+		{
+			get
+			{
+				return this._SL;
+			}
+			set
+			{
+				if ((this._SL != value))
+				{
+					this.OnSLChanging(value);
+					this.SendPropertyChanging();
+					this._SL = value;
+					this.SendPropertyChanged("SL");
+					this.OnSLChanged();
 				}
 			}
 		}
@@ -641,72 +673,32 @@ namespace StoreOnline.Models
 			{
 				if ((this._TONGTIEN != value))
 				{
+					this.OnTONGTIENChanging(value);
+					this.SendPropertyChanging();
 					this._TONGTIEN = value;
+					this.SendPropertyChanged("TONGTIEN");
+					this.OnTONGTIENChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DATHANHTOAN", DbType="Bit")]
-		public System.Nullable<bool> DATHANHTOAN
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
 		{
-			get
+			if ((this.PropertyChanging != null))
 			{
-				return this._DATHANHTOAN;
-			}
-			set
-			{
-				if ((this._DATHANHTOAN != value))
-				{
-					this._DATHANHTOAN = value;
-				}
+				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TINHTRANGGIAO", DbType="Bit")]
-		public System.Nullable<bool> TINHTRANGGIAO
+		protected virtual void SendPropertyChanged(String propertyName)
 		{
-			get
+			if ((this.PropertyChanged != null))
 			{
-				return this._TINHTRANGGIAO;
-			}
-			set
-			{
-				if ((this._TINHTRANGGIAO != value))
-				{
-					this._TINHTRANGGIAO = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYDAT", DbType="DateTime")]
-		public System.Nullable<System.DateTime> NGAYDAT
-		{
-			get
-			{
-				return this._NGAYDAT;
-			}
-			set
-			{
-				if ((this._NGAYDAT != value))
-				{
-					this._NGAYDAT = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAKH", DbType="VarChar(7)")]
-		public string MAKH
-		{
-			get
-			{
-				return this._MAKH;
-			}
-			set
-			{
-				if ((this._MAKH != value))
-				{
-					this._MAKH = value;
-				}
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -818,13 +810,19 @@ namespace StoreOnline.Models
 		
 		private string _MAHD;
 		
-		private string _MASP;
+		private System.Nullable<bool> _DATHANHTOAN;
 		
-		private System.Nullable<int> _SL;
+		private System.Nullable<bool> _TINHTRANGGIAO;
+		
+		private System.Nullable<System.DateTime> _NGAYDAT;
+		
+		private System.Nullable<System.DateTime> _NGAYGIAO;
+		
+		private string _MAKH;
 		
 		private System.Nullable<decimal> _THANHTIEN;
 		
-		private EntityRef<SANPHAM> _SANPHAM;
+		private EntityRef<KHACHHANG> _KHACHHANG;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -832,17 +830,23 @@ namespace StoreOnline.Models
     partial void OnCreated();
     partial void OnMAHDChanging(string value);
     partial void OnMAHDChanged();
-    partial void OnMASPChanging(string value);
-    partial void OnMASPChanged();
-    partial void OnSLChanging(System.Nullable<int> value);
-    partial void OnSLChanged();
+    partial void OnDATHANHTOANChanging(System.Nullable<bool> value);
+    partial void OnDATHANHTOANChanged();
+    partial void OnTINHTRANGGIAOChanging(System.Nullable<bool> value);
+    partial void OnTINHTRANGGIAOChanged();
+    partial void OnNGAYDATChanging(System.Nullable<System.DateTime> value);
+    partial void OnNGAYDATChanged();
+    partial void OnNGAYGIAOChanging(System.Nullable<System.DateTime> value);
+    partial void OnNGAYGIAOChanged();
+    partial void OnMAKHChanging(string value);
+    partial void OnMAKHChanged();
     partial void OnTHANHTIENChanging(System.Nullable<decimal> value);
     partial void OnTHANHTIENChanged();
     #endregion
 		
 		public DONDATHANG()
 		{
-			this._SANPHAM = default(EntityRef<SANPHAM>);
+			this._KHACHHANG = default(EntityRef<KHACHHANG>);
 			OnCreated();
 		}
 		
@@ -866,46 +870,106 @@ namespace StoreOnline.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MASP", DbType="VarChar(7)")]
-		public string MASP
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DATHANHTOAN", DbType="Bit")]
+		public System.Nullable<bool> DATHANHTOAN
 		{
 			get
 			{
-				return this._MASP;
+				return this._DATHANHTOAN;
 			}
 			set
 			{
-				if ((this._MASP != value))
+				if ((this._DATHANHTOAN != value))
 				{
-					if (this._SANPHAM.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMASPChanging(value);
+					this.OnDATHANHTOANChanging(value);
 					this.SendPropertyChanging();
-					this._MASP = value;
-					this.SendPropertyChanged("MASP");
-					this.OnMASPChanged();
+					this._DATHANHTOAN = value;
+					this.SendPropertyChanged("DATHANHTOAN");
+					this.OnDATHANHTOANChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SL", DbType="Int")]
-		public System.Nullable<int> SL
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TINHTRANGGIAO", DbType="Bit")]
+		public System.Nullable<bool> TINHTRANGGIAO
 		{
 			get
 			{
-				return this._SL;
+				return this._TINHTRANGGIAO;
 			}
 			set
 			{
-				if ((this._SL != value))
+				if ((this._TINHTRANGGIAO != value))
 				{
-					this.OnSLChanging(value);
+					this.OnTINHTRANGGIAOChanging(value);
 					this.SendPropertyChanging();
-					this._SL = value;
-					this.SendPropertyChanged("SL");
-					this.OnSLChanged();
+					this._TINHTRANGGIAO = value;
+					this.SendPropertyChanged("TINHTRANGGIAO");
+					this.OnTINHTRANGGIAOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYDAT", DbType="DateTime")]
+		public System.Nullable<System.DateTime> NGAYDAT
+		{
+			get
+			{
+				return this._NGAYDAT;
+			}
+			set
+			{
+				if ((this._NGAYDAT != value))
+				{
+					this.OnNGAYDATChanging(value);
+					this.SendPropertyChanging();
+					this._NGAYDAT = value;
+					this.SendPropertyChanged("NGAYDAT");
+					this.OnNGAYDATChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYGIAO", DbType="DateTime")]
+		public System.Nullable<System.DateTime> NGAYGIAO
+		{
+			get
+			{
+				return this._NGAYGIAO;
+			}
+			set
+			{
+				if ((this._NGAYGIAO != value))
+				{
+					this.OnNGAYGIAOChanging(value);
+					this.SendPropertyChanging();
+					this._NGAYGIAO = value;
+					this.SendPropertyChanged("NGAYGIAO");
+					this.OnNGAYGIAOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAKH", DbType="VarChar(7)")]
+		public string MAKH
+		{
+			get
+			{
+				return this._MAKH;
+			}
+			set
+			{
+				if ((this._MAKH != value))
+				{
+					if (this._KHACHHANG.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMAKHChanging(value);
+					this.SendPropertyChanging();
+					this._MAKH = value;
+					this.SendPropertyChanged("MAKH");
+					this.OnMAKHChanged();
 				}
 			}
 		}
@@ -930,36 +994,36 @@ namespace StoreOnline.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SANPHAM_DONDATHANG", Storage="_SANPHAM", ThisKey="MASP", OtherKey="MASP", IsForeignKey=true)]
-		public SANPHAM SANPHAM
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHACHHANG_DONDATHANG", Storage="_KHACHHANG", ThisKey="MAKH", OtherKey="MAKH", IsForeignKey=true)]
+		public KHACHHANG KHACHHANG
 		{
 			get
 			{
-				return this._SANPHAM.Entity;
+				return this._KHACHHANG.Entity;
 			}
 			set
 			{
-				SANPHAM previousValue = this._SANPHAM.Entity;
+				KHACHHANG previousValue = this._KHACHHANG.Entity;
 				if (((previousValue != value) 
-							|| (this._SANPHAM.HasLoadedOrAssignedValue == false)))
+							|| (this._KHACHHANG.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._SANPHAM.Entity = null;
+						this._KHACHHANG.Entity = null;
 						previousValue.DONDATHANGs.Remove(this);
 					}
-					this._SANPHAM.Entity = value;
+					this._KHACHHANG.Entity = value;
 					if ((value != null))
 					{
 						value.DONDATHANGs.Add(this);
-						this._MASP = value.MASP;
+						this._MAKH = value.MAKH;
 					}
 					else
 					{
-						this._MASP = default(string);
+						this._MAKH = default(string);
 					}
-					this.SendPropertyChanged("SANPHAM");
+					this.SendPropertyChanged("KHACHHANG");
 				}
 			}
 		}
@@ -1052,6 +1116,8 @@ namespace StoreOnline.Models
 		
 		private string _GIOITINH;
 		
+		private EntitySet<DONDATHANG> _DONDATHANGs;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1076,6 +1142,7 @@ namespace StoreOnline.Models
 		
 		public KHACHHANG()
 		{
+			this._DONDATHANGs = new EntitySet<DONDATHANG>(new Action<DONDATHANG>(this.attach_DONDATHANGs), new Action<DONDATHANG>(this.detach_DONDATHANGs));
 			OnCreated();
 		}
 		
@@ -1239,6 +1306,19 @@ namespace StoreOnline.Models
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHACHHANG_DONDATHANG", Storage="_DONDATHANGs", ThisKey="MAKH", OtherKey="MAKH")]
+		public EntitySet<DONDATHANG> DONDATHANGs
+		{
+			get
+			{
+				return this._DONDATHANGs;
+			}
+			set
+			{
+				this._DONDATHANGs.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1257,6 +1337,18 @@ namespace StoreOnline.Models
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_DONDATHANGs(DONDATHANG entity)
+		{
+			this.SendPropertyChanging();
+			entity.KHACHHANG = this;
+		}
+		
+		private void detach_DONDATHANGs(DONDATHANG entity)
+		{
+			this.SendPropertyChanging();
+			entity.KHACHHANG = null;
 		}
 	}
 	
