@@ -63,7 +63,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
+                    <span aria-hidden="true">@Html.ActionLink("×", "XoaTatcaGiohang")</span>
                 </button>
                 <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng của tôi</h4>
             </div>
@@ -77,9 +77,6 @@
                                     <img width="30px" height="30px" src="~/images/sanpham/@item.sAnhsp">
                                 </td>
                                 <td>@item.sTensp</td>
-                                <td title="Remove from Cart" class="text-center" style="width: 30px;">
-                                    <a href="#" class="btn btn-xs btn-danger my-product-remove">@Html.ActionLink("×","XoaGiohang", new { @iMaSp = item.iMasp })</a>
-                                </td>
                                 @using (Html.BeginForm("CapnhatGiohang", "Giohang", new { @iMaSp = item.iMasp }))
                                 {
                                     <td title="Quantity">
@@ -90,9 +87,12 @@
                                     @*<td> <span style="color:red">@Html.ActionLink("Xóa", "XoaGiohang", new { @iMaSp = item.iMasp })</span></td>*@
                                     <td title="Unit Price">@String.Format("{0:0,0}", item.dDongia)</td>
                                     <td title="Total" class="my-product-total">@String.Format("{0:0,0}", item.dThanhtien)</td>
-                                    @*<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">@Html.ActionLink("×", "XoaGiohang", new { @iMaSp = item.iMasp })</span>
-                                    </button>*@
+                                    @*<td title="Remove from Cart" class="text-center" style="width: 30px;">
+                                        <a href="#" class="btn btn-xs btn-danger my-product-remove">@Html.ActionLink("×","XoaGiohang", new { @iMaSp = item.iMasp })</a>
+                                    </td>*@
+                                    <td title="Remove from Cart" class="text-center" style="width: 30px;">
+                                        <a href="@Url.Action("XoaGiohang", "Giohang", new { @iMaSp = item.iMasp })" class="btn btn-xs btn-danger my-product-remove">X</a>
+                                    </td>
 
                                 }
 
@@ -106,12 +106,20 @@
                             <td><strong id="my-cart-grand-total">@String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ</strong></td>
                             <td></td>
                         </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>@Html.ActionLink("ĐẶT HÀNG", "DatHang", "Giohang")</strong></td>
+                            <td></td>
+                        </tr>
 
                     </tbody>
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                <a href="@Url.Action("Index", "Shoponline")"><button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button></a>
             </div>
         </div>
     </div>

@@ -97,6 +97,7 @@ CREATE TABLE CTPHIEUNHAP
 
 )
 GO
+
 CREATE TABLE ADMIN
 (
 	USERADMIN VARCHAR(30) PRIMARY KEY,
@@ -104,7 +105,13 @@ CREATE TABLE ADMIN
 	HOTEN NVARCHAR(50),
 )
 
-
+CREATE VIEW LOAI AS 
+(
+	SELECT LOAI
+	FROM SANPHAM
+	GROUP BY LOAI
+)
+GO
 --Auto ID-----------
 CREATE FUNCTION func_NextID(@lastID varchar(7),@prefix varchar(5),@size int)
 	returns varchar(7)
@@ -163,10 +170,3 @@ as
 	end
 GO
 
-create view LOAI
-AS
-(
-	SELECT LOAI
-	FROM SANPHAM
-	GROUP BY LOAI
-)
