@@ -260,7 +260,7 @@ namespace StoreOnline.Controllers
                     kh.DIACHIKH = diachi;
                     kh.DTKH = dienthoai;
                     kh.GIOITINH = gioitinh;
-                    if (chondoimk.ToString() == "checked")
+                    if (Convert.ToString(chondoimk) == "checked")
                     {
                         if (Convert.ToString(matkhaucu) == "Nhập Lại Mật Khẩu Mới")
                         {
@@ -278,12 +278,19 @@ namespace StoreOnline.Controllers
                         {
                             ViewData["loi9"] = "Mật khẩu nhập lại phải trùng trước đó";
                         }
+                        else if (matkhaucu.ToString() == kh.MK.ToString())
+                        {
+                            kh.MK = matkhau;
+                            db.SubmitChanges();
+                            ViewData["loi2"] = "Cập nhập thành công";
+                            return this.Info();
+                        }
                         else
                         {
-                            ViewData["loi2"] = "Cập nhập không thành công";
-                            return View();
+                            ViewData["loi7"] = "Mật Khẩu cũ không chính xác";
                         }
-                        kh.MK = matkhau;
+                        ViewData["loi2"] = "Cập nhập không thành công";
+                        return this.Info();                        
                     }
                     db.SubmitChanges();
                     ViewData["loi2"] = "Cập nhập thành công";
@@ -296,7 +303,7 @@ namespace StoreOnline.Controllers
                 }
             }
             ViewData["loi2"] = "Cập nhập không thành công";
-            return View();
+            return this.Info();
         }
         public ActionResult Lichsudathang()
         {

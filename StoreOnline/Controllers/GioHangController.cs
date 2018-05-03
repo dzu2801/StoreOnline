@@ -195,11 +195,14 @@ namespace StoreOnline.Controllers
             }
             data.SubmitChanges();
             Session["Giohang"] = null;
-            return RedirectToAction("Xacnhandonhang", "Giohang");
+            return RedirectToAction("Xacnhandonhang", "Giohang", new { madh = xx[0].MAHD});
         }
-        public ActionResult Xacnhandonhang()
+        public ActionResult Xacnhandonhang(string madh)
         {
-            return View();
+            var ddh = from dh in data.DONDATHANGs
+                      where dh.MAHD.ToString() == madh
+                      select dh;
+            return View(ddh.Single());
         }
     }
 
