@@ -1,0 +1,67 @@
+﻿@model StoreOnline.Models.NHACUNGCAP
+
+@{
+    ViewBag.Title = "DetailsNCC";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Thông Tin Chi Tiết Nhà Cung Cấp</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        
+        <dt>
+            Tên Nhà Cung Cấp:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENNCC)
+        </dd>
+        <dt>
+            Địa Chỉ:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIACHINCC)
+        </dd>
+        <dt>
+            Điện Thoại:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTNCC)
+        </dd>
+
+        <dt>
+            Email:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAILNCC)
+        </dd>
+
+        <dt>
+            Mã Số Thuế:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MASOTHUE)
+        </dd>
+
+        <dt>
+            Ghi Chú:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GHICHU)
+        </dd>
+
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Sửa", "EditNCC", new { id = Model.MANCC }) |
+    @Html.ActionLink("Trở Về", "Nhacungcap")
+</p>
+

@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using StoreOnline.Models;
+using PagedList;
+using PagedList.Mvc;
+using System.IO;
 
 namespace StoreOnline.Controllers
 {
@@ -19,6 +22,13 @@ namespace StoreOnline.Controllers
                 return RedirectToAction("Login", "Admin");
             }
             return View();
+        }
+
+        public ActionResult Sanpham(int ?page)
+        {
+            int pageNumber = (page ?? 1);
+            int pageSize = 10;
+            return View(db.SANPHAMs.ToList().OrderBy(n => n.MASP).ToPagedList(pageNumber, pageSize));
         }
 
         [HttpGet]
@@ -45,8 +55,7 @@ namespace StoreOnline.Controllers
                 if (ad != null)
                 {
                     Session["Admin"] = userad;
-                    ViewBag.Thongbao = "Đăng nhập Admin thành công";
-                    //return RedirectToAction("Index", "Admin");
+                    return RedirectToAction("Index", "Admin");
 
                 }
                 else
@@ -55,6 +64,203 @@ namespace StoreOnline.Controllers
                 }
             }
             return View();
+
+        }
+
+        [HttpGet]
+        public ActionResult Themsanpham()
+        {
+            ViewBag.LOAI = new SelectList(db.LOAIs.ToList().OrderBy(n => n.LOAI1), "LOAI", "LOAI1");
+            ViewBag.MANCC = new SelectList(db.NHACUNGCAPs.ToList().OrderBy(n => n.TENNCC), "MANCC", "TENNCC");
+            return View();
+        }
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Themsanpham(SANPHAM sanpham, HttpPostedFileBase fileUpload)
+        {
+            ViewBag.MANCC = new SelectList(db.NHACUNGCAPs.ToList().OrderBy(n => n.TENNCC), "MANCC", "TENNCC");
+            if (fileUpload == null)
+            {
+                ViewBag.Thongbao = "Vui lòng chọn ảnh bìa";
+                return View();
+            }
+            else
+            {
+                if (ModelState.IsValid)
+                {
+                    var fileName = Path.GetFileName(fileUpload.FileName);
+                    var path = Path.Combine(Server.MapPath("~/images/sanpham/"), fileName);
+                    if (System.IO.File.Exists(path))
+                    {
+                        ViewBag.Thongbao = "Hình ảnh đã tồn tại";
+                    }
+                    else
+                    {
+                        fileUpload.SaveAs(path);
+                    }
+                    sanpham.MASP = "";
+                    sanpham.HINHANH = fileName;
+                    db.SANPHAMs.InsertOnSubmit(sanpham);
+                    db.SubmitChanges();
+                }
+            }
+            return RedirectToAction("Sanpham");
+        }
+
+        public ActionResult DetailsSP(string id)
+        {
+            SANPHAM sanpham = db.SANPHAMs.SingleOrDefault(n => n.MASP == id);
+            ViewBag.MASP = sanpham.MASP;
+            if (sanpham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(sanpham);
+        }
+
+        [HttpGet]
+        public ActionResult DeleteSP(string id)
+        {
+            SANPHAM sanpham = db.SANPHAMs.SingleOrDefault(n => n.MASP == id);
+            ViewBag.MASP = sanpham.MASP;
+            if (sanpham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(sanpham);
+        }
+        [HttpPost, ActionName("DeleteSP")]
+        public ActionResult Xacnhanxoa(string id)
+        {
+            SANPHAM sanpham = db.SANPHAMs.SingleOrDefault(n => n.MASP == id);
+            ViewBag.MASP = sanpham.MASP;
+            if (sanpham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            db.SANPHAMs.DeleteOnSubmit(sanpham);
+            db.SubmitChanges();
+            return RedirectToAction("Sanpham");
+        }
+        [HttpGet]
+        public ActionResult EditSP(string id)
+        {
+            SANPHAM sanpham = db.SANPHAMs.SingleOrDefault(n => n.MASP == id);
+            if (sanpham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            ViewBag.MANCC = new SelectList(db.NHACUNGCAPs.ToList().OrderBy(n => n.TENNCC), "MANCC", "TENNCC");
+            return View(sanpham);
+        }
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult EditSP(SANPHAM sanpham, HttpPostedFileBase fileUpload)
+        {
+            ViewBag.MANCC = new SelectList(db.NHACUNGCAPs.ToList().OrderBy(n => n.TENNCC), "MANCC", "TENNCC");
+            if (fileUpload == null)
+            {
+                ViewBag.Thongbao = "Vui lòng chọn ảnh bìa";
+                return View();
+            }
+            else
+            {
+                if (ModelState.IsValid)
+                {
+                    var fileName = Path.GetFileName(fileUpload.FileName);
+                    var path = Path.Combine(Server.MapPath("~/images/sanpham"), fileName);
+                    if (System.IO.File.Exists(path))
+                        ViewBag.Thongbao = "Hình ảnh đã tồn tại";
+                    else
+                    {
+                        fileUpload.SaveAs(path);
+                    }
+                    sanpham.HINHANH = fileName;
+                    UpdateModel(sanpham);
+                    db.SubmitChanges();
+                }
+                return RedirectToAction("Sanpham");
+            }
+        }
+        public ActionResult Nhacungcap(int ?page)
+        {
+            int pageNumber = (page ?? 1);
+            int pageSize = 5;
+            return View(db.NHACUNGCAPs.ToList().OrderBy(n => n.MANCC).ToPagedList(pageNumber, pageSize));
+        }
+        [HttpGet]
+        public ActionResult CreateNCC()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreateNCC(NHACUNGCAP ncc, HttpPostedFileBase fileUpload)
+        {
+            ncc.MANCC = "";
+            db.NHACUNGCAPs.InsertOnSubmit(ncc);
+            db.SubmitChanges();
+            return RedirectToAction("Nhacungcap");
+        }
+
+        public ActionResult DetailsNCC(string id)
+        {
+            NHACUNGCAP ncc = db.NHACUNGCAPs.SingleOrDefault(n => n.MANCC == id);
+            ViewBag.MANCC = ncc.MANCC;
+            if (ncc == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(ncc);
+        }
+        public ActionResult DeleteNCC(string id)
+        {
+            NHACUNGCAP ncc = db.NHACUNGCAPs.SingleOrDefault(n => n.MANCC == id);
+            ViewBag.MANCC = ncc.MANCC;
+            if (ncc == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(ncc);
+        }
+        [HttpPost, ActionName("DeleteNCC")]
+        public ActionResult XacnhanxoaNCC(string id)
+        {
+            NHACUNGCAP ncc = db.NHACUNGCAPs.SingleOrDefault(n => n.MANCC == id);
+            ViewBag.MANCC = ncc.MANCC;
+            if (ncc == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            db.NHACUNGCAPs.DeleteOnSubmit(ncc);
+            db.SubmitChanges();
+            return RedirectToAction("Nhacungcap");
+        }
+
+        [HttpGet]
+        public ActionResult EditNCC(string id)
+        {
+            NHACUNGCAP ncc = db.NHACUNGCAPs.SingleOrDefault(n => n.MANCC == id);
+            if (ncc == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(ncc);
+        }
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult EditNCC(NHACUNGCAP ncc)
+        {
+            UpdateModel(ncc);
+            db.SubmitChanges();
+            return RedirectToAction("Nhacungcap");
         }
     }
 }

@@ -422,6 +422,18 @@
     <Content Include="Views\GioHang\DatHang.cshtml" />
     <Content Include="Views\GioHang\Xacnhandonhang.cshtml" />
     <Content Include="Views\User\Lichsudathang.cshtml" />
+    <Content Include="Views\Admin\CreateNCC.cshtml" />
+    <Content Include="Views\Admin\DeleteNCC.cshtml" />
+    <Content Include="Views\Admin\DeleteSP.cshtml" />
+    <Content Include="Views\Admin\DetailsNCC.cshtml" />
+    <Content Include="Views\Admin\DetailsSP.cshtml" />
+    <Content Include="Views\Admin\EditNCC.cshtml" />
+    <Content Include="Views\Admin\EditSP.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Nhacungcap.cshtml" />
+    <Content Include="Views\Admin\Sanpham.cshtml" />
+    <Content Include="Views\Admin\Themsanpham.cshtml" />
+    <Content Include="Views\Shoponline\Updating.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

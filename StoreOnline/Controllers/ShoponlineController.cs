@@ -66,5 +66,11 @@ namespace StoreOnline.Controllers
         {
             return View();
         }
+
+        public ActionResult Updating()
+        {
+            ViewBag.Thongbao = "Chức Năng Đang Cập Nhật!...........................";
+            return View();
+        }
     }
 }

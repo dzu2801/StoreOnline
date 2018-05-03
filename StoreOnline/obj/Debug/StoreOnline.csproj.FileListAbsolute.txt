@@ -841,3 +841,7 @@ D:\da\StoreOnline\obj\Debug\StoreOnline.csproj.CoreCompileInputs.cache
 D:\da\StoreOnline\obj\Debug\StoreOnline.csproj.CopyComplete
 D:\da\StoreOnline\obj\Debug\StoreOnline.dll
 D:\da\StoreOnline\obj\Debug\StoreOnline.pdb
+C:\Users\DZU\Desktop\Github\StoreOnline\StoreOnline\bin\PagedList.dll
+C:\Users\DZU\Desktop\Github\StoreOnline\StoreOnline\bin\PagedList.Mvc.dll
+C:\Users\DZU\Desktop\Github\StoreOnline\StoreOnline\bin\PagedList.xml
+C:\Users\DZU\Desktop\Github\StoreOnline\StoreOnline\bin\PagedList.Mvc.xml

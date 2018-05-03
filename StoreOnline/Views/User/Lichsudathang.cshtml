@@ -23,7 +23,7 @@
         <div class="modal-body">
             <table class="table table-hover table-responsive" id="my-cart-table">
                 <tr>
-                    <td><strong>Mã Hóa Đơn</strong></td>
+                    <td><strong>Mã Hóa Đơn</strong></a></td>
                     <td><strong>Tình Trạng Thanh Toán</strong></td>
                     <td><strong>Tình Trạng Giao Hàng</strong></td>
                     <td><strong>Ngày Đặt</strong></td>
@@ -34,7 +34,7 @@
                     @foreach (var item in Model)
                     {            
                         <tr title="summary 3" data-id="3" data-price="2.00">
-                        <td>@item.MAHD</td>
+                        <td><a href="@Url.Action("Updating", "Shoponline")">@item.MAHD</a></td>
                         <td>@item.DATHANHTOAN</td>
                         <td>@item.TINHTRANGGIAO</td>
                         <td>@item.NGAYDAT</td>
