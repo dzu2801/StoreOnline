@@ -1,0 +1,95 @@
+﻿@using StoreOnline.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<StoreOnline.Models.NHACUNGCAP>
+
+@helper Truncate(string input, int lenght)
+    {
+        if (input.Length < lenght)
+        {
+            @input
+        }
+        else
+        {
+            @input.Substring(0, lenght)<text>...</text>
+        }
+}
+
+
+@{
+    ViewBag.Title = "Nhacungcap";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+
+<h2>Quản Lý Thông Tin Nhà Cung Cấp</h2>
+<br />
+
+<p>
+    @Html.ActionLink("Thêm Nhà Cung Cấp", "CreateNCC")
+</p>
+
+<table class="table" border="1">
+    <tr>
+        <th style="width:200px; text-align:center">
+            Nhà Cung Cấp
+        </th>
+        <th style="width:300px; text-align:center">
+            Địa Chỉ
+        </th>
+        <th style="width:150px; text-align:center">
+            Điện Thoại
+        </th>
+        <th style="width:150px; text-align:center">
+            Email
+        </th>
+        <th style="width:200px; text-align:center">
+            Mã Số Thuế
+        </th>
+        <th style="width:150px; text-align:center">
+            Ghi Chú
+        </th>
+        <th style="width:200px; text-align:center"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TENNCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DIACHINCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DTNCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMAILNCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MASOTHUE)
+            </td>
+            <td>
+                @Truncate(item.GHICHU, 50)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "EditNCC", new { id = item.MANCC }) |
+                @Html.ActionLink("Chi Tiết", "DetailsNCC", new { id = item.MANCC }) |
+                @Html.ActionLink("Xóa", "DeleteNCC", new { id = item.MANCC })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    <ul class="pagination pagination-lg">
+        <li>
+            @Html.PagedListPager(Model, page => Url.Action("Nhacungcap", new { page = page }))
+        </li>
+    </ul>
+</div>

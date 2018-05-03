@@ -1,0 +1,72 @@
+﻿@model StoreOnline.Models.NHACUNGCAP
+
+@{
+    ViewBag.Title = "DeleteNCC";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Xác Nhận Thông Tin Nhà Cung Cấp Cần Xóa</h2>
+
+<h3>Bạn quyết định xóa nhà cung cấp này?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TENNCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENNCC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIACHINCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIACHINCC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DTNCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTNCC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAILNCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAILNCC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MASOTHUE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MASOTHUE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GHICHU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GHICHU)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Trở Về", "Nhacungcap")
+        </div>
+    }
+</div>

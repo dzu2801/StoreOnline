@@ -58,10 +58,41 @@
                 </div>
                 <label>Giới tính: (Nam / Nữ / Khác)</label>
                 @ViewData["loi6"]
-                <div class="key">
-                    <i class="fa fa-intersex" aria-hidden="true"></i>
-                    <input type="text" value="Giới Tính" name="Sex" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Giới Tính';}" required="">
-                    <div class="clearfix"></div>
+                <div class="form-group gender-select-wrap" id="register_name">
+                    <label class="control-label" for="pasword">Giới tính</label>
+                    <div class="input-wrap">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <label>
+                                    <input type="radio" name="gender" value="Nam" id="gender_male" class="gender">
+                                    <span>
+                                        <i class="ico"></i>
+                                    </span>
+                                    Nam
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label>                                   
+                                    <input type="radio" name="gender" value="Nữ" id="gender_male" class="gender">
+                                    <span>
+                                        <i class="ico"></i>
+                                    </span>
+                                    Nữ
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <label>
+                                    <input type="radio" name="gender" value="Khác" id="gender_male" class="gender">
+                                    <span>
+                                        <i class="ico"></i>
+                                    </span>
+                                    Khác
+                                </label>
+                            </div>
+                        </div>
+                        <span class="help-block"></span>
+                        <div class="clearfix"></div>
+                    </div>
                 </div>
                 <label>Mật khẩu</label>
                 @ViewData["loi7"]

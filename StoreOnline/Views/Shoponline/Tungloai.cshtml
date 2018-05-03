@@ -27,7 +27,7 @@
             {
                 <div class="col-sm-4 col-lg-3 col-md-4 pro-1">
                     <div class="thumbnail col-m">
-                        <a href="@Url.Action("Details", "Shoponline", new { masp = sanpham.MASP })" data-toggle="modal" data-target="#myModal1" class="offer-img">
+                        <a href="@Url.Action("Details", "Shoponline", new { masp = sanpham.MASP })" class="offer-img">
                             <img alt="@sanpham.TENSP" src="~/images/sanpham/@sanpham.HINHANH" sizes="auto" class="img-responsive">
                             <div class="offer"><p><span>@sanpham.LOAI</span></p></div>
                         </a>
@@ -44,11 +44,9 @@
                             </div>
                             <div>
                                 <div class="add add-3">
-                                    <button class="btn btn-danger my-cart-btn my-cart-b ">
                                         <a href="@Url.Action("ThemGiohang", "GioHang", new { @iMasp= sanpham.MASP, @strURL=Request.Url.ToString() })">
-                                            <p style="color:black">ĐẶT MUA</p>
+                                            <p style="color:black" class="btn btn-danger my-cart-btn my-cart-b">ĐẶT MUA</p>
                                         </a>
-                                    </button>
                                 </div>
                             </div>
                         </div>

@@ -1,0 +1,111 @@
+﻿@using StoreOnline.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<StoreOnline.Models.SANPHAM>
+
+@helper Truncate(string input, int lenght)
+    {
+        if (input.Length < lenght)
+        {
+            @input
+        }
+        else
+        {
+            @input.Substring(0, lenght)<text>...</text>
+        }
+}
+
+@{
+    ViewBag.Title = "Sanpham";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+
+<h2>Quản Lý Thông Tin Sản Phẩm</h2>
+<br />
+
+<p>
+    @Html.ActionLink("Thêm Mới Sản Phẩm", "Themsanpham")
+</p>
+
+<table class="table" border="1">
+    <tr>
+        @*<th>
+                @Html.DisplayNameFor(model => model.First().HINHANH)
+            </th>*@
+        <th style="width:200px; text-align:center">
+            Tên Sản Phẩm
+        </th>
+        <th style="width:150px; text-align:center">
+            Loại
+        </th>
+        <th style="width:100px; text-align:center">
+            Số Lượng
+        </th>
+        <th style="width:150px; text-align:center">
+            Nhà Cung Cấp
+        </th>
+        <th style="width:100px; text-align:center">
+            ĐVT
+        </th>
+        <th style="width:150px; text-align:center">
+            Giá Vốn
+        </th>
+        <th style="width:150px; text-align:center">
+            Giá Bán
+        </th>
+        <th style="width:300px; text-align:center">
+            Mô Tả
+        </th>
+        <th style="width:200px"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                    <img src="@Url.Content("~/images/sanpham/" + item.HINHANH)" class="img-responsive" />
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.TENSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LOAI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SOLUONG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NHACUNGCAP.TENNCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DONVITINH)
+            </td>
+            <td>
+                @String.Format("{0:0,0}", item.GIAVON) VNĐ
+            </td>
+            <td>
+                @String.Format("{0:0,0}", item.GIABAN) VNĐ
+            </td>
+            <td>
+                @Truncate(item.MOTA, 50)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "EditSP", new { id = item.MASP }) |
+                @Html.ActionLink("Chi tiết", "DetailsSP", new { id = item.MASP }) |
+                @Html.ActionLink("Xóa", "DeleteSP", new { id = item.MASP })
+            </td>
+        </tr>
+    }
+
+</table>
+<div>
+    <ul class="pagination pagination-lg">
+        <li>
+            @Html.PagedListPager(Model, page => Url.Action("Sanpham", new { page = page }))
+        </li>
+    </ul>
+</div>

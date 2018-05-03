@@ -266,7 +266,6 @@ C:\Users\DZU\Desktop\StoreOnline\StoreOnline\bin\Microsoft.AI.DependencyCollecto
 C:\Users\DZU\Desktop\StoreOnline\StoreOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\DZU\Desktop\StoreOnline\StoreOnline\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\DZU\Desktop\StoreOnline\StoreOnline\bin\Microsoft.AI.Web.xml
-C:\Users\DZU\Desktop\StoreOnline\StoreOnline\obj\Debug\StoreOnline.csprojResolveAssemblyReference.cache
 C:\Users\DZU\Desktop\StoreOnline\StoreOnline\obj\Debug\StoreOnline.csproj.CoreCompileInputs.cache
 C:\Users\DZU\Desktop\StoreOnline\StoreOnline\obj\Debug\StoreOnline.csproj.CopyComplete
 C:\Users\DZU\Desktop\StoreOnline\StoreOnline\obj\Debug\StoreOnline.dll
