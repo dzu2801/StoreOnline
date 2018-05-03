@@ -300,11 +300,13 @@ namespace StoreOnline.Controllers
         }
         public ActionResult Lichsudathang()
         {
-            if(Session["taikhoan"]==null)
+            if (Session["TK"] == null||Session["TK"].ToString()==null)
             {
                 return this.Login();
             }
-            return View();
+            KHACHHANG kh = (KHACHHANG)Session["Taikhoan"];
+            var ddh=db.DONDATHANGs.OrderByDescending(a => a.NGAYDAT).Where(m=>m.MAKH==kh.MAKH.ToString()).ToList();
+            return View(ddh);
         }
     }
 }

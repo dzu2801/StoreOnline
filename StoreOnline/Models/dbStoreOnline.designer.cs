@@ -54,7 +54,7 @@ namespace StoreOnline.Models
     #endregion
 		
 		public dbStoreOnlineDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SHOPDACSANConnectionString2"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SHOPDACSANConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -298,6 +298,8 @@ namespace StoreOnline.Models
 		
 		private string _HINHANH;
 		
+		private string _MOTA;
+		
 		private EntityRef<NHACUNGCAP> _NHACUNGCAP;
 		
     #region Extensibility Method Definitions
@@ -322,6 +324,8 @@ namespace StoreOnline.Models
     partial void OnGIABANChanged();
     partial void OnHINHANHChanging(string value);
     partial void OnHINHANHChanged();
+    partial void OnMOTAChanging(string value);
+    partial void OnMOTAChanged();
     #endregion
 		
 		public SANPHAM()
@@ -510,6 +514,26 @@ namespace StoreOnline.Models
 					this._HINHANH = value;
 					this.SendPropertyChanged("HINHANH");
 					this.OnHINHANHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MOTA", DbType="NVarChar(MAX)")]
+		public string MOTA
+		{
+			get
+			{
+				return this._MOTA;
+			}
+			set
+			{
+				if ((this._MOTA != value))
+				{
+					this.OnMOTAChanging(value);
+					this.SendPropertyChanging();
+					this._MOTA = value;
+					this.SendPropertyChanged("MOTA");
+					this.OnMOTAChanged();
 				}
 			}
 		}
