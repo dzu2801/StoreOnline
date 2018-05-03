@@ -280,10 +280,10 @@ namespace StoreOnline.Controllers
                         }
                         else
                         {
-                            kh.MK = matkhau;
+                            ViewData["loi2"] = "Cập nhập không thành công";
+                            return View();
                         }
-                        ViewData["loi2"] = "Cập nhập không thành công";
-                        return View();
+                        kh.MK = matkhau;
                     }
                     db.SubmitChanges();
                     ViewData["loi2"] = "Cập nhập thành công";
@@ -292,7 +292,7 @@ namespace StoreOnline.Controllers
                 catch
                 {
                     ViewData["loi2"] = "Cập nhập không thành công";
-                    return View();
+                    return this.Info();
                 }
             }
             ViewData["loi2"] = "Cập nhập không thành công";
