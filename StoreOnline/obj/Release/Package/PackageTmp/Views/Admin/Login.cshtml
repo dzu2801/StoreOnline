@@ -1,44 +1,23 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>Login Admin</title>
-    <link href="~/Content/style.ad.css" rel="stylesheet" type="text/css" media="all" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Transparent Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
-    <!--web-fonts-->
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css' />
-    <!--web-fonts-->
-
-</head>
-
-<body>
-    <div class="header-w3l">
-        <h1> Trang Đăng Nhập Admin</h1>
+<div class="header-w3l">
+    <h1> Trang Đăng Nhập Admin</h1>
+</div>
+<!--//header-->
+<!--main-->
+<div class="main-content-agile">
+    <div class="sub-main-w3">
+        <span style="color:red">@ViewBag.Thongbao</span>
+        <span style="color:red">@ViewData["loi1"]</span>
+        <span style="color:red">@ViewData["loi2"]</span>
+        <form action="#" method="post">
+            <input placeholder="Username" name="Userad" class="user" type="text" required=""><br>
+            <input placeholder="Password" name="Passad" class="pass" type="password" required=""><br>
+            <input type="submit" value="">
+        </form>
     </div>
-    <!--//header-->
-    <!--main-->
-    <div class="main-content-agile">
-        <div class="sub-main-w3">
-            <span style="color:red">@ViewBag.Thongbao</span>
-            <span style="color:red">@ViewData["loi1"]</span>
-            <span style="color:red">@ViewData["loi2"]</span>
-            <form action="#" method="post">
-                <input placeholder="Username" name="Userad" class="user" type="text" required=""><br>
-                <input placeholder="Password" name="Passad" class="pass" type="password" required=""><br>
-                <input type="submit" value="">
-            </form>
-        </div>
-    </div>
-    <div class="footer">
-        <p>&copy; 2017 Transparent Login Form. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-    </div>
-
-</body>
-</html>
+</div>

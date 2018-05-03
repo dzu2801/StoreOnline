@@ -262,5 +262,16 @@ namespace StoreOnline.Controllers
             db.SubmitChanges();
             return RedirectToAction("Nhacungcap");
         }
+        [HttpGet]
+        public ActionResult Dondathang()
+        {
+            List<DONDATHANG> ddh = db.DONDATHANGs.OrderByDescending(a => a.NGAYDAT).ToList();
+            return View(ddh);
+        }
+        public ActionResult Chitietdondathang(string mahd)
+        {
+            List<CTDONDATHANG> sp = db.CTDONDATHANGs.Where(a=>a.MAHD==mahd).ToList();
+            return View(sp.ToList());
+        }
     }
 }

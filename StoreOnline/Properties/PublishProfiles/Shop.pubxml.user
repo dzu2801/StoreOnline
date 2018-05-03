@@ -80,19 +80,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2018 10:55:27</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
-      <publishTime>04/23/2018 10:55:27</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
       <publishTime>04/23/2018 10:55:27</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
-      <publishTime>04/23/2018 10:55:28</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
       <publishTime>04/23/2018 10:55:27</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
-      <publishTime>04/23/2018 10:55:28</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
       <publishTime>04/23/2018 10:55:27</publishTime>
@@ -203,10 +203,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2018 10:55:28</publishTime>
     </File>
     <File Include="bin/StoreOnline.dll">
-      <publishTime>05/03/2018 22:13:33</publishTime>
+      <publishTime>05/04/2018 00:13:53</publishTime>
     </File>
     <File Include="bin/StoreOnline.pdb">
-      <publishTime>05/03/2018 22:13:33</publishTime>
+      <publishTime>05/04/2018 00:13:53</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>04/23/2018 10:55:27</publishTime>
@@ -521,7 +521,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2018 10:55:26</publishTime>
     </File>
     <File Include="Models/dbStoreOnline.dbml">
-      <publishTime>05/03/2018 18:39:51</publishTime>
+      <publishTime>05/04/2018 00:09:13</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>04/27/2018 17:07:07</publishTime>
@@ -662,7 +662,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/27/2018 20:04:17</publishTime>
     </File>
     <File Include="Views/Shoponline/Details.cshtml">
-      <publishTime>05/03/2018 10:54:06</publishTime>
+      <publishTime>03/05/2018 23:06:21</publishTime>
     </File>
     <File Include="Views/Shoponline/Giaohang.cshtml">
       <publishTime>05/02/2018 12:00:53</publishTime>
@@ -680,7 +680,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/01/2018 22:15:41</publishTime>
     </File>
     <File Include="Views/Shoponline/Tungloai.cshtml">
-      <publishTime>05/03/2018 18:45:11</publishTime>
+      <publishTime>03/05/2018 22:53:32</publishTime>
     </File>
     <File Include="Views/Shoponline/Updating.cshtml">
       <publishTime>05/03/2018 18:52:21</publishTime>
@@ -698,7 +698,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/28/2018 21:25:43</publishTime>
     </File>
     <File Include="Views/User/Register.cshtml">
-      <publishTime>05/02/2018 22:29:29</publishTime>
+      <publishTime>03/05/2018 23:20:54</publishTime>
     </File>
     <File Include="Views/User/Resetpassword.cshtml">
       <publishTime>04/27/2018 20:04:17</publishTime>
@@ -713,7 +713,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2018 10:55:25</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/03/2018 22:08:44</publishTime>
+      <publishTime>05/04/2018 00:13:59</publishTime>
     </File>
   </ItemGroup>
 </Project>

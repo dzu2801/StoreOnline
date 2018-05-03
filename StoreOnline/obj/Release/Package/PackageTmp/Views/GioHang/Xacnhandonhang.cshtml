@@ -1,4 +1,4 @@
-﻿@using StoreOnline.Models
+﻿
 @{
     ViewBag.Title = "Xacnhandonhang";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
@@ -12,25 +12,13 @@
 </div>
 </br>
 </br>
+<div class="content-top ">
+    <div class="container ">
 
-<div class="modal-dialog" role="document">
-    <h1 style="text-align:center; color:red">CẢM ƠN QUÝ KHÁCH ĐÃ ĐẶT HÀNG</h1>
-    <div class="modal-content">
-
-        <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart"></span> Thanh Toan Online</h4>
-        </div>
-        <div class="modal-body">
-            <h1 style="text-align:center; color:red">
-                Bạn có muốn thanh toán Online??? NẾU KHÔNG HÃY NHẤN TRỞ VỀ 
-                <a href="@Url.Action("Index", "Shoponline")">TRANG CHỦ</a>
-                </br>
-                </br>
-                <a target="_blank" href="https://www.nganluong.vn/button_payment.php?receiver=dzu2801@gmail.com&product_name=@Model.MAHD&price=@Model.THANHTIEN&return_url=@Url.Action("Index", "Shoponline")&comments=(Ghi chú về đơn hàng)">
-                    <img src="https://www.nganluong.vn/css/newhome/img/button/pay-sm.png" border="0" />
-                </a>
-            </h1>
+        <h1 style="text-align:center; color:red">XIN CẢM ƠN QUÝ KHÁCH</h1>
+        
+        <p class="modal-footer">
+            @Html.ActionLink("VỀ TRANG CHỦ", "Index", "Shoponline")
+        </p>
         </div>
     </div>
-</div>
-

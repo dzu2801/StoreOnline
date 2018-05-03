@@ -1,0 +1,45 @@
+﻿@model IEnumerable<StoreOnline.Models.CTDONDATHANG>
+
+@{
+    ViewBag.Title = "Chitietdondathang";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Chitietdondathang</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Mã Sản Phẩm
+        </th>
+        <th>
+            Số Lượng
+        </th>
+        <th>
+            Tổng Tiền
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MASP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TONGTIEN)
+            </td>
+
+        </tr>
+    }
+
+</table>
+<td>
+    @Html.ActionLink("Quay lại", "Dondathang")
+</td>
