@@ -307,12 +307,21 @@ namespace StoreOnline.Controllers
         }
         public ActionResult Lichsudathang()
         {
-            if (Session["TK"] == null||Session["TK"].ToString()==null)
+            if (Session["Taikhoan"] == null)
             {
                 return this.Login();
             }
             KHACHHANG kh = (KHACHHANG)Session["Taikhoan"];
             var ddh=db.DONDATHANGs.OrderByDescending(a => a.NGAYDAT).Where(m=>m.MAKH==kh.MAKH.ToString()).ToList();
+            return View(ddh);
+        }
+        public ActionResult Chitietdondathang(string mahd)
+        {
+            if (Session["TK"] == null || Session["TK"].ToString() == null)
+            {
+                return this.Login();
+            }
+            var ddh = db.CTDONDATHANGs.Where(m => m.MAHD == mahd).ToList();
             return View(ddh);
         }
     }

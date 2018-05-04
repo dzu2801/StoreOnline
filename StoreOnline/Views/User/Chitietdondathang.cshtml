@@ -1,0 +1,47 @@
+﻿@using StoreOnline.Models
+@{
+    ViewBag.Title = "Chitietdondathang";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<div class="banner-top">
+    <div class="container">
+        <h3>Lịch Sử Đặt Hàng</h3>
+        <h4><a href="@Url.Action("Index", "Shoponline")">Trang Chủ</a><label>/</label>Lịch Sử Đặt Hàng</h4>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+
+<!--login-->
+
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart"></span> Chi Tiết Đơn Đặt Hàng</h4>
+        </div>
+        <div class="modal-body">
+            <table class="table table-hover table-responsive" id="my-cart-table">
+                <tr>
+                    <td><strong>Mã Sản Phẩm</strong></td>
+                    <td><strong>Số Lương</strong></td>
+                    <td><strong>Tổng Tiền</strong></td>
+                </tr>
+                <tbody>
+                    @foreach (var item in Model)
+                {
+                    <tr title="summary 3" data-id="3" data-price="2.00">
+                        <td>@item.MASP</td>
+                        <td>@item.SL</td>
+                        <td>@item.TONGTIEN</td>
+
+                    </tr>
+            }
+                </tbody>
+
+            </table>
+        </div>
+        <td>
+            @Html.ActionLink("Quay lại", "Lichsudathang")
+        </td>
+    </div>
+</div>
+

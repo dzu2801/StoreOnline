@@ -1,77 +1,56 @@
-﻿@model StoreOnline.Models.NHACUNGCAP
-
+﻿@using StoreOnline.Models
 @{
     ViewBag.Title = "EditNCC";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
-
-<h2>Điều Chỉnh Thông Tin Nhà Cung Cấp</h2>
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.MANCC)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.TENNCC, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TENNCC, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TENNCC, "", new { @class = "text-danger" })
+<body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="form-w3agile form1">
+        <h3>Thông Tin Nhà Cung Cấp</h3>
+        <form action="#" method="post">
+            <label>Tên NCC</label>
+            <div class="key">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" value="@Model.TENNCC" name="Ten" onfocus="this.value = '@Model.TENNCC';" onblur="if (this.value == '') {this.value = 'Họ Tên';}" required="">
+                <span class="help-block"></span>
+                <div class="clearfix"></div>
             </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.DIACHINCC, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DIACHINCC, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DIACHINCC, "", new { @class = "text-danger" })
+            <label>Email</label>
+            <div class="key">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <input type="text" value="@Model.EMAILNCC" name="Email" onfocus="this.value = '@Model.EMAILNCC';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                <div class="clearfix"></div>
             </div>
-        </div>
+            <label>Địa chỉ</label>
+            <div class="key">
+                <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
+                <input type="text" value="@Model.DIACHINCC" name="Diachi" onfocus="this.value = '@Model.DIACHINCC';" onblur="if (this.value == '') {this.value = 'Địa Chỉ';}" required="">
+                <div class="clearfix"></div>
+            </div>
+            <label>Điện thoại</label>
+            <div class="key">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <input type="text" value="@Model.DTNCC" name="Dienthoai" onfocus="this.value = '@Model.DTNCC';" onblur="if (this.value == '') {this.value = 'Số Điện Thoại';}" required="">
+                <div class="clearfix"></div>
+            </div>
+            <label>Mã Số Thuế</label>
+            <div class="key">
+                <input type="text" value="@Model.MASOTHUE" name="mast" onfocus="this.value = '@Model.MASOTHUE';" onblur="if (this.value == '') {this.value = 'Số Điện Thoại';}" required="">
+                <div class="clearfix"></div>
+            </div>
+            <label>Ghi Chú</label>
+            <div class="key">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <input type="text" value="@Model.GHICHU" name="ghichu" onfocus="this.value = '@Model.GHICHU';" onblur="if (this.value == '') {this.value = 'Số Điện Thoại';}" required="">
+                <div class="clearfix"></div>
+            </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.DTNCC, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DTNCC, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DTNCC, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EMAILNCC, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.EMAILNCC, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.EMAILNCC, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.MASOTHUE, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.MASOTHUE, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.MASOTHUE, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.GHICHU, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.GHICHU, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.GHICHU, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
-        </div>
+            <input type="submit" value="Cập Nhật">
+        </form>
     </div>
-}
+</body>
 
-<div>
-    @Html.ActionLink("Trở Về", "Nhacungcap")
-</div>

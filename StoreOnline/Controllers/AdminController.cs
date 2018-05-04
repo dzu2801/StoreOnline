@@ -26,6 +26,10 @@ namespace StoreOnline.Controllers
 
         public ActionResult Sanpham(int ?page)
         {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
             int pageNumber = (page ?? 1);
             int pageSize = 10;
             return View(db.SANPHAMs.ToList().OrderBy(n => n.MASP).ToPagedList(pageNumber, pageSize));
@@ -55,8 +59,7 @@ namespace StoreOnline.Controllers
                 if (ad != null)
                 {
                     Session["Admin"] = userad;
-                    return RedirectToAction("Index", "Admin");
-
+                    return RedirectToAction("Dondathang", "Admin");
                 }
                 else
                 {
@@ -188,6 +191,14 @@ namespace StoreOnline.Controllers
         }
         public ActionResult Nhacungcap(int ?page)
         {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
             int pageNumber = (page ?? 1);
             int pageSize = 5;
             return View(db.NHACUNGCAPs.ToList().OrderBy(n => n.MANCC).ToPagedList(pageNumber, pageSize));
@@ -208,6 +219,10 @@ namespace StoreOnline.Controllers
 
         public ActionResult DetailsNCC(string id)
         {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
             NHACUNGCAP ncc = db.NHACUNGCAPs.SingleOrDefault(n => n.MANCC == id);
             ViewBag.MANCC = ncc.MANCC;
             if (ncc == null)
@@ -246,6 +261,11 @@ namespace StoreOnline.Controllers
         [HttpGet]
         public ActionResult EditNCC(string id)
         {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            Session["mancc"] = id;
             NHACUNGCAP ncc = db.NHACUNGCAPs.SingleOrDefault(n => n.MANCC == id);
             if (ncc == null)
             {
@@ -255,21 +275,43 @@ namespace StoreOnline.Controllers
             return View(ncc);
         }
         [HttpPost]
-        [ValidateInput(false)]
-        public ActionResult EditNCC(NHACUNGCAP ncc)
+        public ActionResult EditNCC(FormCollection collection)
         {
-            UpdateModel(ncc);
+            var id = Session["mancc"];
+            var ten = collection["Ten"];
+            var diachi = collection["Diachi"];
+            var dt = collection["Dienthoai"];
+            var email = collection["Email"];
+            var mast = collection["mast"];
+            var ghichu = collection["ghichu"];
+
+            NHACUNGCAP ncc = db.NHACUNGCAPs.SingleOrDefault(n => n.MANCC == id.ToString());
+            ncc.TENNCC = ten;
+            ncc.DIACHINCC = diachi;
+            ncc.DTNCC = dt;
+            ncc.GHICHU = ghichu;
+            ncc.MASOTHUE = mast;
+            ncc.EMAILNCC = email;
             db.SubmitChanges();
+          
             return RedirectToAction("Nhacungcap");
         }
         [HttpGet]
         public ActionResult Dondathang()
         {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
             List<DONDATHANG> ddh = db.DONDATHANGs.OrderByDescending(a => a.NGAYDAT).ToList();
             return View(ddh);
         }
         public ActionResult Chitietdondathang(string mahd)
         {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
             List<CTDONDATHANG> sp = db.CTDONDATHANGs.Where(a=>a.MAHD==mahd).ToList();
             return View(sp.ToList());
         }

@@ -853,3 +853,7 @@ C:\Users\DZU\Desktop\StoreOnline\StoreOnline\bin\EntityFramework.dll
 C:\Users\DZU\Desktop\StoreOnline\StoreOnline\bin\EntityFramework.SqlServer.dll
 C:\Users\DZU\Desktop\StoreOnline\StoreOnline\bin\EntityFramework.xml
 C:\Users\DZU\Desktop\StoreOnline\StoreOnline\bin\EntityFramework.SqlServer.xml
+D:\da\StoreOnline\bin\EntityFramework.dll
+D:\da\StoreOnline\bin\EntityFramework.SqlServer.dll
+D:\da\StoreOnline\bin\EntityFramework.xml
+D:\da\StoreOnline\bin\EntityFramework.SqlServer.xml
