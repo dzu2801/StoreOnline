@@ -73,6 +73,11 @@ namespace StoreOnline.Controllers
         [HttpGet]
         public ActionResult Themsanpham()
         {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+
             ViewBag.LOAI = new SelectList(db.LOAIs.ToList().OrderBy(n => n.LOAI1), "LOAI", "LOAI1");
             ViewBag.MANCC = new SelectList(db.NHACUNGCAPs.ToList().OrderBy(n => n.TENNCC), "MANCC", "TENNCC");
             return View();
@@ -112,6 +117,11 @@ namespace StoreOnline.Controllers
 
         public ActionResult DetailsSP(string id)
         {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+
             SANPHAM sanpham = db.SANPHAMs.SingleOrDefault(n => n.MASP == id);
             ViewBag.MASP = sanpham.MASP;
             if (sanpham == null)
@@ -125,6 +135,11 @@ namespace StoreOnline.Controllers
         [HttpGet]
         public ActionResult DeleteSP(string id)
         {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+
             SANPHAM sanpham = db.SANPHAMs.SingleOrDefault(n => n.MASP == id);
             ViewBag.MASP = sanpham.MASP;
             if (sanpham == null)
@@ -137,6 +152,7 @@ namespace StoreOnline.Controllers
         [HttpPost, ActionName("DeleteSP")]
         public ActionResult Xacnhanxoa(string id)
         {
+
             SANPHAM sanpham = db.SANPHAMs.SingleOrDefault(n => n.MASP == id);
             ViewBag.MASP = sanpham.MASP;
             if (sanpham == null)
@@ -151,6 +167,11 @@ namespace StoreOnline.Controllers
         [HttpGet]
         public ActionResult EditSP(string id)
         {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+
             SANPHAM sanpham = db.SANPHAMs.SingleOrDefault(n => n.MASP == id);
             if (sanpham == null)
             {
@@ -195,10 +216,6 @@ namespace StoreOnline.Controllers
             {
                 return RedirectToAction("Login", "Admin");
             }
-            if (Session["Admin"] == null)
-            {
-                return RedirectToAction("Login", "Admin");
-            }
             int pageNumber = (page ?? 1);
             int pageSize = 5;
             return View(db.NHACUNGCAPs.ToList().OrderBy(n => n.MANCC).ToPagedList(pageNumber, pageSize));
@@ -211,6 +228,11 @@ namespace StoreOnline.Controllers
         [HttpPost]
         public ActionResult CreateNCC(NHACUNGCAP ncc, HttpPostedFileBase fileUpload)
         {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+
             ncc.MANCC = "";
             db.NHACUNGCAPs.InsertOnSubmit(ncc);
             db.SubmitChanges();
@@ -232,8 +254,14 @@ namespace StoreOnline.Controllers
             }
             return View(ncc);
         }
+        [HttpGet]
         public ActionResult DeleteNCC(string id)
         {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+
             NHACUNGCAP ncc = db.NHACUNGCAPs.SingleOrDefault(n => n.MANCC == id);
             ViewBag.MANCC = ncc.MANCC;
             if (ncc == null)
@@ -306,14 +334,74 @@ namespace StoreOnline.Controllers
             List<DONDATHANG> ddh = db.DONDATHANGs.OrderByDescending(a => a.NGAYDAT).ToList();
             return View(ddh);
         }
-        public ActionResult Chitietdondathang(string mahd)
+        public ActionResult Chitietdondathang(string mahd, string makh)
         {
             if (Session["Admin"] == null)
             {
                 return RedirectToAction("Login", "Admin");
             }
             List<CTDONDATHANG> sp = db.CTDONDATHANGs.Where(a=>a.MAHD==mahd).ToList();
+            List<CTDONDATHANG> kh = db.CTDONDATHANGs.Where(a => a.DONDATHANG.MAKH == makh).ToList();
+
             return View(sp.ToList());
+        }
+
+        public ActionResult Khachhang(int ?page)
+        {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            int pageNumber = (page ?? 1);
+            int pageSize = 5;
+            return View(db.KHACHHANGs.ToList().OrderBy(n => n.MAKH).ToPagedList(pageNumber, pageSize));
+        }
+
+        public ActionResult DetailsKH(string id)
+        {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            KHACHHANG kh = db.KHACHHANGs.SingleOrDefault(n => n.MAKH == id);
+            ViewBag.MAKH = kh.MAKH;
+            if (kh == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(kh);
+        }
+        [HttpGet]
+        public ActionResult DeleteKH(string id)
+        {
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+
+            KHACHHANG kh = db.KHACHHANGs.SingleOrDefault(n => n.MAKH == id);
+            ViewBag.MAKH = kh.MAKH;
+            if (kh == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(kh);
+        }
+        [HttpPost, ActionName("DeleteKH")]
+        public ActionResult XacnhanxoaKH(string id)
+        {
+            KHACHHANG kh = db.KHACHHANGs.SingleOrDefault(n => n.MAKH == id);
+            ViewBag.MAKH = kh.MAKH;
+            if (kh == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            db.KHACHHANGs.DeleteOnSubmit(kh);
+            db.SubmitChanges();
+            return RedirectToAction("Khachhang");
         }
     }
 }

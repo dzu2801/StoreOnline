@@ -1,0 +1,83 @@
+﻿@model StoreOnline.Models.KHACHHANG
+
+@{
+    ViewBag.Title = "DetailsKH";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Thông Tin Khách Hàng</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên Tài Khoản:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TK)
+            <span class="help-block"></span>
+            <div class="clearfix"></div>
+
+        </dd>
+
+        <dt>
+            Họ Tên Khách Hàng:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENKH)
+            <span class="help-block"></span>
+            <div class="clearfix"></div>
+
+        </dd>
+
+        <dt>
+            Email:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAILKH)
+            <span class="help-block"></span>
+            <div class="clearfix"></div>
+
+        </dd>
+
+        <dt>
+            Địa Chỉ:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIACHIKH)
+            <span class="help-block"></span>
+            <div class="clearfix"></div>
+
+        </dd>
+
+        <dt>
+            Điện Thoại:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTKH)
+            <span class="help-block"></span>
+            <div class="clearfix"></div>
+
+        </dd>
+
+        <dt>
+            Giới Tính:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIOITINH)
+            <span class="help-block"></span>
+            <div class="clearfix"></div>
+
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Trở Về", "Khachhang")
+</p>

@@ -5,15 +5,22 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Dondathang</h2>
+<br />
+<br />
+<br />
+<br />
+<h2>Đơn Đặt Hàng Mới Nhất</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<table class="table" border="1">
     <tr>
         <th>
             Mã Đơn Hàng
+        </th>
+        <th>
+            Mã KH
+        </th>
+        <th>
+            Tên Khách Hàng
         </th>
         <th>
             Tình Trạng Thanh Toán
@@ -28,9 +35,6 @@
             Ngày Giao
         </th>
         <th>
-            Mã KH
-        </th>
-        <th>
             Thành Tiền
         </th>
         <th></th>
@@ -39,7 +43,14 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.MAHD)
+            <a href="@Url.Action("Chitietdondathang", "Admin", new { mahd = item.MAHD})">@item.MAHD</a>
+        </td>
+        <td>
+            <a href="@Url.Action("DetailsKH", "Admin", new { id = item.MAKH})">@item.MAKH</a>
+            @*@Html.DisplayFor(modelItem => item.MAKH)*@
+        </td>
+        <td>
+            @item.KHACHHANG.TENKH
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DATHANHTOAN)
@@ -54,14 +65,11 @@
             @Html.DisplayFor(modelItem => item.NGAYGIAO)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.MAKH)
+            @String.Format("{0:0,0}", item.THANHTIEN) VNĐ
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.THANHTIEN)
-        </td>
-        <td>          
-            
-            @Html.ActionLink("Details", "Chitietdondathang", new {mahd=item.MAHD }) 
+
+            @Html.ActionLink("Chi Tiết", "Chitietdondathang", new { mahd = item.MAHD })
         </td>
     </tr>
 }

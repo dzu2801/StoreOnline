@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\DZU\Desktop\SangCho</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>04/23/2018 10:55:25</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>04/23/2018 10:55:25</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/PagedList.dll">
+      <publishTime>04/27/2018 00:12:20</publishTime>
+    </File>
+    <File Include="bin/PagedList.Mvc.dll">
+      <publishTime>04/27/2018 00:12:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.Process.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.DriveInfo.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Pipes.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.AccessControl.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Claims.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Principal.Windows.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Thread.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="bin/StoreOnline.dll">
+      <publishTime>05/04/2018 15:38:38</publishTime>
+    </File>
+    <File Include="bin/StoreOnline.pdb">
+      <publishTime>05/04/2018 15:38:38</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>04/23/2018 10:55:27</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>04/23/2018 10:55:28</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>04/23/2018 10:55:25</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>04/23/2018 10:55:25</publishTime>
+    </File>
+    <File Include="Content/font-awesome.css">
+      <publishTime>04/23/2018 10:55:25</publishTime>
+    </File>
+    <File Include="Content/jstarbox.css">
+      <publishTime>04/23/2018 10:55:25</publishTime>
+    </File>
+    <File Include="Content/PagedList.css">
+      <publishTime>04/27/2018 00:12:20</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>04/23/2018 10:55:25</publishTime>
+    </File>
+    <File Include="Content/style.ad.css">
+      <publishTime>04/25/2018 22:11:55</publishTime>
+    </File>
+    <File Include="Content/style.css">
+      <publishTime>04/29/2018 13:56:02</publishTime>
+    </File>
+    <File Include="Content/tiki.css">
+      <publishTime>04/28/2018 21:25:43</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff2">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="fonts/FontAwesome.otf">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/23/2018 10:55:25</publishTime>
+    </File>
+    <File Include="images/ab.jpg">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="images/ab1.jpg">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="images/arr.png">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="images/arrow.png">
+      <publishTime>04/25/2018 22:11:56</publishTime>
+    </File>
+    <File Include="images/bg2.jpg">
+      <publishTime>05/03/2018 12:45:26</publishTime>
+    </File>
+    <File Include="images/bgsen.jpg">
+      <publishTime>05/04/2018 09:40:22</publishTime>
+    </File>
+    <File Include="images/can.png">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="images/logo-Copy.jpg">
+      <publishTime>04/27/2018 14:50:31</publishTime>
+    </File>
+    <File Include="images/logo.jpg">
+      <publishTime>04/26/2018 23:34:44</publishTime>
+    </File>
+    <File Include="images/logo_DSH.jpg">
+      <publishTime>04/26/2018 20:39:03</publishTime>
+    </File>
+    <File Include="images/logo_test.jpg">
+      <publishTime>04/26/2018 23:34:44</publishTime>
+    </File>
+    <File Include="images/sanpham/bang phong ca lang 3.jpg">
+      <publishTime>05/02/2018 15:54:53</publishTime>
+    </File>
+    <File Include="images/sanpham/banh phong ca lang %282%29.jpg">
+      <publishTime>05/02/2018 15:54:53</publishTime>
+    </File>
+    <File Include="images/sanpham/banh phong ca lang.jpg">
+      <publishTime>04/29/2018 18:13:06</publishTime>
+    </File>
+    <File Include="images/sanpham/banh phong gao lut.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/banh phong tao.jpg">
+      <publishTime>05/02/2018 15:54:53</publishTime>
+    </File>
+    <File Include="images/sanpham/banh phong tom cao cap SG tron.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/banh phong tom cao cap SG vuong.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/banh phong tom dac biet.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/banh phong tom khoai lang.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/banh phong tom thuong hang.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/banh phong tom vuong.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/bot 5 thu dau hat sen.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/bot dau den xanh long.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/bot dau nanh hat sen.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/bot dau xanh hat sen.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/bot gao lut hat sen.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/bot me den hat sen.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/bun gao lut huyet rong.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/bun tuoi.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/cha bong ech.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/cha ca loc khoi.jpg">
+      <publishTime>05/02/2018 15:54:53</publishTime>
+    </File>
+    <File Include="images/sanpham/cha ca loc vien.jpg">
+      <publishTime>05/02/2018 15:54:53</publishTime>
+    </File>
+    <File Include="images/sanpham/dau ranee 250ml.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/dau ranee 950ml.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/gao bon mua.jpg">
+      <publishTime>05/02/2018 15:54:53</publishTime>
+    </File>
+    <File Include="images/sanpham/gao long chau.jpg">
+      <publishTime>05/02/2018 15:54:54</publishTime>
+    </File>
+    <File Include="images/sanpham/gao lotus.jpg">
+      <publishTime>05/02/2018 15:54:54</publishTime>
+    </File>
+    <File Include="images/sanpham/gao ngoc sa.jpg">
+      <publishTime>05/02/2018 15:54:54</publishTime>
+    </File>
+    <File Include="images/sanpham/gao ramsar.png">
+      <publishTime>05/02/2018 15:54:54</publishTime>
+    </File>
+    <File Include="images/sanpham/gao thap muoi.png">
+      <publishTime>05/02/2018 15:54:54</publishTime>
+    </File>
+    <File Include="images/sanpham/gao tram chim.png">
+      <publishTime>05/02/2018 15:54:54</publishTime>
+    </File>
+    <File Include="images/sanpham/hst dac biet.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/hst.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/hu tieu bot loc.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/kho ca dieu hong hsv.jpg">
+      <publishTime>04/29/2018 18:13:06</publishTime>
+    </File>
+    <File Include="images/sanpham/kho ca loc hsv.jpg">
+      <publishTime>04/29/2018 18:13:06</publishTime>
+    </File>
+    <File Include="images/sanpham/kho dieu hong hai yen.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/kho ech.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/kho loc tu quy.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/kho sac tu quy.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/kho trau 100gr.jpg">
+      <publishTime>04/29/2018 18:13:06</publishTime>
+    </File>
+    <File Include="images/sanpham/kho trau 450gr.jpg">
+      <publishTime>04/29/2018 18:13:06</publishTime>
+    </File>
+    <File Include="images/sanpham/khoai lang say 80gr.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/mien dau xanh.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/mit say 40gr.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/mit say 80gr.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/mut chuoi phong dau phong 170gr.jpg">
+      <publishTime>04/29/2018 18:13:06</publishTime>
+    </File>
+    <File Include="images/sanpham/mut chuoi phong hat dieu 170gr.jpg">
+      <publishTime>04/29/2018 18:13:06</publishTime>
+    </File>
+    <File Include="images/sanpham/mut chuoi phong hat dieu 220gr.jpg">
+      <publishTime>04/29/2018 18:13:06</publishTime>
+    </File>
+    <File Include="images/sanpham/mut chuoi phong mang cau 170gr.png">
+      <publishTime>05/02/2018 15:54:54</publishTime>
+    </File>
+    <File Include="images/sanpham/mut chuoi phong me 220gr.jpg">
+      <publishTime>04/29/2018 18:13:06</publishTime>
+    </File>
+    <File Include="images/sanpham/mut khom 220gr.jpg">
+      <publishTime>04/29/2018 18:13:06</publishTime>
+    </File>
+    <File Include="images/sanpham/mut mang cau 220gr.jpg">
+      <publishTime>04/29/2018 18:13:06</publishTime>
+    </File>
+    <File Include="images/sanpham/nuoc mam hong ngu.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/sen say 100gr.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/sen say 200gr.jpg">
+      <publishTime>04/29/2018 18:13:07</publishTime>
+    </File>
+    <File Include="images/sanpham/sen say 40gr.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/sen say 500gr.jpg">
+      <publishTime>04/29/2018 18:13:07</publishTime>
+    </File>
+    <File Include="images/sanpham/tra la sen 150gr.jpg">
+      <publishTime>04/29/2018 18:13:07</publishTime>
+    </File>
+    <File Include="images/sanpham/tra la sen 70gr.jpg">
+      <publishTime>04/29/2018 18:13:07</publishTime>
+    </File>
+    <File Include="images/sanpham/tra tim sen.jpg">
+      <publishTime>04/29/2018 18:13:07</publishTime>
+    </File>
+    <File Include="images/sanpham/trai cay say 80gr.jpg">
+      <publishTime>04/27/2018 21:56:51</publishTime>
+    </File>
+    <File Include="images/sanpham/trai cay say.jpg">
+      <publishTime>04/29/2018 18:13:07</publishTime>
+    </File>
+    <File Include="images/sanpham/xoay say deo.jpg">
+      <publishTime>04/29/2018 18:13:07</publishTime>
+    </File>
+    <File Include="images/sh.jpg">
+      <publishTime>04/23/2018 10:55:26</publishTime>
+    </File>
+    <File Include="Models/dbStoreOnline.dbml">
+      <publishTime>05/04/2018 13:17:10</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/easing.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/easyResponsiveTabs.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.11.1.min.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.mycart.js">
+      <publishTime>04/28/2018 09:43:13</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.vide.min.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.zoomtoo.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/jstarbox.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/modernizr.custom.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/move-top.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>04/27/2018 17:07:07</publishTime>
+    </File>
+    <File Include="Views/Admin/Chitietdondathang.cshtml">
+      <publishTime>05/04/2018 14:41:30</publishTime>
+    </File>
+    <File Include="Views/Admin/CreateNCC.cshtml">
+      <publishTime>05/03/2018 21:28:47</publishTime>
+    </File>
+    <File Include="Views/Admin/DeleteKH.cshtml">
+      <publishTime>05/04/2018 14:53:51</publishTime>
+    </File>
+    <File Include="Views/Admin/DeleteNCC.cshtml">
+      <publishTime>05/03/2018 21:28:47</publishTime>
+    </File>
+    <File Include="Views/Admin/DeleteSP.cshtml">
+      <publishTime>05/03/2018 21:28:47</publishTime>
+    </File>
+    <File Include="Views/Admin/DetailsKH.cshtml">
+      <publishTime>05/04/2018 14:53:51</publishTime>
+    </File>
+    <File Include="Views/Admin/DetailsNCC.cshtml">
+      <publishTime>05/03/2018 21:28:47</publishTime>
+    </File>
+    <File Include="Views/Admin/DetailsSP.cshtml">
+      <publishTime>05/03/2018 21:28:47</publishTime>
+    </File>
+    <File Include="Views/Admin/Dondathang.cshtml">
+      <publishTime>05/04/2018 14:51:30</publishTime>
+    </File>
+    <File Include="Views/Admin/EditNCC.cshtml">
+      <publishTime>05/04/2018 13:10:51</publishTime>
+    </File>
+    <File Include="Views/Admin/EditSP.cshtml">
+      <publishTime>05/03/2018 22:51:32</publishTime>
+    </File>
+    <File Include="Views/Admin/Index.cshtml">
+      <publishTime>05/04/2018 14:13:36</publishTime>
+    </File>
+    <File Include="Views/Admin/Khachhang.cshtml">
+      <publishTime>05/04/2018 14:22:51</publishTime>
+    </File>
+    <File Include="Views/Admin/Login.cshtml">
+      <publishTime>05/03/2018 21:28:47</publishTime>
+    </File>
+    <File Include="Views/Admin/Nhacungcap.cshtml">
+      <publishTime>05/03/2018 21:28:47</publishTime>
+    </File>
+    <File Include="Views/Admin/Sanpham.cshtml">
+      <publishTime>05/03/2018 21:28:47</publishTime>
+    </File>
+    <File Include="Views/Admin/Themsanpham.cshtml">
+      <publishTime>05/03/2018 21:28:47</publishTime>
+    </File>
+    <File Include="Views/GioHang/DatHang.cshtml">
+      <publishTime>05/02/2018 23:47:49</publishTime>
+    </File>
+    <File Include="Views/GioHang/GioHang.cshtml">
+      <publishTime>05/03/2018 01:07:58</publishTime>
+    </File>
+    <File Include="Views/GioHang/GiohangPartial.cshtml">
+      <publishTime>04/28/2018 16:48:33</publishTime>
+    </File>
+    <File Include="Views/GioHang/test.cshtml">
+      <publishTime>04/30/2018 16:03:15</publishTime>
+    </File>
+    <File Include="Views/GioHang/Xacnhandonhang.cshtml">
+      <publishTime>05/03/2018 15:26:42</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>04/23/2018 10:55:25</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>04/23/2018 10:55:25</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>04/25/2018 21:54:19</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>04/23/2018 10:55:25</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>04/23/2018 10:55:25</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutAdmin.cshtml">
+      <publishTime>05/04/2018 14:24:00</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutUser.cshtml">
+      <publishTime>05/03/2018 21:28:47</publishTime>
+    </File>
+    <File Include="Views/Shoponline/Contact.cshtml">
+      <publishTime>05/04/2018 00:58:19</publishTime>
+    </File>
+    <File Include="Views/Shoponline/Details.cshtml">
+      <publishTime>05/03/2018 23:06:21</publishTime>
+    </File>
+    <File Include="Views/Shoponline/Giaohang.cshtml">
+      <publishTime>05/02/2018 12:00:53</publishTime>
+    </File>
+    <File Include="Views/Shoponline/Index.cshtml">
+      <publishTime>05/03/2018 22:53:32</publishTime>
+    </File>
+    <File Include="Views/Shoponline/Mota.cshtml">
+      <publishTime>05/02/2018 12:00:53</publishTime>
+    </File>
+    <File Include="Views/Shoponline/Phanloai.cshtml">
+      <publishTime>05/01/2018 22:15:41</publishTime>
+    </File>
+    <File Include="Views/Shoponline/test.cshtml">
+      <publishTime>05/01/2018 22:15:41</publishTime>
+    </File>
+    <File Include="Views/Shoponline/Tungloai.cshtml">
+      <publishTime>05/03/2018 22:53:32</publishTime>
+    </File>
+    <File Include="Views/Shoponline/Updating.cshtml">
+      <publishTime>05/03/2018 18:52:21</publishTime>
+    </File>
+    <File Include="Views/User/Chitietdondathang.cshtml">
+      <publishTime>05/04/2018 13:42:21</publishTime>
+    </File>
+    <File Include="Views/User/ForgotPassword.cshtml">
+      <publishTime>04/28/2018 21:25:43</publishTime>
+    </File>
+    <File Include="Views/User/Info.cshtml">
+      <publishTime>05/03/2018 11:05:41</publishTime>
+    </File>
+    <File Include="Views/User/Lichsudathang.cshtml">
+      <publishTime>05/04/2018 13:10:51</publishTime>
+    </File>
+    <File Include="Views/User/Login.cshtml">
+      <publishTime>04/28/2018 21:25:43</publishTime>
+    </File>
+    <File Include="Views/User/Register.cshtml">
+      <publishTime>05/03/2018 23:20:54</publishTime>
+    </File>
+    <File Include="Views/User/Resetpassword.cshtml">
+      <publishTime>04/27/2018 20:04:17</publishTime>
+    </File>
+    <File Include="Views/User/Wishlist.cshtml">
+      <publishTime>04/27/2018 20:04:17</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>04/23/2018 10:55:25</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>04/23/2018 10:55:25</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/04/2018 15:38:51</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

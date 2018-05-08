@@ -1,0 +1,91 @@
+﻿@model StoreOnline.Models.KHACHHANG
+
+@{
+    ViewBag.Title = "DeleteKH";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Xác Nhận Xóa Tài Khoản Khách Hàng</h2>
+
+<h3>Bạn Có Muốn Xóa Tài Khoản Khách Hàng Này Không?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên Tài Khoản:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TK)
+            <span class="help-block"></span>
+            <div class="clearfix"></div>
+
+        </dd>
+
+        <dt>
+            Họ Tên Khách Hàng:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENKH)
+            <span class="help-block"></span>
+            <div class="clearfix"></div>
+
+        </dd>
+
+        <dt>
+            Email:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAILKH)
+            <span class="help-block"></span>
+            <div class="clearfix"></div>
+
+        </dd>
+
+        <dt>
+            Địa Chỉ:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIACHIKH)
+            <span class="help-block"></span>
+            <div class="clearfix"></div>
+
+        </dd>
+
+        <dt>
+            Điện Thoại:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTKH)
+            <span class="help-block"></span>
+            <div class="clearfix"></div>
+
+        </dd>
+
+        <dt>
+            Giới Tính:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIOITINH)
+            <span class="help-block"></span>
+            <div class="clearfix"></div>
+
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Trở Về", "Khachhang")
+        </div>
+    }
+</div>

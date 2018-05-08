@@ -16,7 +16,6 @@
     <div class="main-agileits">
         <div class="form-w3agile form1">
             <h3>Thông Tin</h3>
-            @ViewData["loi9"]
             <form action="#" method="post">
                 <label>Họ tên</label>
                 @ViewData["loi2"]
@@ -114,6 +113,15 @@
                         <div class="clearfix"></div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="input-wrap margin">
+                        <label class="checkbox">
+                            <input type="checkbox" name="doimatkhau" value="checked">
+                            <span class="ico"></span> Thay đổi mật khẩu
+                        </label>
+
+                    </div>
+                </div>
                 <label>Mật khẩu cũ</label>
                 @ViewData["loi7"]
                 <div class="key">
@@ -122,7 +130,7 @@
                     <div class="clearfix"></div>
                 </div>
                 <label>Mật khẩu mới</label>
-                @ViewData["loi7"]
+                @ViewData["loi8"]
                 <div class="key">
                     <i class="fa fa-lock" aria-hidden="true"></i>
                     <input type="password" value="Nhập Lại Mật Khẩu Mới" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập Lại Mật Khẩu Mới';}" required="">
@@ -130,7 +138,7 @@
                 </div>
 
                 <label>Nhập lại mật khẩu</label>
-                @ViewData["loi8"]
+                @ViewData["loi9"]
                 <div class="key">
                     <i class="fa fa-lock" aria-hidden="true"></i>
                     <input type="password" value="Nhập Lại Mật Khẩu Mới" name="Confirm Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập Lại Mật Khẩu Mới';}" required="">

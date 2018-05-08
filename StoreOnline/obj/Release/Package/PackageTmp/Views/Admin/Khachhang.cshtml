@@ -1,0 +1,64 @@
+﻿@model IEnumerable<StoreOnline.Models.KHACHHANG>
+
+@{
+    ViewBag.Title = "Khachhang";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+<h2>Quản Lý Danh Sách Khách Hàng</h2>
+
+<table class="table" border="1">
+    <tr>
+        <th>
+            Tên Tài Khoản
+        </th>
+        <th>
+            Tên Khách Hàng
+        </th>
+        <th>
+            Email Khách Hàng
+        </th>
+        <th>
+            Địa Chỉ
+        </th>
+        <th>
+            Điện Thoại
+        </th>
+        <th>
+            Giới Tính
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAILKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIACHIKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DTKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIOITINH)
+        </td>
+        <td>
+            @Html.ActionLink("Thông Tin", "DetailsKH", new { id=item.MAKH }) |
+            @Html.ActionLink("Xóa Tài Khoản", "DeleteKH", new { id=item.MAKH })
+        </td>
+    </tr>
+}
+
+</table>

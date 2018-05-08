@@ -1,0 +1,56 @@
+﻿@using StoreOnline.Models
+@{
+    ViewBag.Title = "Chitietdondathang";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<div class="banner-top">
+    <div class="container">
+        <h3>Lịch Sử Đặt Hàng</h3>
+        <h4><a href="@Url.Action("Index", "Shoponline")">Trang Chủ</a><label>/</label>Lịch Sử Đặt Hàng</h4>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+
+<!--login-->
+
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart"></span> Chi Tiết Đơn Đặt Hàng</h4>
+        </div>
+        <div class="modal-body">
+            <table class="table table-hover table-responsive" id="my-cart-table" border="1">
+                <tr>
+                    <td style="text-align:center"><strong>Hình Ảnh</strong></td>
+                    <td style="text-align:center"><strong>Tên Sản Phẩm</strong></td>
+                    <td style="text-align:center"><strong>Đơn Giá</strong></td>
+                    <td style="text-align:center"><strong>Số Lương</strong></td>
+                    <td style="text-align:center"><strong>Tổng Tiền</strong></td>
+                </tr>
+                <tbody>
+                    @foreach (var item in Model)
+                {
+                    <tr title="summary 3" data-id="3" data-price="2.00">
+                        <td width="150px">
+                            <a href="@Url.Action("Details", "Shoponline", new { masp = @item.MASP })" class="offer-img">
+                                <img alt="@item.SANPHAM.TENSP" src="~/images/sanpham/@item.SANPHAM.HINHANH" sizes="auto" class="img-responsive">
+                                @*<div class="offer"><p><span>@item.SANPHAM.LOAI</span></p></div>*@
+                            </a>
+                        </td>
+                        <td><a href="@Url.Action("Details", "Shoponline", new { masp = @item.MASP })">@item.SANPHAM.TENSP</a></td>
+                        <td style="text-align:center">@item.SANPHAM.GIABAN</td>
+                        <td style="text-align:center">@item.SL</td>
+                        <td style="text-align:center">@item.TONGTIEN</td>
+
+                    </tr>
+            }
+                </tbody>
+
+            </table>
+        </div>
+        <td>
+            @Html.ActionLink("Quay lại", "Lichsudathang")
+        </td>
+    </div>
+</div>
+

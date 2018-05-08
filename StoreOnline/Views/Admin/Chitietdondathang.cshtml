@@ -5,41 +5,115 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Chitietdondathang</h2>
+<br />
+<br />
+<br />
+<br />
+@*<div class="login">*@
+    @*<div class="main-agileits">
+        <div class="form-w3agile form1">*@
+            <h2>Thông Tin Khách Hàng</h2>
+<br />
+            <form action="#" method="post">
+                
+                @foreach (var kh in Model)
+                {
+                <label>Họ tên</label>
+                <div>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    @kh.DONDATHANG.KHACHHANG.TENKH
+                    <span class="help-block"></span>
+                    <div class="clearfix"></div>
+                </div>
+                    break;
+                }
+                @foreach (var kh in Model)
+                {
+                <label>Email</label>
+                <div>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    @kh.DONDATHANG.KHACHHANG.EMAILKH
+                    <span class="help-block"></span>
+                    <div class="clearfix"></div>
+                </div>
+                    break;
+                }
+                @foreach (var kh in Model)
+                {
+                <label>Địa chỉ</label>
+                <div>
+                    <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
+                    @kh.DONDATHANG.KHACHHANG.DIACHIKH
+                    <span class="help-block"></span>
+                    <div class="clearfix"></div>
+                </div>
+                    break;
+                }
+                @foreach (var kh in Model)
+                { 
+                <label>Điện thoại</label>
+                <div>
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    @kh.DONDATHANG.KHACHHANG.DTKH
+                    <span class="help-block"></span>
+                    <div class="clearfix"></div>
+                </div>
+                    break;
+                }
+            </form>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<br />
+<br />
+<br />
+<h3>Chi Tiết Đơn Hàng</h3>
+
+<table class="table" border="1">
     <tr>
-        <th>
+        <th style="text-align:center">
             Mã Sản Phẩm
         </th>
-        <th>
+        <th style="text-align:center">
+            Tên Sản Phẩm
+        </th>
+        <th style="text-align:center">
+            Đơn Giá
+        </th>
+        <th style="text-align:center">
             Số Lượng
         </th>
-        <th>
+        <th style="text-align:center">
             Tổng Tiền
+        </th>
+        <th style="text-align:center">
+            Ngày Giao Hàng Yêu Cầu
         </th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
-            <td>
+            <td style="text-align:center">
                 @Html.DisplayFor(modelItem => item.MASP)
             </td>
-            <td>
+            <td style="text-align:center">
+                @item.SANPHAM.TENSP
+            </td>
+            <td style="text-align:center">
+                @String.Format("{0:0,0}", item.SANPHAM.GIABAN) VNĐ
+            </td>
+            <td style="text-align:center">
                 @Html.DisplayFor(modelItem => item.SL)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TONGTIEN)
+            <td style="text-align:center">
+                @String.Format("{0:0,0}", item.TONGTIEN) VNĐ
             </td>
-
+            <td width="200px">
+                @item.DONDATHANG.NGAYGIAO
+            </td>
         </tr>
     }
 
 </table>
-<td>
+<td class="modal-footer">
     @Html.ActionLink("Quay lại", "Dondathang")
 </td>

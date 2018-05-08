@@ -19,19 +19,28 @@
             <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart"></span> Chi Tiết Đơn Đặt Hàng</h4>
         </div>
         <div class="modal-body">
-            <table class="table table-hover table-responsive" id="my-cart-table">
+            <table class="table table-hover table-responsive" id="my-cart-table" border="1">
                 <tr>
-                    <td><strong>Mã Sản Phẩm</strong></td>
-                    <td><strong>Số Lương</strong></td>
-                    <td><strong>Tổng Tiền</strong></td>
+                    <td style="text-align:center"><strong>Hình Ảnh</strong></td>
+                    <td style="text-align:center"><strong>Tên Sản Phẩm</strong></td>
+                    <td style="text-align:center"><strong>Đơn Giá</strong></td>
+                    <td style="text-align:center"><strong>Số Lương</strong></td>
+                    <td style="text-align:center"><strong>Tổng Tiền</strong></td>
                 </tr>
                 <tbody>
                     @foreach (var item in Model)
                 {
                     <tr title="summary 3" data-id="3" data-price="2.00">
-                        <td>@item.MASP</td>
-                        <td>@item.SL</td>
-                        <td>@item.TONGTIEN</td>
+                        <td width="150px">
+                            <a href="@Url.Action("Details", "Shoponline", new { masp = @item.MASP })" class="offer-img">
+                                <img alt="@item.SANPHAM.TENSP" src="~/images/sanpham/@item.SANPHAM.HINHANH" sizes="auto" class="img-responsive">
+                                @*<div class="offer"><p><span>@item.SANPHAM.LOAI</span></p></div>*@
+                            </a>
+                        </td>
+                        <td><a href="@Url.Action("Details", "Shoponline", new { masp = @item.MASP })">@item.SANPHAM.TENSP</a></td>
+                        <td style="text-align:center">@item.SANPHAM.GIABAN</td>
+                        <td style="text-align:center">@item.SL</td>
+                        <td style="text-align:center">@item.TONGTIEN</td>
 
                     </tr>
             }

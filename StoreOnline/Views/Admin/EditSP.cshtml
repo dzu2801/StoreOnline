@@ -75,7 +75,7 @@
             @Html.LabelFor(model => model.HINHANH, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <input type="file" name="fileUpload" />
-                <img src="@Url.Content("~/images/sanpham/" + Model.HINHANH)" width="120px" /> (Ảnh hiện tại)
+                <img src="@Url.Content("~/images/sanpham/" + Model.HINHANH)" width="120" /> (Ảnh hiện tại)
                 @ViewBag.Thongbao
             </div>
         </div>

@@ -291,10 +291,6 @@
     <Content Include="Scripts\move-top.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="video\video\video.gif" />
-    <Content Include="video\video\video.jpg" />
-    <Content Include="video\video\video.mp4" />
-    <Content Include="video\video\video.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -347,6 +343,9 @@
     <Content Include="Views\Admin\Dondathang.cshtml" />
     <Content Include="Views\Admin\Chitietdondathang.cshtml" />
     <Content Include="Views\User\Chitietdondathang.cshtml" />
+    <Content Include="Views\Admin\Khachhang.cshtml" />
+    <Content Include="Views\Admin\DetailsKH.cshtml" />
+    <Content Include="Views\Admin\DeleteKH.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
